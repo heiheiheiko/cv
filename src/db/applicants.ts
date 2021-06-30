@@ -1,6 +1,9 @@
-import { Applicant, Addressable, Trait } from '@/db/dbTypes';
+import {
+  Applicant, Addressable, Trait, Linkable,
+} from '@/db/dbTypes';
 
 // applicant
+const parentType = 'Applicant';
 const applicant: Applicant = {
   id: 1,
   birthday: new Date('1986-07-18'),
@@ -24,7 +27,7 @@ const applicantAddressable: Addressable = {
   zip: '48565',
   city: 'Steinfurt',
   parentId: applicant.id,
-  parentType: 'Applicant',
+  parentType,
 };
 applicant.addressable = applicantAddressable;
 
@@ -68,6 +71,41 @@ const traitAccomplisher: Trait = {
   url: 'accomplisher_430x700.jpg',
 };
 applicant.traits = [traitGamer, traitExplorer, traitAccomplisher];
+
+// linkables
+const linkGithub: Linkable = {
+  id: 1,
+  titleI18n: {
+    de: 'Github',
+    en: 'Github',
+  },
+  url: 'https://github.com/HBeineke',
+  parentId: applicant.id,
+  parentType,
+};
+
+const linkXing: Linkable = {
+  id: 2,
+  titleI18n: {
+    de: 'Xing',
+    en: 'Xing',
+  },
+  url: 'https://www.xing.com/profile/Heiko_Beineke',
+  parentId: applicant.id,
+  parentType,
+};
+
+const linkHomepage: Linkable = {
+  id: 3,
+  titleI18n: {
+    de: 'Homepage',
+    en: 'Homepage',
+  },
+  url: 'https://hb-curriculum-vitae.herokuapp.com/',
+  parentId: applicant.id,
+  parentType,
+};
+applicant.linkables = [linkGithub, linkXing, linkHomepage];
 
 export default [
   applicant,

@@ -20,6 +20,14 @@ interface Trait{
   url: string,
 }
 
+interface Linkable{
+  id: number,
+  titleI18n: I18nField,
+  url: string,
+  parentId: number,
+  parentType: string,
+}
+
 interface Applicant {
   id: number,
   birthday: Date,
@@ -29,8 +37,9 @@ interface Applicant {
   sloganI18n: I18nField,
   addressable?: Addressable
   traits?: Array<Trait>,
+  linkables?: Array<Linkable>
 }
 
 export {
-  I18nField, Applicant, Addressable, Trait,
+  I18nField, Applicant, Addressable, Trait, Linkable,
 };

@@ -4,12 +4,14 @@ import useState from '@/composables/useState';
 import applicantsJson from '@/db/applicants';
 import useAddressable from '@/composables/useAddressable';
 import useTrait from '@/composables/useTrait';
+import useLinkable from '@/composables/useLinkable';
 
 const {
   normalizeAndAssignData, allResources, findResource,
 } = useState();
 const { addressableSchema } = useAddressable();
 const { traitSchema } = useTrait();
+const { linkableSchema } = useLinkable();
 
 // constants
 const resourceName = 'applicants';
@@ -18,6 +20,7 @@ const resourceName = 'applicants';
 const applicantSchema = new schema.Entity(resourceName, {
   addressable: addressableSchema,
   traits: [traitSchema],
+  linkables: [linkableSchema],
 });
 
 // computed
