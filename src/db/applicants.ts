@@ -1,11 +1,13 @@
 import {
   Applicant, Addressable, Trait, Linkable,
 } from '@/db/dbTypes';
+import stages from '@/db/stages';
 
 // applicant
 const parentType = 'Applicant';
 const applicant: Applicant = {
   id: 1,
+  name: 'Heiko Beineke',
   birthday: new Date('1986-07-18'),
   email: 'heiko.beineke@gmail.com',
   mobilePhone: '0151 555 45 345',
@@ -22,7 +24,7 @@ const applicant: Applicant = {
 // addressable
 const applicantAddressable: Addressable = {
   id: 1,
-  person: 'Heiko Beineke',
+  addressee: 'Heiko Beineke',
   street: 'Weststr. 1',
   zip: '48565',
   city: 'Steinfurt',
@@ -107,6 +109,7 @@ const linkHomepage: Linkable = {
 };
 applicant.linkables = [linkGithub, linkXing, linkHomepage];
 
+applicant.stages = stages;
 export default [
   applicant,
 ];

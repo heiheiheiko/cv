@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 interface I18nField {
   de: string,
   en: string
@@ -5,8 +6,8 @@ interface I18nField {
 
 interface Addressable{
   id: number,
-  person: string,
-  street: string,
+  addressee?: string,
+  street?: string,
   zip: string,
   city: string,
   parentId: number,
@@ -28,8 +29,52 @@ interface Linkable{
   parentType: string,
 }
 
+enum SkillTypes {
+  keyword = 'keyword',
+  technology = 'technology',
+  software = 'software',
+  soft = 'soft'
+}
+interface Skill{
+  id: string,
+  titleI18n: I18nField,
+  isTop: boolean,
+  type: SkillTypes,
+}
+
+enum StageSkillTypes {
+  frequent = 'frequent',
+  regular = 'regular',
+  rare = 'rare',
+}
+interface StageSkill {
+  id: number,
+  stageId: number,
+  skill: Skill,
+  type: StageSkillTypes
+}
+
+enum StageTypes {
+  education = 'education',
+  highlight = 'highlight',
+  job = 'job',
+}
+interface Stage{
+  id: number,
+  titleI18n: I18nField,
+  type: StageTypes,
+  startedAt: Date,
+  endedAt: Date | null,
+  badge: string
+  graduationI18n?: I18nField
+  addressable?: Addressable,
+  linkable?: Linkable,
+  stageSkills?: Array<StageSkill>
+}
+
 interface Applicant {
   id: number,
+  name: string,
   birthday: Date,
   email: string,
   mobilePhone: string,
@@ -38,8 +83,10 @@ interface Applicant {
   addressable?: Addressable
   traits?: Array<Trait>,
   linkables?: Array<Linkable>
+  stages?: Array<Stage>
 }
 
 export {
-  I18nField, Applicant, Addressable, Trait, Linkable,
+  I18nField, Applicant, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
+  StageTypes, StageSkillTypes, StageSkill,
 };
