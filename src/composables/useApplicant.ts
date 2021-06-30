@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 import { schema } from 'normalizr';
 import useState from '@/composables/useState';
-import applicantsJson from '@/db/applicants.json';
+import applicantsJson from '@/db/applicants';
 
 const {
   normalizeAndAssignData, allResources, findResource,
