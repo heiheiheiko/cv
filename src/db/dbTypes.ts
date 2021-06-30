@@ -3,6 +3,16 @@ interface I18nField {
   en: string
 }
 
+interface Addressable{
+  id: number,
+  person: string,
+  street: string,
+  zip: string,
+  city: string,
+  parentId: number,
+  parentType: string,
+}
+
 interface Applicant {
   id: number,
   birthday: Date,
@@ -10,8 +20,9 @@ interface Applicant {
   mobilePhone: string,
   familyStatusI18n: I18nField,
   sloganI18n: I18nField,
+  addressable?: Addressable
 }
 
 export {
-  I18nField, Applicant,
+  I18nField, Applicant, Addressable,
 };

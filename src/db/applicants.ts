@@ -1,4 +1,4 @@
-import { Applicant } from '@/db/dbTypes';
+import { Applicant, Addressable } from '@/db/dbTypes';
 
 const applicant: Applicant = {
   id: 1,
@@ -14,6 +14,18 @@ const applicant: Applicant = {
     en: 'Gamer, Explorer, Accomplisher',
   },
 };
+
+const applicantAddressable: Addressable = {
+  id: 1,
+  person: 'Heiko Beineke',
+  street: 'Weststr. 1',
+  zip: '48565',
+  city: 'Steinfurt',
+  parentId: applicant.id,
+  parentType: 'Applicant',
+};
+
+applicant.addressable = applicantAddressable;
 
 export default [
   applicant,
