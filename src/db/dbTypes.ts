@@ -42,35 +42,29 @@ interface Skill{
   type: SkillTypes,
 }
 
-enum StageSkillTypes {
-  frequent = 'frequent',
-  regular = 'regular',
-  rare = 'rare',
-}
 interface StageSkill {
   id: number,
   stageId: number,
   skill: Skill,
-  type: StageSkillTypes
 }
 
 enum StageTypes {
-  education = 'education',
-  highlight = 'highlight',
-  job = 'job',
+  education = 'EDUCATION',
+  highlight = 'HIGHLIGHT',
+  job = 'JOB',
 }
 
-enum Employments {
-  employee = 'employee',
-  studentAssistant = 'studentAssistant',
-  intern = 'intern',
-  bachelor = 'bachelor'
+enum EmploymentEnum {
+  employee = 'EMPLOYEE ',
+  studentAssistant = 'STUDENT_ASSISTANT',
+  intern = 'INTERN',
+  bachelor = 'BACHELOR'
 }
 
-enum Positions {
-  webDeveloper = 'webDeveloper',
-  softwareDeveloper = 'softwareDeveloper',
-  juniorSoftwareDeveloper = 'juniorSoftwareDeveloper',
+enum PositionEnum {
+  webDeveloper = 'WEB_DEVELOPER',
+  softwareDeveloper = 'SOFTWARE_DEVELOPER',
+  juniorSoftwareDeveloper = 'JUNIOR_SOFTWARE_DEVELOPER',
 }
 
 interface Stage{
@@ -78,8 +72,8 @@ interface Stage{
   titleI18n: I18nField,
   descriptionI18n?: I18nField,
   type: StageTypes,
-  position?: Positions,
-  employment?: Employments,
+  position?: PositionEnum,
+  employment?: EmploymentEnum,
   startedAt: Date,
   endedAt: Date | null,
   badge: string
@@ -105,5 +99,5 @@ interface Applicant {
 
 export {
   I18nField, Applicant, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
-  StageTypes, StageSkillTypes, StageSkill, Positions, Employments,
+  StageTypes, StageSkill, PositionEnum, EmploymentEnum,
 };
