@@ -59,10 +59,27 @@ enum StageTypes {
   highlight = 'highlight',
   job = 'job',
 }
+
+enum Employments {
+  employee = 'employee',
+  studentAssistant = 'studentAssistant',
+  intern = 'intern',
+  bachelor = 'bachelor'
+}
+
+enum Positions {
+  webDeveloper = 'webDeveloper',
+  softwareDeveloper = 'softwareDeveloper',
+  juniorSoftwareDeveloper = 'juniorSoftwareDeveloper',
+}
+
 interface Stage{
   id: number,
   titleI18n: I18nField,
+  descriptionI18n?: I18nField,
   type: StageTypes,
+  position?: Positions,
+  employment?: Employments,
   startedAt: Date,
   endedAt: Date | null,
   badge: string
@@ -88,5 +105,5 @@ interface Applicant {
 
 export {
   I18nField, Applicant, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
-  StageTypes, StageSkillTypes, StageSkill,
+  StageTypes, StageSkillTypes, StageSkill, Positions, Employments,
 };

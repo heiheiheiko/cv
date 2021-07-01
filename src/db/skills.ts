@@ -323,6 +323,16 @@ export default [
   },
 
   {
+    id: 'laravel',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'Laravel',
+      en: 'Laravel',
+    },
+  },
+
+  {
     id: 'ruby',
     type: SkillTypes.technology,
     isTop: true,
@@ -417,7 +427,7 @@ export default [
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
-      de: 'QL',
+      de: 'PostgreSQL',
       en: 'PostgreSQL',
     },
   },
