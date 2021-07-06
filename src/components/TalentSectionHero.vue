@@ -74,3 +74,15 @@
     </div>
   </div>
 </template>
+
+<script>
+import { defineComponent } from 'vue';
+import { ChevronRightIcon } from '@heroicons/vue/solid';
+
+export default defineComponent({
+  components: {
+    ChevronRightIcon,
+  },
+
+});
+</script>
