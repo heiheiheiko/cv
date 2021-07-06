@@ -232,7 +232,7 @@ const footerNavigation = {
   ],
 };
 
-export default {
+export default defineComponent({
   components: {
     Popover,
     PopoverButton,
@@ -249,5 +249,5 @@ export default {
       footerNavigation,
     };
   },
-};
+});
 </script>
