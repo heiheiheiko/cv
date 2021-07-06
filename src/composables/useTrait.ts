@@ -3,7 +3,7 @@ import { schema } from 'normalizr';
 import useState from '@/composables/useState';
 
 const {
-  allResources, findResource,
+  allResources, findResource, findResources,
 } = useState();
 
 // constants
@@ -18,8 +18,9 @@ const traits = computed(() => allResources(resourceName));
 export default function useTrait() {
   // methods
   const findTrait = (id: number) => findResource(resourceName, id);
+  const findTraits = (ids: Array<number|string>) => findResources(resourceName, ids);
 
   return {
-    traits, findTrait, traitSchema,
+    traits, findTrait, findTraits, traitSchema,
   };
 }

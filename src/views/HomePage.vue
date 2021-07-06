@@ -1,5 +1,9 @@
 <template>
   <AppLayout>
+    <TraitSection :traits="traits" />
+    <pre>
+      {{ applicant }}
+    </pre>
     <BaseSection>
       <BaseSectionTitle> Title </BaseSectionTitle>
       <BaseSectionBody> Content </BaseSectionBody>
@@ -8,12 +12,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 import AppLayout from '@/components/AppLayout.vue';
 import BaseSection from '@/components/BaseSection.vue';
 import BaseSectionTitle from '@/components/BaseSectionTitle.vue';
 import BaseSectionBody from '@/components/BaseSectionBody.vue';
 import useApplicant from '@/composables/useApplicant';
+import useTrait from '@/composables/useTrait';
+import TraitSection from '@/components/TraitSection.vue';
 
 export default defineComponent({
   name: 'HomePage',
@@ -22,12 +28,17 @@ export default defineComponent({
     BaseSection,
     BaseSectionTitle,
     BaseSectionBody,
+    TraitSection,
   },
   setup() {
-    const { applicants, fetchApplicants } = useApplicant();
+    const { findApplicant, fetchApplicants } = useApplicant();
+    const { findTraits } = useTrait();
+
+    const applicant = computed(() => findApplicant(1));
+    const traits = computed(() => findTraits(applicant.value.traits));
 
     return {
-      applicants, fetchApplicants,
+      findApplicant, fetchApplicants, applicant, traits,
     };
   },
   created() {
