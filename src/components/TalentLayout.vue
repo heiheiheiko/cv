@@ -4,7 +4,7 @@
     <div class="relative overflow-hidden">
       <TalentNavigation />
       <main>
-        <TalentSectionHero />
+        <TalentSectionHero :talent="talent" />
         <TalentSectionFeature />
         <TalentSectionTestimonial />
       </main>
@@ -28,6 +28,12 @@ export default defineComponent({
     TalentSectionFeature,
     TalentSectionTestimonial,
     TalentFooter,
+  },
+  props: {
+    talent: {
+      type: Object,
+      required: true,
+    },
   },
 });
 </script>

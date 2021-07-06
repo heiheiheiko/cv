@@ -86,11 +86,13 @@ interface Stage{
 interface Talent {
   id: number,
   name: string,
+  positionI18n: I18nField,
   birthday: Date,
   email: string,
   mobilePhone: string,
   familyStatusI18n: I18nField,
   sloganI18n: I18nField,
+  sloganLongI18n: I18nField,
   addressable?: Addressable
   traits?: Array<Trait>,
   linkables?: Array<Linkable>

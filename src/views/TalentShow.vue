@@ -1,5 +1,5 @@
 <template>
-  <TalentLayout />
+  <TalentLayout :talent="talent" />
 </template>
 
 <script lang="ts">
