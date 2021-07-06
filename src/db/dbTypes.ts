@@ -83,7 +83,7 @@ interface Stage{
   stageSkills?: Array<StageSkill>
 }
 
-interface Applicant {
+interface Talent {
   id: number,
   name: string,
   birthday: Date,
@@ -98,6 +98,6 @@ interface Applicant {
 }
 
 export {
-  I18nField, Applicant, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
+  I18nField, Talent, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
   StageTypes, StageSkill, PositionEnum, EmploymentEnum,
 };

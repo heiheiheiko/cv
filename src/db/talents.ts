@@ -1,11 +1,11 @@
 import {
-  Applicant, Addressable, Trait, Linkable,
+  Talent, Addressable, Trait, Linkable,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
-// applicant
-const parentType = 'Applicant';
-const applicant: Applicant = {
+// talent
+const parentType = 'talent';
+const talent: Talent = {
   id: 1,
   name: 'Heiko Beineke',
   birthday: new Date('1986-07-18'),
@@ -22,16 +22,16 @@ const applicant: Applicant = {
 };
 
 // addressable
-const applicantAddressable: Addressable = {
+const talentAddressable: Addressable = {
   id: 1,
   addressee: 'Heiko Beineke',
   street: 'Weststr. 1',
   zip: '48565',
   city: 'Steinfurt',
-  parentId: applicant.id,
+  parentId: talent.id,
   parentType,
 };
-applicant.addressable = applicantAddressable;
+talent.addressable = talentAddressable;
 
 // traits
 const traitGamer: Trait = {
@@ -72,7 +72,7 @@ const traitAccomplisher: Trait = {
   },
   url: 'accomplisher_430x700.jpg',
 };
-applicant.traits = [traitGamer, traitExplorer, traitAccomplisher];
+talent.traits = [traitGamer, traitExplorer, traitAccomplisher];
 
 // linkables
 const linkGithub: Linkable = {
@@ -82,7 +82,7 @@ const linkGithub: Linkable = {
     en: 'Github',
   },
   url: 'https://github.com/HBeineke',
-  parentId: applicant.id,
+  parentId: talent.id,
   parentType,
 };
 
@@ -93,7 +93,7 @@ const linkXing: Linkable = {
     en: 'Xing',
   },
   url: 'https://www.xing.com/profile/Heiko_Beineke',
-  parentId: applicant.id,
+  parentId: talent.id,
   parentType,
 };
 
@@ -104,12 +104,12 @@ const linkHomepage: Linkable = {
     en: 'Homepage',
   },
   url: 'https://hb-curriculum-vitae.herokuapp.com/',
-  parentId: applicant.id,
+  parentId: talent.id,
   parentType,
 };
-applicant.linkables = [linkGithub, linkXing, linkHomepage];
+talent.linkables = [linkGithub, linkXing, linkHomepage];
 
-applicant.stages = stages;
+talent.stages = stages;
 export default [
-  applicant,
+  talent,
 ];

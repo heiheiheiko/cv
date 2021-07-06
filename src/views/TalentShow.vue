@@ -2,7 +2,7 @@
   <AppLayout>
     <TraitSection :traits="traits" />
     <pre>
-      {{ applicant }}
+      {{ talent }}
     </pre>
     <BaseSection>
       <BaseSectionTitle> Title </BaseSectionTitle>
@@ -18,7 +18,7 @@ import AppLayout from '@/components/AppLayout.vue';
 import BaseSection from '@/components/BaseSection.vue';
 import BaseSectionTitle from '@/components/BaseSectionTitle.vue';
 import BaseSectionBody from '@/components/BaseSectionBody.vue';
-import useApplicant from '@/composables/useApplicant';
+import useTalent from '@/composables/useTalent';
 import useTrait from '@/composables/useTrait';
 import TraitSection from '@/components/TraitSection.vue';
 
@@ -33,19 +33,19 @@ export default defineComponent({
   },
   setup() {
     const route = useRoute();
-    const { findApplicant, fetchApplicants } = useApplicant();
+    const { findTalent, fetchTalents } = useTalent();
     const { findTraits } = useTrait();
 
-    const apllicantId = parseInt(route.params.id as string, 10);
-    const applicant = computed(() => findApplicant(apllicantId));
-    const traits = computed(() => findTraits(applicant.value.traits));
+    const talentId = parseInt(route.params.id as string, 10);
+    const talent = computed(() => findTalent(talentId));
+    const traits = computed(() => findTraits(talent.value.traits));
 
     return {
-      findApplicant, fetchApplicants, applicant, traits,
+      findTalent, fetchTalents, talent, traits,
     };
   },
   created() {
-    this.fetchApplicants();
+    this.fetchTalents();
   },
 });
 </script>

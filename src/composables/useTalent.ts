@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 import { schema } from 'normalizr';
 import useState from '@/composables/useState';
-import applicantsJson from '@/db/applicants';
+import talentsJson from '@/db/talents';
 import useAddressable from '@/composables/useAddressable';
 import useTrait from '@/composables/useTrait';
 import useLinkable from '@/composables/useLinkable';
@@ -16,10 +16,10 @@ const { linkableSchema } = useLinkable();
 const { stageSchema } = useStage();
 
 // constants
-const resourceName = 'applicants';
+const resourceName = 'talents';
 
 // schema
-const applicantSchema = new schema.Entity(resourceName, {
+const talentSchema = new schema.Entity(resourceName, {
   addressable: addressableSchema,
   traits: [traitSchema],
   linkables: [linkableSchema],
@@ -27,14 +27,14 @@ const applicantSchema = new schema.Entity(resourceName, {
 });
 
 // computed
-const applicants = computed(() => allResources(resourceName));
+const talents = computed(() => allResources(resourceName));
 
-export default function useApplicant() {
+export default function useTalent() {
   // methods
-  const fetchApplicants = () => normalizeAndAssignData(applicantsJson, [applicantSchema]);
-  const findApplicant = (id: number) => findResource(resourceName, id);
+  const fetchTalents = () => normalizeAndAssignData(talentsJson, [talentSchema]);
+  const findTalent = (id: number) => findResource(resourceName, id);
 
   return {
-    applicants, fetchApplicants, findApplicant,
+    talents, fetchTalents, findTalent,
   };
 }

@@ -3,12 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: { name: 'ApplicantShow', params: { id: 1 } },
+    redirect: { name: 'TalentShow', params: { id: 1 } },
   },
   {
-    path: '/applicant/:id',
-    name: 'ApplicantShow',
-    component: () => import(/* webpackChunkName: "core" */ '../views/ApplicantShow.vue'),
+    path: '/talent/:id',
+    name: 'TalentShow',
+    component: () => import(/* webpackChunkName: "core" */ '../views/TalentShow.vue'),
   },
 ];
 
