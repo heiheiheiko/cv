@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { reactive, computed } from 'vue';
 import { normalize } from 'normalizr';
 
@@ -21,12 +23,17 @@ export default function useState() {
     return Object.values(state[resourceName]);
   };
 
-  const findResource = (resourceName: string, id: any) => {
+  const findResource = (resourceName: string, id: number|string) => {
     if (state[resourceName] === undefined) { return {}; }
     return state[resourceName][id] || null;
   };
 
+  const findResources = (resourceName: string, ids: Array<number|string>) => {
+    if (state[resourceName] === undefined) { return {}; }
+    return ids.map((id) => state[resourceName][id] || null);
+  };
+
   return {
-    state, computedState, normalizeAndAssignData, allResources, findResource,
+    state, computedState, normalizeAndAssignData, allResources, findResource, findResources,
   };
 }
