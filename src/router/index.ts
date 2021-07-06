@@ -3,8 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'HomePage',
-    component: () => import(/* webpackChunkName: "core" */ '../views/HomePage.vue'),
+    redirect: { name: 'ApplicantShow', params: { id: 1 } },
+  },
+  {
+    path: '/applicant/:id',
+    name: 'ApplicantShow',
+    component: () => import(/* webpackChunkName: "core" */ '../views/ApplicantShow.vue'),
   },
 ];
 

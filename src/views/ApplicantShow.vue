@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
+import { useRoute } from 'vue-router';
 import AppLayout from '@/components/AppLayout.vue';
 import BaseSection from '@/components/BaseSection.vue';
 import BaseSectionTitle from '@/components/BaseSectionTitle.vue';
@@ -31,10 +32,12 @@ export default defineComponent({
     TraitSection,
   },
   setup() {
+    const route = useRoute();
     const { findApplicant, fetchApplicants } = useApplicant();
     const { findTraits } = useTrait();
 
-    const applicant = computed(() => findApplicant(1));
+    const apllicantId = parseInt(route.params.id as string, 10);
+    const applicant = computed(() => findApplicant(apllicantId));
     const traits = computed(() => findTraits(applicant.value.traits));
 
     return {
