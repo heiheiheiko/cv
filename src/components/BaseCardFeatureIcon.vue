@@ -19,7 +19,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   props: {
     icon: {
-      type: Object,
+      type: Function,
       required: true,
     },
   },
