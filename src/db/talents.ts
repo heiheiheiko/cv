@@ -1,10 +1,14 @@
+/* eslint-disable no-plusplus */
+
 import {
-  Talent, Addressable, Trait, Linkable,
+  Talent, Addressable, Trait, Linkable, Statement,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
-// talent
+let statementId = 1;
 const parentType = 'talent';
+
+// talent
 const talent: Talent = {
   id: 1,
   name: 'Heiko Beineke',
@@ -25,7 +29,7 @@ const talent: Talent = {
   },
   sloganLongI18n: {
     de: 'Ich schaffe digitale Mehrwerte, löse knifflige Probleme, treibe lang ersehnten Fortschritt voran, entwickle Produkte die begeistern und helfe Menschen damit einfach großartiger zu sein.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
   },
 };
 
@@ -116,6 +120,89 @@ const linkHomepage: Linkable = {
   parentType,
 };
 talent.linkables = [linkGithub, linkXing, linkHomepage];
+
+// staements
+const statementWay: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Das ist der Weg',
+    en: 'This is the way',
+  },
+  descriptionI18n: {
+    de: 'Der Weg braucht ein Ziel, sonst kann es sein, dass man im Kreis läuft.',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  },
+  icon: 'CogIcon',
+};
+
+const statementMultitasking: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Multitasking ist Gift',
+    en: 'Multitasking is poison',
+  },
+  descriptionI18n: {
+    de: 'Häufige Kontextwechsel führen dazu, dass Aufgaben nur oberflächlich bearbeitet werden können. ',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+  },
+  icon: 'CogIcon',
+};
+
+const statementInformation: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Informationen sind wie Schmieröl',
+    en: 'Information is like lube',
+  },
+  descriptionI18n: {
+    de: 'Wenn an irgendeiner Stelle Informationen fehlen, geraten nachgelagerte Prozesse schnell ins stocken.',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+  },
+  icon: 'CogIcon',
+};
+
+const statementDog: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Hund gut alles gut',
+    en: 'Dog good all good',
+  },
+  descriptionI18n: {
+    de: 'Meiner Erfahrung nach kann ein Hund im Büro eine Win-Win-Situation für Mensch und Tier sein.',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+  },
+  icon: 'CogIcon',
+};
+
+const statementRemote: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Das Ergebnis ist was zählt',
+    en: 'The result is what counts',
+  },
+  descriptionI18n: {
+    de: 'Ich die Erfahrung gemacht, dass es fast egal ist von wo und wann Leute arbeiten, solange alle motiviert sind, die richtigen Tools einsetzen und alle am gleichen Strang ziehen.',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+  },
+  icon: 'CogIcon',
+};
+
+const statementEssentials: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Das Wesentliche',
+    en: 'The essentials',
+  },
+  descriptionI18n: {
+    de: 'Am erfolgreichsten habe ich in Strukturen gearbeitet, wo Menschen sich auf Augenhöhe begegnet sind. ',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+  },
+  icon: 'ServerIcon',
+};
+talent.statements = [
+  statementWay, statementMultitasking, statementInformation,
+  statementDog, statementRemote, statementEssentials,
+];
 
 talent.stages = stages;
 export default [

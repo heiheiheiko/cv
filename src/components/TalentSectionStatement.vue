@@ -15,15 +15,15 @@
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <BaseCardFeature
-            v-for="feature in features"
-            :key="feature.name"
+            v-for="statement in statements"
+            :key="statement.id"
           >
-            <BaseCardFeatureIcon :icon="feature.icon" />
+            <BaseCardFeatureIcon :icon="statement.icon" />
             <BaseCardFeatureTitle>
-              {{ feature.name }}
+              {{ translateI18nField(statement.titleI18n) }}
             </BaseCardFeatureTitle>
             <BaseCardFeatureDescription>
-              {{ feature.description }}
+              {{ translateI18nField(statement.descriptionI18n) }}
             </BaseCardFeatureDescription>
           </BaseCardFeature>
         </div>
@@ -34,15 +34,8 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { translateI18nField } from '@/utils/i18nUtils';
 
-import {
-  CloudUploadIcon,
-  LockClosedIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  ServerIcon,
-  CogIcon,
-} from '@heroicons/vue/solid';
 import BaseSectionHeaderTitle from '@/components/BaseSectionHeaderTitle.vue';
 import BaseSectionHeaderSubtitle from '@/components/BaseSectionHeaderSubtitle.vue';
 import BaseSectionHeaderDescription from '@/components/BaseSectionHeaderDescription.vue';
@@ -50,40 +43,6 @@ import BaseCardFeature from '@/components/BaseCardFeature.vue';
 import BaseCardFeatureTitle from '@/components/BaseCardFeatureTitle.vue';
 import BaseCardFeatureDescription from '@/components/BaseCardFeatureDescription.vue';
 import BaseCardFeatureIcon from '@/components/BaseCardFeatureIcon.vue';
-
-const features = [
-  {
-    name: 'Push to Deploy',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.',
-    icon: CloudUploadIcon,
-  },
-  {
-    name: 'SSL Certificates',
-    description: 'Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Simple Queues',
-    description: 'Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.',
-    icon: RefreshIcon,
-  },
-  {
-    name: 'Advanced Security',
-    description: 'Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Powerful API',
-    description:
-      'Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.',
-    icon: CogIcon,
-  },
-  {
-    name: 'Database Backups',
-    description: 'Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.',
-    icon: ServerIcon,
-  },
-];
 
 export default defineComponent({
   components: {
@@ -95,9 +54,15 @@ export default defineComponent({
     BaseCardFeatureTitle,
     BaseCardFeatureDescription,
   },
+  props: {
+    statements: {
+      type: Array,
+      required: true,
+    },
+  },
   setup() {
     return {
-      features,
+      translateI18nField,
     };
   },
 });

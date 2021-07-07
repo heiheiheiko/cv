@@ -5,7 +5,7 @@
       <TalentNavigation />
       <main>
         <TalentSectionHero :talent="talent" />
-        <TalentSectionFeature />
+        <TalentSectionStatement :statements="talentStatements" />
         <TalentSectionTestimonial />
       </main>
       <TalentFooter />
@@ -13,19 +13,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue';
 import TalentNavigation from '@/components/TalentNavigation.vue';
 import TalentSectionHero from '@/components/TalentSectionHero.vue';
-import TalentSectionFeature from '@/components/TalentSectionFeature.vue';
+import TalentSectionStatement from '@/components/TalentSectionStatement.vue';
 import TalentSectionTestimonial from '@/components/TalentSectionTestimonial.vue';
 import TalentFooter from '@/components/TalentFooter.vue';
+import useStatment from '@/composables/useStatement';
 
 export default defineComponent({
   components: {
     TalentNavigation,
     TalentSectionHero,
-    TalentSectionFeature,
+    TalentSectionStatement,
     TalentSectionTestimonial,
     TalentFooter,
   },
@@ -34,6 +35,12 @@ export default defineComponent({
       type: Object,
       required: true,
     },
+  },
+  setup(props) {
+    const { findStatements } = useStatment();
+
+    const talentStatements = findStatements(props.talent.statements);
+    return { talentStatements };
   },
 });
 </script>
