@@ -10,14 +10,14 @@
                 class="pb-3 text-base font-semibold tracking-wider block bg-clip-text text-transparent bg-gradient-to-r
                      from-teal-200 to-cyan-400 uppercase"
               >
-                {{ talent.positionI18n.de }}
+                {{ translateI18nField(talent.positionI18n) }}
               </span>
               <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-cyan-400 sm:pb-5">
                 {{ talent.name }}
               </span>
             </h1>
             <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-              {{ talent.sloganLongI18n.de }}
+              {{ translateI18nField(talent.sloganLongI18n) }}
             </p>
             <div class="mt-10 sm:mt-12">
               <button
@@ -46,6 +46,7 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { translateI18nField } from '@/utils/i18nUtils';
 
 export default defineComponent({
   props: {
@@ -53,6 +54,11 @@ export default defineComponent({
       type: Object,
       required: true,
     },
+  },
+  setup() {
+    return {
+      translateI18nField,
+    };
   },
 });
 </script>

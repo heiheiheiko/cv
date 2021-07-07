@@ -9,14 +9,14 @@
     <div class="sm:col-span-2">
       <div class="space-y-4">
         <div class="text-lg leading-6 font-medium space-y-1">
-          <h3>{{ trait.titleI18n.de }}</h3>
+          <h3>{{ translateI18nField(trait.titleI18n) }}</h3>
           <p class="text-indigo-600">
-            {{ trait.titleI18n.de }}
+            {{ translateI18nField(trait.titleI18n) }}
           </p>
         </div>
         <div class="text-lg">
           <p class="text-gray-500">
-            {{ trait.quoteI18n.de }}
+            {{ translateI18nField(trait.quoteI18n) }}
           </p>
         </div>
         <ul class="flex space-x-5">
@@ -82,6 +82,11 @@
 /* eslint-disable global-require */
 
 import { defineComponent } from 'vue';
+import { translateI18nField } from '@/utils/i18nUtils';
+
+function getImgUrl(image:string) {
+  return require(`../assets/images/${image}`);
+}
 
 export default defineComponent({
   props: {
@@ -90,10 +95,11 @@ export default defineComponent({
       required: true,
     },
   },
-  methods: {
-    getImgUrl(image:string) {
-      return require(`../assets/images/${image}`);
-    },
+  setup() {
+    return {
+      getImgUrl,
+      translateI18nField,
+    };
   },
 });
 </script>

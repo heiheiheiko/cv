@@ -1,5 +1,7 @@
 /* eslint-disable no-shadow */
+
 interface I18nField {
+  [unit: string] : string,
   de: string,
   en: string
 }
