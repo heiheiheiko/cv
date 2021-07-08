@@ -122,86 +122,127 @@ const linkHomepage: Linkable = {
 talent.linkables = [linkGithub, linkXing, linkHomepage];
 
 // staements
-const statementWay: Statement = {
+const statementAgile: Statement = {
   id: statementId++,
   titleI18n: {
-    de: 'Das ist der Weg',
-    en: 'This is the way',
+    de: 'Agile Enthusiast',
+    en: 'Agile Enthusiast',
   },
   descriptionI18n: {
-    de: 'Der Weg braucht ein Ziel, sonst kann es sein, dass man im Kreis läuft.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    de: 'Agile Methoden bieten den Rahmen um als Team über sich hinaus zu wachsen',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
-  icon: 'CogIcon',
-};
-
-const statementMultitasking: Statement = {
-  id: statementId++,
-  titleI18n: {
-    de: 'Multitasking ist Gift',
-    en: 'Multitasking is poison',
-  },
-  descriptionI18n: {
-    de: 'Häufige Kontextwechsel führen dazu, dass Aufgaben nur oberflächlich bearbeitet werden können. ',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-  },
-  icon: 'CogIcon',
-};
-
-const statementInformation: Statement = {
-  id: statementId++,
-  titleI18n: {
-    de: 'Informationen sind wie Schmieröl',
-    en: 'Information is like lube',
-  },
-  descriptionI18n: {
-    de: 'Wenn an irgendeiner Stelle Informationen fehlen, geraten nachgelagerte Prozesse schnell ins stocken.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-  },
-  icon: 'CogIcon',
+  icon: 'sync',
 };
 
 const statementDog: Statement = {
   id: statementId++,
   titleI18n: {
-    de: 'Hund gut alles gut',
-    en: 'Dog good all good',
+    de: 'Rudelführer',
+    en: 'Pack leader',
   },
   descriptionI18n: {
-    de: 'Meiner Erfahrung nach kann ein Hund im Büro eine Win-Win-Situation für Mensch und Tier sein.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    de: 'Ich habe 2 erfahrene Office-Hunde im Gepäck, die regelmäßig für gute Laune sorgen',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
-  icon: 'CogIcon',
+  icon: 'dog',
 };
 
 const statementRemote: Statement = {
   id: statementId++,
   titleI18n: {
-    de: 'Das Ergebnis ist was zählt',
-    en: 'The result is what counts',
+    de: 'Remote Work',
+    en: 'Remote Work',
   },
   descriptionI18n: {
-    de: 'Ich die Erfahrung gemacht, dass es fast egal ist von wo und wann Leute arbeiten, solange alle motiviert sind, die richtigen Tools einsetzen und alle am gleichen Strang ziehen.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    de: 'Hin und wieder bietet das heimische Büro den nötigen Abstand, um Dinge einfach mal fertig zu machen',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
-  icon: 'CogIcon',
+  icon: 'home',
 };
 
-const statementEssentials: Statement = {
+const statementRespect: Statement = {
   id: statementId++,
   titleI18n: {
-    de: 'Das Wesentliche',
-    en: 'The essentials',
+    de: 'Respektvolles Miteinander',
+    en: 'Respectful togetherness',
   },
   descriptionI18n: {
-    de: 'Am erfolgreichsten habe ich in Strukturen gearbeitet, wo Menschen sich auf Augenhöhe begegnet sind. ',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    de: 'Ein vertrauensvoller und respektvoller Umgang auf Augenhöhe ist für mich eine Selbstverständlichkeit',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
-  icon: 'ServerIcon',
+  icon: 'people-arrows',
 };
+
+const statementCommunication: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Offene Kommunikation',
+    en: 'Open communication',
+  },
+  descriptionI18n: {
+    de: 'Ich mache auch mal auf Probleme aufmerksam und beteilige mich aktiv an der Lösung',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  },
+  icon: 'comments',
+};
+
+const statementVision: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Produktvision',
+    en: 'Product vision',
+  },
+  descriptionI18n: {
+    de: 'Ich lasse mich gerne begeistern und nutze meine kreative Energie am liebsten um ein Produkt zu formen',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  },
+  icon: 'space-shuttle',
+};
+
+const statementForward: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Dinge vorantreiben',
+    en: 'Moving things forward',
+  },
+  descriptionI18n: {
+    de: 'Wenn Gestaltungsspielräume vorhanden sind, bringe ich auch gerne mal eigene Ideen mit ein',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  },
+  icon: 'cogs',
+};
+
+const statementPassion: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Leidenschaft',
+    en: 'Passion',
+  },
+  descriptionI18n: {
+    de: 'Ich identifiziere mich mit meiner Arbeit und habe hohe Ansprüche an mich selbst',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  },
+  icon: 'user-astronaut',
+};
+
+const statementFun: Statement = {
+  id: statementId++,
+  titleI18n: {
+    de: 'Why so serious?',
+    en: 'Why so serious?',
+  },
+  descriptionI18n: {
+    de: 'Ich schätze es sehr, wenn man als Team auch mal abseits der Arbeit zusammenkommt',
+    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+  },
+  icon: 'dice',
+};
+
 talent.statements = [
-  statementWay, statementMultitasking, statementInformation,
-  statementDog, statementRemote, statementEssentials,
+  statementAgile, statementDog, statementRemote,
+  statementRespect, statementCommunication, statementVision,
+  statementForward, statementPassion, statementFun,
 ];
 
 talent.stages = stages;

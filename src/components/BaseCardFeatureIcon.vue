@@ -6,7 +6,7 @@
     >
       <span class="h-6 w-6 text-white">
         <FontAwesomeIcon
-          icon="dog"
+          :icon="icon"
           size="lg"
           fixed-width
           aria-hidden="true"
