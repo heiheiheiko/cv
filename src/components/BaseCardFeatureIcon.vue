@@ -23,7 +23,7 @@ export default defineComponent({
   },
   props: {
     icon: {
-      type: Function,
+      type: String,
       required: true,
     },
   },
