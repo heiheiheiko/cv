@@ -1,11 +1,12 @@
 /* eslint-disable no-plusplus */
 
 import {
-  Talent, Addressable, Trait, Linkable, Feature,
+  Talent, Addressable, Testimonial, Linkable, Feature,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
 let featureId = 1;
+let testimonialId = 1;
 const parentType = 'talent';
 
 // talent
@@ -45,46 +46,52 @@ const talentAddressable: Addressable = {
 };
 talent.addressable = talentAddressable;
 
-// traits
-const traitGamer: Trait = {
-  id: 1,
-  titleI18n: {
+// Testimonials
+const testimonialGamer: Testimonial = {
+  id: testimonialId++,
+  staticId: 'gamer',
+  quoteI18n: {
+    de: 'Ich habe vielseitige Interessen, bin annähernd für jeden Unfug zu haben, verbringe meine Zeit am liebsten mit Menschen die ich mag und möchte einfach eine gute Zeit haben.',
+    en: 'Lorem Ipsum',
+  },
+  quotedPerson: 'Heiko Beineke',
+  quotedPersonPositionI18n: {
     de: 'Gamer',
     en: 'Gamer',
-  },
-  quoteI18n: {
-    de: 'Deine Wahrnehmung bestimmt deine Realität. - Qui-Gon Jinn',
-    en: 'Your focus determines your reality. - Qui-Gon Jinn',
   },
   url: 'gamer_430x700.jpg',
 };
 
-const traitExplorer: Trait = {
-  id: 2,
-  titleI18n: {
+const testimonialExplorer: Testimonial = {
+  id: testimonialId++,
+  staticId: 'explorer',
+  quoteI18n: {
+    de: 'Ich bin weltoffen, probiere gerne neue Dinge aus, schätze die Herausforderung, agiere auch gerne mal außerhalb meiner Komfortzone und erfinde mich damit immer wieder neu.',
+    en: 'Lorem Ipsum',
+  },
+  quotedPerson: 'Heiko Beineke',
+  quotedPersonPositionI18n: {
     de: 'Entdecker',
     en: 'Explorer',
-  },
-  quoteI18n: {
-    de: 'Ich habe keine besondere Begabung, sondern bin nur leidenschaftlich neugierig. - Albert Einstein',
-    en: 'I have no special talent. I am only passionately curious. - Albert Einstein',
   },
   url: 'explorer_430x700.jpg',
 };
 
-const traitAccomplisher: Trait = {
-  id: 3,
-  titleI18n: {
+const testimonialAccomplisher: Testimonial = {
+  id: testimonialId++,
+  staticId: 'accomplisher',
+  quoteI18n: {
+    de: 'Ich schaffe digitale Mehrwerte, löse knifflige Probleme, treibe lang ersehnten Fortschritt voran, entwickle Produkte die begeistern und helfe damit Menschen einfach großartiger zu sein.',
+    en: 'Lorem Ipsum',
+  },
+  quotedPerson: 'Heiko Beineke',
+  quotedPersonPositionI18n: {
     de: 'Verwirklicher',
     en: 'Accomplisher',
   },
-  quoteI18n: {
-    de: 'Wer immer tut, was er schon kann, bleibt immer das, was er schon ist. - Henry Ford',
-    en: 'If you always do what you’ve always done, you’ll always get what you’ve always got. - Henry Ford',
-  },
   url: 'accomplisher_430x700.jpg',
 };
-talent.traits = [traitGamer, traitExplorer, traitAccomplisher];
+talent.testimonials = [testimonialGamer, testimonialExplorer, testimonialAccomplisher];
 
 // linkables
 const linkGithub: Linkable = {

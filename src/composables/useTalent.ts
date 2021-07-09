@@ -3,7 +3,7 @@ import { schema } from 'normalizr';
 import useState from '@/composables/useState';
 import talentsJson from '@/db/talents';
 import useAddressable from '@/composables/useAddressable';
-import useTrait from '@/composables/useTrait';
+import useTestimonial from '@/composables/useTestimonial';
 import useFeature from '@/composables/useFeature';
 import useLinkable from '@/composables/useLinkable';
 import useStage from '@/composables/useStage';
@@ -12,7 +12,7 @@ const {
   normalizeAndAssignData, allResources, findResource,
 } = useState();
 const { addressableSchema } = useAddressable();
-const { traitSchema } = useTrait();
+const { testimonialSchema } = useTestimonial();
 const { featureSchema } = useFeature();
 const { linkableSchema } = useLinkable();
 const { stageSchema } = useStage();
@@ -23,7 +23,7 @@ const resourceName = 'talents';
 // schema
 const talentSchema = new schema.Entity(resourceName, {
   addressable: addressableSchema,
-  traits: [traitSchema],
+  testimonials: [testimonialSchema],
   features: [featureSchema],
   linkables: [linkableSchema],
   stages: [stageSchema],

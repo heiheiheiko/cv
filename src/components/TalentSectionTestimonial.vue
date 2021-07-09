@@ -13,9 +13,13 @@
           >
             <img
               class="object-cover lg:h-full lg:w-full"
-              src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+              src="https://via.placeholder.com/2100x1400/14b8a6/FFFFFF?Text=Down.com"
               alt=""
             >
+            <!-- <img
+              class="object-cover lg:h-full lg:w-full"
+              :src="getImgUrl('accomplisher_430x700.jpg')"
+            > -->
           </div>
         </div>
       </div>
@@ -39,16 +43,15 @@
                 />
               </svg>
               <p class="mt-6 text-2xl font-medium text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae
-                laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+                {{ translateI18nField(testimonial.quoteI18n) }}
               </p>
             </div>
             <footer class="mt-6">
               <p class="text-base font-medium text-white">
-                Judith Black
+                {{ testimonial.quotedPerson }}
               </p>
               <p class="text-base font-medium text-cyan-100">
-                CEO at PureInsights
+                {{ translateI18nField(testimonial.quotedPersonPositionI18n) }}
               </p>
             </footer>
           </blockquote>
@@ -57,3 +60,30 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
+
+import { defineComponent } from 'vue';
+import { translateI18nField } from '@/utils/i18nUtils';
+
+// function getImgUrl(image:string) {
+//   return require(`../assets/images/${image}`);
+// }
+
+export default defineComponent({
+  props: {
+    testimonial: {
+      type: Object,
+      required: true,
+    },
+  },
+  setup() {
+    return {
+      // getImgUrl,
+      translateI18nField,
+    };
+  },
+});
+</script>

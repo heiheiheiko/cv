@@ -16,10 +16,12 @@ interface Addressable{
   parentType: string,
 }
 
-interface Trait{
+interface Testimonial{
   id: number,
-  titleI18n: I18nField,
+  staticId: string,
   quoteI18n: I18nField,
+  quotedPerson: string,
+  quotedPersonPositionI18n: I18nField,
   url: string,
 }
 
@@ -103,13 +105,13 @@ interface Talent {
   sloganI18n: I18nField,
   sloganLongI18n: I18nField,
   addressable?: Addressable
-  traits?: Array<Trait>,
+  testimonials?: Array<Testimonial>,
   linkables?: Array<Linkable>
   stages?: Array<Stage>
   features?: Array<Feature>
 }
 
 export {
-  I18nField, Talent, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
+  I18nField, Talent, Addressable, Testimonial, Linkable, Skill, SkillTypes, Stage,
   StageTypes, StageSkill, PositionEnum, EmploymentEnum, Feature,
 };

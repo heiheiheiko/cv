@@ -6,7 +6,7 @@
       <main>
         <TalentSectionHero :talent="talent" />
         <TalentSectionFeature :features="talentFeatures" />
-        <TalentSectionTestimonial />
+        <TalentSectionTestimonial :testimonial="gamerTestimonial" />
       </main>
       <TalentFooter />
     </div>
@@ -21,6 +21,7 @@ import TalentSectionFeature from '@/components/TalentSectionFeature.vue';
 import TalentSectionTestimonial from '@/components/TalentSectionTestimonial.vue';
 import TalentFooter from '@/components/TalentFooter.vue';
 import useFeature from '@/composables/useFeature';
+import useTestimonial from '@/composables/useTestimonial';
 
 export default defineComponent({
   components: {
@@ -38,9 +39,11 @@ export default defineComponent({
   },
   setup(props) {
     const { findFeatures } = useFeature();
+    const { findTestimonialByStaticId } = useTestimonial();
 
     const talentFeatures = findFeatures(props.talent.features);
-    return { talentFeatures };
+    const gamerTestimonial = findTestimonialByStaticId('gamer');
+    return { talentFeatures, gamerTestimonial };
   },
 });
 </script>
