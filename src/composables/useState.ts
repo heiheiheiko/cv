@@ -33,7 +33,27 @@ export default function useState() {
     return ids.map((id) => state[resourceName][id] || null);
   };
 
+  const findResourceByAttribute = (
+    resourceName: string,
+    attributeKey:
+    string, attributeValue: string|number,
+  ) => {
+    if (state[resourceName] === undefined) { return {}; }
+
+    return Object.values(state[resourceName]).find((resource: any) => {
+      // stops eslint rule
+      const resourceAttributeKey = resource[attributeKey];
+      return resourceAttributeKey === attributeValue;
+    });
+  };
+
   return {
-    state, computedState, normalizeAndAssignData, allResources, findResource, findResources,
+    state,
+    computedState,
+    normalizeAndAssignData,
+    allResources,
+    findResource,
+    findResources,
+    findResourceByAttribute,
   };
 }
