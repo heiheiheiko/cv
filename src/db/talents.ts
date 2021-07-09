@@ -1,11 +1,11 @@
 /* eslint-disable no-plusplus */
 
 import {
-  Talent, Addressable, Trait, Linkable, Statement,
+  Talent, Addressable, Trait, Linkable, Feature,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
-let statementId = 1;
+let featureId = 1;
 const parentType = 'talent';
 
 // talent
@@ -121,9 +121,9 @@ const linkHomepage: Linkable = {
 };
 talent.linkables = [linkGithub, linkXing, linkHomepage];
 
-// staements
-const statementAgile: Statement = {
-  id: statementId++,
+// features
+const featureAgile: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Agile Enthusiast',
     en: 'Agile Enthusiast',
@@ -135,8 +135,8 @@ const statementAgile: Statement = {
   icon: 'sync',
 };
 
-const statementDog: Statement = {
-  id: statementId++,
+const featureDog: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Rudelführer',
     en: 'Pack leader',
@@ -148,8 +148,8 @@ const statementDog: Statement = {
   icon: 'dog',
 };
 
-const statementRemote: Statement = {
-  id: statementId++,
+const featureRemote: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Remote Work',
     en: 'Remote Work',
@@ -161,8 +161,8 @@ const statementRemote: Statement = {
   icon: 'home',
 };
 
-const statementRespect: Statement = {
-  id: statementId++,
+const featureRespect: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Respektvolles Miteinander',
     en: 'Respectful togetherness',
@@ -174,8 +174,8 @@ const statementRespect: Statement = {
   icon: 'people-arrows',
 };
 
-const statementCommunication: Statement = {
-  id: statementId++,
+const featureCommunication: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Offene Kommunikation',
     en: 'Open communication',
@@ -187,8 +187,8 @@ const statementCommunication: Statement = {
   icon: 'comments',
 };
 
-const statementVision: Statement = {
-  id: statementId++,
+const featureVision: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Produktvision',
     en: 'Product vision',
@@ -200,8 +200,8 @@ const statementVision: Statement = {
   icon: 'space-shuttle',
 };
 
-const statementForward: Statement = {
-  id: statementId++,
+const featureForward: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Dinge vorantreiben',
     en: 'Moving things forward',
@@ -213,8 +213,8 @@ const statementForward: Statement = {
   icon: 'cogs',
 };
 
-const statementPassion: Statement = {
-  id: statementId++,
+const featurePassion: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Leidenschaft',
     en: 'Passion',
@@ -226,8 +226,8 @@ const statementPassion: Statement = {
   icon: 'user-astronaut',
 };
 
-const statementFun: Statement = {
-  id: statementId++,
+const featureFun: Feature = {
+  id: featureId++,
   titleI18n: {
     de: 'Why so serious?',
     en: 'Why so serious?',
@@ -239,10 +239,10 @@ const statementFun: Statement = {
   icon: 'dice',
 };
 
-talent.statements = [
-  statementAgile, statementDog, statementRemote,
-  statementRespect, statementCommunication, statementVision,
-  statementForward, statementPassion, statementFun,
+talent.features = [
+  featureAgile, featureDog, featureRemote,
+  featureRespect, featureCommunication, featureVision,
+  featureForward, featurePassion, featureFun,
 ];
 
 talent.stages = stages;

@@ -15,15 +15,15 @@
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <BaseCardFeature
-            v-for="statement in statements"
-            :key="statement.id"
+            v-for="feature in features"
+            :key="feature.id"
           >
-            <BaseCardFeatureIcon :icon="statement.icon" />
+            <BaseCardFeatureIcon :icon="feature.icon" />
             <BaseCardFeatureTitle>
-              {{ translateI18nField(statement.titleI18n) }}
+              {{ translateI18nField(feature.titleI18n) }}
             </BaseCardFeatureTitle>
             <BaseCardFeatureDescription>
-              {{ translateI18nField(statement.descriptionI18n) }}
+              {{ translateI18nField(feature.descriptionI18n) }}
             </BaseCardFeatureDescription>
           </BaseCardFeature>
         </div>
@@ -55,7 +55,7 @@ export default defineComponent({
     BaseCardFeatureDescription,
   },
   props: {
-    statements: {
+    features: {
       type: Array,
       required: true,
     },

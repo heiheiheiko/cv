@@ -5,7 +5,7 @@
       <TalentNavigation />
       <main>
         <TalentSectionHero :talent="talent" />
-        <TalentSectionStatement :statements="talentStatements" />
+        <TalentSectionFeature :features="talentFeatures" />
         <TalentSectionTestimonial />
       </main>
       <TalentFooter />
@@ -17,16 +17,16 @@
 import { defineComponent } from 'vue';
 import TalentNavigation from '@/components/TalentNavigation.vue';
 import TalentSectionHero from '@/components/TalentSectionHero.vue';
-import TalentSectionStatement from '@/components/TalentSectionStatement.vue';
+import TalentSectionFeature from '@/components/TalentSectionFeature.vue';
 import TalentSectionTestimonial from '@/components/TalentSectionTestimonial.vue';
 import TalentFooter from '@/components/TalentFooter.vue';
-import useStatment from '@/composables/useStatement';
+import useFeature from '@/composables/useFeature';
 
 export default defineComponent({
   components: {
     TalentNavigation,
     TalentSectionHero,
-    TalentSectionStatement,
+    TalentSectionFeature,
     TalentSectionTestimonial,
     TalentFooter,
   },
@@ -37,10 +37,10 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { findStatements } = useStatment();
+    const { findFeatures } = useFeature();
 
-    const talentStatements = findStatements(props.talent.statements);
-    return { talentStatements };
+    const talentFeatures = findFeatures(props.talent.features);
+    return { talentFeatures };
   },
 });
 </script>

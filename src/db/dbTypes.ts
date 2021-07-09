@@ -85,7 +85,7 @@ interface Stage{
   stageSkills?: Array<StageSkill>
 }
 
-interface Statement{
+interface Feature{
   id: number,
   titleI18n: I18nField,
   descriptionI18n?: I18nField,
@@ -106,10 +106,10 @@ interface Talent {
   traits?: Array<Trait>,
   linkables?: Array<Linkable>
   stages?: Array<Stage>
-  statements?: Array<Statement>
+  features?: Array<Feature>
 }
 
 export {
   I18nField, Talent, Addressable, Trait, Linkable, Skill, SkillTypes, Stage,
-  StageTypes, StageSkill, PositionEnum, EmploymentEnum, Statement,
+  StageTypes, StageSkill, PositionEnum, EmploymentEnum, Feature,
 };

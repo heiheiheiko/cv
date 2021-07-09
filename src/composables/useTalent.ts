@@ -4,7 +4,7 @@ import useState from '@/composables/useState';
 import talentsJson from '@/db/talents';
 import useAddressable from '@/composables/useAddressable';
 import useTrait from '@/composables/useTrait';
-import useStatement from '@/composables/useStatement';
+import useFeature from '@/composables/useFeature';
 import useLinkable from '@/composables/useLinkable';
 import useStage from '@/composables/useStage';
 
@@ -13,7 +13,7 @@ const {
 } = useState();
 const { addressableSchema } = useAddressable();
 const { traitSchema } = useTrait();
-const { statementSchema } = useStatement();
+const { featureSchema } = useFeature();
 const { linkableSchema } = useLinkable();
 const { stageSchema } = useStage();
 
@@ -24,7 +24,7 @@ const resourceName = 'talents';
 const talentSchema = new schema.Entity(resourceName, {
   addressable: addressableSchema,
   traits: [traitSchema],
-  statements: [statementSchema],
+  features: [featureSchema],
   linkables: [linkableSchema],
   stages: [stageSchema],
 });
