@@ -59,7 +59,7 @@ enum StageTypes {
 }
 
 enum EmploymentEnum {
-  employee = 'EMPLOYEE ',
+  employee = 'EMPLOYEE',
   studentAssistant = 'STUDENT_ASSISTANT',
   intern = 'INTERN',
   bachelor = 'BACHELOR'
@@ -80,7 +80,7 @@ interface Stage{
   employment?: EmploymentEnum,
   startedAt: Date,
   endedAt: Date | null,
-  badge: string
+  icon: string
   graduationI18n?: I18nField
   addressable?: Addressable,
   linkable?: Linkable,

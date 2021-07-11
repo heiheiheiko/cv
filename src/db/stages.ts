@@ -23,7 +23,7 @@ export default [
     type: StageTypes.highlight,
     startedAt: new Date('1986-07-18'),
     endedAt: null,
-    badge: 'birthday-cake',
+    icon: 'birthday-cake',
     addressable: {
       id: addressableId++,
       zip: '48653',
@@ -45,9 +45,9 @@ export default [
       de: 'Fachoberschulreife',
       en: 'Vocational extension certificate',
     },
-    started_at: new Date('1997-08-01'),
-    ended_at: new Date('2003-07-01'),
-    badge: 'book',
+    startedAt: new Date('1997-08-01'),
+    endedAt: new Date('2003-07-01'),
+    icon: 'book',
     addressable: {
       id: addressableId++,
       addressee: 'KVG Gesamtschule Nordwalde',
@@ -83,9 +83,9 @@ export default [
       de: 'Fachhochschulreife (Wirtschaft)',
       en: 'Advanced college certificate (Commercial)',
     },
-    started_at: new Date('2003-08-01'),
-    ended_at: new Date('2005-06-01'),
-    badge: 'book',
+    startedAt: new Date('2003-08-01'),
+    endedAt: new Date('2005-06-01'),
+    icon: 'book',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -132,9 +132,9 @@ export default [
       en: 'Met the love of my life',
     },
     type: StageTypes.education,
-    started_at: new Date('2004-02-22'),
-    ended_at: null,
-    badge: 'heart',
+    startedAt: new Date('2004-02-22'),
+    endedAt: null,
+    icon: 'heart',
   },
 
   // Führerschein
@@ -145,9 +145,9 @@ export default [
       en: 'Driving licence',
     },
     type: StageTypes.education,
-    started_at: new Date('2006-10-01'),
-    ended_at: null,
-    badge: 'car',
+    startedAt: new Date('2006-10-01'),
+    endedAt: null,
+    icon: 'car',
   },
 
   // Technische Schulen des Kreises Steinfurt
@@ -166,9 +166,9 @@ export default [
       de: 'Fachhochschulreife (Informatik)',
       en: 'Advanced college certificate (IT)',
     },
-    started_at: new Date('2005-08-01'),
-    ended_at: new Date('2008-07-01'),
-    badge: 'book',
+    startedAt: new Date('2005-08-01'),
+    endedAt: new Date('2008-07-01'),
+    icon: 'book',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -284,9 +284,9 @@ export default [
       en: 'Martin Oelrich GmbH & Co. KG (Car washer);Emsdettener Fahrradkurier (Mail carrier);Movie and More - Video library (Seller);Organic farm (Utility man);Hermes Logistik Gruppe Deutschland (Parcel delivery);crashtest-service.com GmbH (Data preparation)',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2002-03-01'),
-    ended_at: new Date('2009-09-01'),
-    badge: 'money-bill-alt',
+    startedAt: new Date('2002-03-01'),
+    endedAt: new Date('2009-09-01'),
+    icon: 'money-bill-alt',
   },
 
   // Fachhochschule Münster (Steinfurt)
@@ -297,9 +297,9 @@ export default [
       en: 'Applied computer science',
     },
     type: StageTypes.education,
-    started_at: new Date('2008-10-01'),
-    ended_at: new Date('20010-07-01'),
-    badge: 'graduation-cap',
+    startedAt: new Date('2008-10-01'),
+    endedAt: new Date('20010-07-01'),
+    icon: 'graduation-cap',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -392,9 +392,9 @@ export default [
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2010-12-01'),
-    ended_at: new Date('2011-02-01'),
-    badge: 'code',
+    startedAt: new Date('2010-12-01'),
+    endedAt: new Date('2011-02-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -482,9 +482,9 @@ export default [
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2009-04-01'),
-    ended_at: new Date('2011-07-01'),
-    badge: 'code',
+    startedAt: new Date('2009-04-01'),
+    endedAt: new Date('2011-07-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -566,9 +566,9 @@ export default [
       en: 'First shared apartment',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2011-04-22'),
-    ended_at: new Date('2014-09-22'),
-    badge: 'home',
+    startedAt: new Date('2011-04-22'),
+    endedAt: new Date('2014-09-22'),
+    icon: 'home',
     addressable: {
       id: addressableId++,
       street: 'Theodor-Heuss-Str. 8',
@@ -593,9 +593,9 @@ export default [
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2012-01-01'),
-    ended_at: new Date('2012-07-01'),
-    badge: 'code',
+    startedAt: new Date('2012-01-01'),
+    endedAt: new Date('2012-07-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -693,9 +693,9 @@ export default [
     employment: EmploymentEnum.intern,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2012-07-01'),
-    ended_at: new Date('2012-09-01'),
-    badge: 'code',
+    startedAt: new Date('2012-07-01'),
+    endedAt: new Date('2012-09-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -892,9 +892,9 @@ export default [
       en: 'Married the love of my life',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2013-02-22'),
-    ended_at: null,
-    badge: 'heart',
+    startedAt: new Date('2013-02-22'),
+    endedAt: null,
+    icon: 'heart',
   },
 
   // Compeon
@@ -911,9 +911,9 @@ export default [
     employment: EmploymentEnum.bachelor,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2013-03-01'),
-    ended_at: new Date('2013-09-01'),
-    badge: 'code',
+    startedAt: new Date('2013-03-01'),
+    endedAt: new Date('2013-09-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -1144,9 +1144,9 @@ export default [
       en: 'Bachelor of science',
     },
     type: StageTypes.education,
-    started_at: new Date('2010-10-01'),
-    ended_at: new Date('2013-09-01'),
-    badge: 'graduation-cap',
+    startedAt: new Date('2010-10-01'),
+    endedAt: new Date('2013-09-01'),
+    icon: 'graduation-cap',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -1384,9 +1384,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.juniorSoftwareDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2013-12-01'),
-    ended_at: new Date('2014-06-01'),
-    badge: 'code',
+    startedAt: new Date('2013-12-01'),
+    endedAt: new Date('2014-06-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -1655,9 +1655,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2014-06-01'),
-    ended_at: new Date('2014-09-01'),
-    badge: 'code',
+    startedAt: new Date('2014-06-01'),
+    endedAt: new Date('2014-09-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -1784,9 +1784,9 @@ export default [
       en: 'Moving to a larger apartment',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2014-10-22'),
-    ended_at: null,
-    badge: 'home',
+    startedAt: new Date('2014-10-22'),
+    endedAt: null,
+    icon: 'home',
     addressable: {
       id: addressableId++,
       street: 'Weststr. 1',
@@ -1805,9 +1805,9 @@ export default [
       en: 'Kung Fu training',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2010-04-22'),
-    ended_at: new Date('2015-07-22'),
-    badge: 'hand-rock',
+    startedAt: new Date('2010-04-22'),
+    endedAt: new Date('2015-07-22'),
+    icon: 'hand-rock',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -1841,9 +1841,9 @@ export default [
       en: '8 days, 150 km, 2 federal states, 1 damaged knee, 1 damaged ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2016-07-30'),
-    ended_at: new Date('2016-08-07'),
-    badge: 'hiking',
+    startedAt: new Date('2016-07-30'),
+    endedAt: new Date('2016-08-07'),
+    icon: 'hiking',
   },
 
   // Fuchs 2
@@ -1860,9 +1860,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.softwareDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2014-10-01'),
-    ended_at: new Date('2016-10-31'),
-    badge: 'code',
+    startedAt: new Date('2014-10-01'),
+    endedAt: new Date('2016-10-31'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -2124,9 +2124,9 @@ export default [
       en: 'Proud dog daddy of Geoffrey',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2004-10-16'),
-    ended_at: new Date('2018-09-18'),
-    badge: 'dog',
+    startedAt: new Date('2004-10-16'),
+    endedAt: new Date('2018-09-18'),
+    icon: 'dog',
   },
 
   // Hermannsweg
@@ -2141,9 +2141,9 @@ export default [
       en: '5 days, 100 km, no injuries and some unexpected acquaintances',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2018-07-29'),
-    ended_at: new Date('2018-08-03'),
-    badge: 'hiking',
+    startedAt: new Date('2018-07-29'),
+    endedAt: new Date('2018-08-03'),
+    icon: 'hiking',
   },
 
   // IDB
@@ -2160,9 +2160,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2016-11-01'),
-    ended_at: new Date('2019-01-01'),
-    badge: 'code',
+    startedAt: new Date('2016-11-01'),
+    endedAt: new Date('2019-01-01'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -2178,7 +2178,7 @@ export default [
       addressee: 'InfluencerDB Tech GmbH & Co. KG',
       street: 'Im Mediapark 4D',
       zip: '50670',
-      city: 'Köln',
+      city: 'Münster/Köln',
       parentId: stageId - 1,
       parentType,
     } as Addressable,
@@ -2399,9 +2399,9 @@ export default [
       en: 'Proud dog daddy of Rumo',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2019-01-06'),
-    ended_at: null,
-    badge: 'dog',
+    startedAt: new Date('2019-01-06'),
+    endedAt: null,
+    icon: 'dog',
   },
 
   // Kung Fu I
@@ -2412,9 +2412,9 @@ export default [
       en: 'Kung Fu training resumed',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2020-01-15'),
-    ended_at: null,
-    badge: 'hand-rock',
+    startedAt: new Date('2020-01-15'),
+    endedAt: null,
+    icon: 'hand-rock',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -2450,9 +2450,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2019-06-01'),
-    ended_at: new Date('2020-06-30'),
-    badge: 'code',
+    startedAt: new Date('2019-06-01'),
+    endedAt: new Date('2020-06-30'),
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -2654,9 +2654,9 @@ export default [
       en: 'Proud dog daddy of Rala',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2020-03-14'),
-    ended_at: null,
-    badge: 'dog',
+    startedAt: new Date('2020-03-14'),
+    endedAt: null,
+    icon: 'dog',
   },
 
   // adcommander
@@ -2673,9 +2673,9 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    started_at: new Date('2019-07-01'),
-    ended_at: null,
-    badge: 'code',
+    startedAt: new Date('2019-07-01'),
+    endedAt: null,
+    icon: 'code',
     linkable: {
       id: linkableId++,
       titleI18n: {
@@ -2902,9 +2902,9 @@ export default [
       en: 'The dream of owning a home made true',
     },
     type: StageTypes.highlight,
-    started_at: new Date('2021-03-30'),
-    ended_at: null,
-    badge: 'home',
+    startedAt: new Date('2021-03-30'),
+    endedAt: null,
+    icon: 'home',
     addressable: {
       id: addressableId++,
       street: 'Alaunstraße 2',
