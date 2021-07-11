@@ -14,7 +14,23 @@ function loadLocaleMessages(): LocaleMessages<VueMessageType> {
   return messages;
 }
 
+const datetimeFormats = {
+  de: {
+    short: {
+      year: 'numeric',
+      month: 'short',
+    },
+  },
+  en: {
+    short: {
+      year: 'numeric',
+      month: 'short',
+    },
+  },
+};
+
 export default createI18n({
+  datetimeFormats,
   legacy: false,
   locale: process.env.VUE_APP_I18N_LOCALE || 'en',
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',

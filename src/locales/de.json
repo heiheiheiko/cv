@@ -1,3 +1,9 @@
 {
-  "message": "hallo i18n !!"
+  "general": {
+    "and" : "und"
+  },
+  "datetime": {
+    "year":  "Jahr | Jahre",
+    "month":  "Monat | Monate"
+  }
 }

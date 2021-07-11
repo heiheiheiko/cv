@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSync, faDog, faHome, faPeopleArrows, faComments, faSpaceShuttle,
-  faCogs, faUserAstronaut, faDice,
+  faCogs, faUserAstronaut, faDice, faCode,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
@@ -20,6 +20,7 @@ library.add(faSpaceShuttle);
 library.add(faCogs);
 library.add(faUserAstronaut);
 library.add(faDice);
+library.add(faCode);
 
 const app = createApp(App).use(i18n).use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);
