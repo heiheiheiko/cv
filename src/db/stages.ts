@@ -1,16 +1,49 @@
 /* eslint-disable no-plusplus */
 import {
-  Addressable,
   Stage, StageTypes, StageSkill, PositionEnum, EmploymentEnum,
+  Organization, OrganizationSizeEnum, BranchEnum,
 } from '@/db/dbTypes';
 import skills from '@/db/skills';
 import { findOrFail } from '@/utils/ArrayUtils';
 
-const parentType = 'Stage';
 let stageId = 1;
-let addressableId = 2;
 let stageSkillId = 1;
-let linkableId = 4;
+let organizationId = 1;
+
+// organizations
+const orgaFhMsWi = {
+  id: organizationId++,
+  staticId: 'fh-ms-wi',
+  name: 'Fachhochschule Münster',
+  street: 'Corrensstraße 25',
+  zip: '48149',
+  city: 'Münster',
+  website: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php',
+  organizationSize: OrganizationSizeEnum.between501And1000,
+  branch: BranchEnum.education,
+} as Organization;
+
+const orgaFuchs = {
+  id: organizationId++,
+  staticId: 'fuchs',
+  name: 'Fuchs Gewürze GmbH',
+  street: 'Industriestraße 25',
+  zip: '49201',
+  city: 'Dissen a.T.W.',
+  website: 'http://www.fuchs.de//',
+  organizationSize: OrganizationSizeEnum.between1001To5000,
+  branch: BranchEnum.food,
+} as Organization;
+
+const orgaTvb = {
+  id: organizationId++,
+  staticId: 'tvb',
+  name: 'TV Borghorst',
+  street: 'Winkelstraße 22',
+  zip: '48565',
+  city: 'Steinfurt',
+  website: 'http://www.tv-borghorst.de/',
+} as Organization;
 
 export default [
   // Geburtstag
@@ -24,13 +57,6 @@ export default [
     startedAt: new Date('1986-07-18'),
     endedAt: null,
     icon: 'birthday-cake',
-    addressable: {
-      id: addressableId++,
-      zip: '48653',
-      city: 'Coesfeld',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
   },
 
   // KVG Gesamtschule Nordwalde
@@ -48,15 +74,15 @@ export default [
     startedAt: new Date('1997-08-01'),
     endedAt: new Date('2003-07-01'),
     icon: 'book',
-    addressable: {
-      id: addressableId++,
-      addressee: 'KVG Gesamtschule Nordwalde',
+    organization: {
+      id: organizationId++,
+      staticId: 'kvg',
+      name: 'KVG Gesamtschule Nordwalde',
       street: 'Amtmann-Daniel-Straße 30',
       zip: '48356',
       city: 'Nordwalde',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://kvgn.de/',
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -86,25 +112,15 @@ export default [
     startedAt: new Date('2003-08-01'),
     endedAt: new Date('2005-06-01'),
     icon: 'book',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Hermann-Emanuel-Berufskolleg',
-        en: 'Hermann-Emanuel-Berufskolleg',
-      },
-      url: 'https://hermann-emanuel-berufskolleg.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Hermann-Emanuel-Berufskolleg',
+    organization: {
+      id: organizationId++,
+      staticId: 'hermann',
+      name: 'Hermann-Emanuel-Berufskolleg',
       street: 'Bahnhofstraße 28',
       zip: '48565',
       city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://hermann-emanuel-berufskolleg.de/',
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -169,25 +185,15 @@ export default [
     startedAt: new Date('2005-08-01'),
     endedAt: new Date('2008-07-01'),
     icon: 'book',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Technische Schulen des Kreises Steinfurt',
-        en: 'Technische Schulen des Kreises Steinfurt',
-      },
-      url: 'https://www.tssteinfurt.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Technische Schulen des Kreises Steinfurt',
+    organization: {
+      id: organizationId++,
+      staticId: 'tsst',
+      name: 'Technische Schulen des Kreises Steinfurt',
       street: 'Liedekerker Str. 84',
       zip: '48565',
       city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.tssteinfurt.de/',
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -300,25 +306,15 @@ export default [
     startedAt: new Date('2008-10-01'),
     endedAt: new Date('20010-07-01'),
     icon: 'graduation-cap',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fachhochschule Münster',
-        en: 'Fachhochschule Münster',
-      },
-      url: 'https://www.fh-muenster.de/fb2/index.php',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fachhochschule Münster',
+    organization: {
+      id: organizationId++,
+      staticId: 'fh-ms-fb2',
+      name: 'Fachhochschule Münster',
       street: 'Bismarckstraße 11',
       zip: '48565',
       city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.fh-muenster.de/fb2/index.php',
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -395,25 +391,17 @@ export default [
     startedAt: new Date('2010-12-01'),
     endedAt: new Date('2011-02-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fachhochschule Münster',
-        en: 'Fachhochschule Münster',
-      },
-      url: 'https://www.fh-muenster.de/fb9/index.php',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fachhochschule Münster',
+    organization: {
+      id: organizationId++,
+      staticId: 'fh-ms-fb9',
+      name: 'Fachhochschule Münster',
       street: 'Corrensstraße 25',
       zip: '48149',
       city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.fh-muenster.de/fb9/index.php',
+      organizationSize: OrganizationSizeEnum.between501And1000,
+      branch: BranchEnum.education,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -485,25 +473,17 @@ export default [
     startedAt: new Date('2009-04-01'),
     endedAt: new Date('2011-07-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'zeb',
-        en: 'zeb',
-      },
-      url: 'http://www.zeb.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'zeb/rolfes.schierenbeck.associates GmbH',
+    organization: {
+      id: organizationId++,
+      staticId: 'zeb',
+      name: 'zeb/rolfes.schierenbeck.associates GmbH',
       street: 'Hammer Str. 165',
       zip: '48153',
       city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'http://www.zeb.de/',
+      organizationSize: OrganizationSizeEnum.between501And1000,
+      branch: BranchEnum.finance,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -569,14 +549,6 @@ export default [
     startedAt: new Date('2011-04-22'),
     endedAt: new Date('2014-09-22'),
     icon: 'home',
-    addressable: {
-      id: addressableId++,
-      street: 'Theodor-Heuss-Str. 8',
-      zip: '48341',
-      city: 'Altenberge',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
   },
 
   // gloud GmbH
@@ -596,25 +568,13 @@ export default [
     startedAt: new Date('2012-01-01'),
     endedAt: new Date('2012-07-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'gloud',
-        en: 'gloud',
-      },
-      url: 'http://www.gloud.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'gloud GmbH',
-      street: 'Hafenstraße 29- 31',
-      zip: '48153',
-      city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: {
+      id: organizationId++,
+      staticId: 'gloud',
+      name: 'gloud GmbH',
+      organizationSize: OrganizationSizeEnum.between1And10,
+      branch: BranchEnum.cloud,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -696,25 +656,7 @@ export default [
     startedAt: new Date('2012-07-01'),
     endedAt: new Date('2012-09-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fachhochschule Münster',
-        en: 'Fachhochschule Münster',
-      },
-      url: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fachhochschule Münster',
-      street: 'Corrensstraße 25',
-      zip: '48149',
-      city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaFhMsWi,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -914,25 +856,17 @@ export default [
     startedAt: new Date('2013-03-01'),
     endedAt: new Date('2013-09-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'COMPEON',
-        en: 'COMPEON',
-      },
-      url: 'https://www.compeon.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'COMPEON GmbH',
+    organization: {
+      id: organizationId++,
+      staticId: 'compeon',
+      name: 'COMPEON GmbH',
       street: 'Am Wehrhahn 100',
       zip: '40211',
       city: 'Düsseldorf',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.compeon.de/',
+      organizationSize: OrganizationSizeEnum.between501And1000,
+      branch: BranchEnum.finance,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1147,25 +1081,7 @@ export default [
     startedAt: new Date('2010-10-01'),
     endedAt: new Date('2013-09-01'),
     icon: 'graduation-cap',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fachhochschule Münster',
-        en: 'Fachhochschule Münster',
-      },
-      url: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fachhochschule Münster',
-      street: 'Corrensstraße 25',
-      zip: '48149',
-      city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaFhMsWi,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1387,25 +1303,7 @@ export default [
     startedAt: new Date('2013-12-01'),
     endedAt: new Date('2014-06-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fuchs Gewürze',
-        en: 'Fuchs Gewürze',
-      },
-      url: 'http://www.fuchs.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fuchs Gewürze GmbH',
-      street: 'Industriestraße 25',
-      zip: '49201',
-      city: 'Dissen a.T.W.',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaFuchs,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1658,25 +1556,17 @@ export default [
     startedAt: new Date('2014-06-01'),
     endedAt: new Date('2014-09-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'deltacity',
-        en: 'deltacity',
-      },
-      url: 'http://www.deltacity.net',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'deltacityNET Gesellschaft für multimediale Kommunikation mbH & Co. KG',
+    organization: {
+      id: organizationId++,
+      staticId: 'deltacity',
+      name: 'deltacityNET Gesellschaft für multimediale Kommunikation mbH & Co. KG',
       street: 'Am Biederlackturm 2',
       zip: '48282',
       city: 'Emsdetten',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'http://www.deltacity.net',
+      organizationSize: OrganizationSizeEnum.between11And50,
+      branch: BranchEnum.agency,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1787,14 +1677,6 @@ export default [
     startedAt: new Date('2014-10-22'),
     endedAt: null,
     icon: 'home',
-    addressable: {
-      id: addressableId++,
-      street: 'Weststr. 1',
-      zip: '48565',
-      city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
   },
 
   // Kung Fu I
@@ -1808,25 +1690,7 @@ export default [
     startedAt: new Date('2010-04-22'),
     endedAt: new Date('2015-07-22'),
     icon: 'hand-rock',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'TV Borghorst',
-        en: 'TV Borghorst',
-      },
-      url: 'http://www.tv-borghorst.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'TV Borghorst 1884 e.V.',
-      street: 'Winkelstraße 22',
-      zip: '48565',
-      city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaTvb,
   },
 
   // Hermannsweg
@@ -1863,25 +1727,7 @@ export default [
     startedAt: new Date('2014-10-01'),
     endedAt: new Date('2016-10-31'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'Fuchs Gewürze',
-        en: 'Fuchs Gewürze',
-      },
-      url: 'http://www.fuchs.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'Fuchs Gewürze GmbH',
-      street: 'Industriestraße 25',
-      zip: '49201',
-      city: 'Dissen a.T.W.',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaFuchs,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2163,25 +2009,13 @@ export default [
     startedAt: new Date('2016-11-01'),
     endedAt: new Date('2019-01-01'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'InfluencerDB',
-        en: 'InfluencerDB',
-      },
-      url: 'https://influencerdb.com/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'InfluencerDB Tech GmbH & Co. KG',
-      street: 'Im Mediapark 4D',
-      zip: '50670',
-      city: 'Münster/Köln',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: {
+      id: organizationId++,
+      staticId: 'idb',
+      name: 'InfluencerDB Tech GmbH & Co. KG',
+      organizationSize: OrganizationSizeEnum.between11And50,
+      branch: BranchEnum.marketing,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2415,25 +2249,7 @@ export default [
     startedAt: new Date('2020-01-15'),
     endedAt: null,
     icon: 'hand-rock',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'TV Borghorst',
-        en: 'TV Borghorst',
-      },
-      url: 'http://www.tv-borghorst.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'TV Borghorst 1884 e.V.',
-      street: 'Winkelstraße 22',
-      zip: '48565',
-      city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+    organization: orgaTvb,
   },
 
   // CROWDCODE
@@ -2453,25 +2269,17 @@ export default [
     startedAt: new Date('2019-06-01'),
     endedAt: new Date('2020-06-30'),
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'CROWDCODE',
-        en: 'CROWDCODE',
-      },
-      url: 'https://www.crowdcode.io/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'CROWDCODE GmbH & Co. KG',
+    organization: {
+      id: organizationId++,
+      staticId: 'crowdcode',
+      name: 'CROWDCODE GmbH & Co. KG',
       street: 'Am Mittelhafen 16',
       zip: '48155',
       city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.crowdcode.io/',
+      organizationSize: OrganizationSizeEnum.between1And10,
+      branch: BranchEnum.agency,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2676,25 +2484,17 @@ export default [
     startedAt: new Date('2019-07-01'),
     endedAt: null,
     icon: 'code',
-    linkable: {
-      id: linkableId++,
-      titleI18n: {
-        de: 'adcommander',
-        en: 'adcommander',
-      },
-      url: 'https://www.adcommander.de/',
-      parentId: stageId - 1,
-      parentType,
-    },
-    addressable: {
-      id: addressableId++,
-      addressee: 'adcommander GmbH',
+    organization: {
+      id: organizationId++,
+      staticId: 'adcommander',
+      name: 'adcommander GmbH',
       street: 'Lippstädter Str. 54',
       zip: '48155',
       city: 'Münster',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
+      website: 'https://www.adcommander.de/',
+      organizationSize: OrganizationSizeEnum.between11And50,
+      branch: BranchEnum.marketing,
+    } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2905,13 +2705,5 @@ export default [
     startedAt: new Date('2021-03-30'),
     endedAt: null,
     icon: 'home',
-    addressable: {
-      id: addressableId++,
-      street: 'Alaunstraße 2',
-      zip: '48565',
-      city: 'Steinfurt',
-      parentId: stageId - 1,
-      parentType,
-    } as Addressable,
   },
 ] as Array<Stage>;

@@ -1,24 +1,21 @@
 import { computed } from 'vue';
 import { schema } from 'normalizr';
 import useState from '@/composables/useState';
-import useAddressable from '@/composables/useAddressable';
+import useOrganization from '@/composables/useOrganization';
 import useStageSkill from '@/composables/useStageSkill';
-import useLinkable from '@/composables/useLinkable';
 
 const {
   allResources, findResource, findResources,
 } = useState();
-const { addressableSchema } = useAddressable();
+const { organizationSchema } = useOrganization();
 const { stageSkillSchema } = useStageSkill();
-const { linkableSchema } = useLinkable();
 
 // constants
 const resourceName = 'stages';
 
 // schema
 const stageSchema = new schema.Entity(resourceName, {
-  linkable: linkableSchema,
-  addressable: addressableSchema,
+  organization: organizationSchema,
   stageSkills: [stageSkillSchema],
 });
 

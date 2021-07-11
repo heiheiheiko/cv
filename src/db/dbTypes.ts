@@ -6,16 +6,6 @@ interface I18nField {
   en: string
 }
 
-interface Addressable{
-  id: number,
-  addressee?: string,
-  street?: string,
-  zip: string,
-  city: string,
-  parentId: number,
-  parentType: string,
-}
-
 interface Testimonial{
   id: number,
   staticId: string,
@@ -71,6 +61,36 @@ enum PositionEnum {
   juniorSoftwareDeveloper = 'JUNIOR_SOFTWARE_DEVELOPER',
 }
 
+enum OrganizationSizeEnum{
+  between1And10 = 'BETWEEN_1_AND_10',
+  between11And50 = 'BETWEEN_11_AND_50',
+  between51And200 = 'BETWEEN_51_AND_200',
+  between201And500 = 'BETWEEN_201_AND_500',
+  between501And1000 = 'BETWEEN_501_AND_1000',
+  between1001To5000 = 'BETWEEN_1001_AND_5000',
+}
+
+enum BranchEnum{
+  marketing = 'MARKETING',
+  food = 'FOOD',
+  finance = 'FINANCE',
+  agency = 'AGENCY',
+  education = 'EDUCATION',
+  cloud = 'CLOUD'
+}
+
+interface Organization{
+  id: number,
+  staticId: string,
+  name: string,
+  street?: string,
+  zip?: string,
+  city?: string,
+  website?: string,
+  organizationSize?: OrganizationSizeEnum,
+  branch?: BranchEnum,
+}
+
 interface Stage{
   id: number,
   titleI18n: I18nField,
@@ -82,8 +102,7 @@ interface Stage{
   endedAt: Date | null,
   icon: string
   graduationI18n?: I18nField
-  addressable?: Addressable,
-  linkable?: Linkable,
+  organization?: Organization,
   stageSkills?: Array<StageSkill>
 }
 
@@ -104,7 +123,6 @@ interface Talent {
   familyStatusI18n: I18nField,
   sloganI18n: I18nField,
   sloganLongI18n: I18nField,
-  addressable?: Addressable
   testimonials?: Array<Testimonial>,
   linkables?: Array<Linkable>
   stages?: Array<Stage>
@@ -112,6 +130,7 @@ interface Talent {
 }
 
 export {
-  I18nField, Talent, Addressable, Testimonial, Linkable, Skill, SkillTypes, Stage,
+  I18nField, Talent, Testimonial, Linkable, Skill, SkillTypes, Stage,
   StageTypes, StageSkill, PositionEnum, EmploymentEnum, Feature,
+  OrganizationSizeEnum, BranchEnum, Organization,
 };

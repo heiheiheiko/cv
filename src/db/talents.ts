@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 
 import {
-  Talent, Addressable, Testimonial, Linkable, Feature,
+  Talent, Testimonial, Linkable, Feature,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
@@ -33,18 +33,6 @@ const talent: Talent = {
     en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
   },
 };
-
-// addressable
-const talentAddressable: Addressable = {
-  id: 1,
-  addressee: 'Heiko Beineke',
-  street: 'Weststr. 1',
-  zip: '48565',
-  city: 'Steinfurt',
-  parentId: talent.id,
-  parentType,
-};
-talent.addressable = talentAddressable;
 
 // Testimonials
 const testimonialGamer: Testimonial = {

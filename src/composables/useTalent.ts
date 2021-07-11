@@ -2,7 +2,6 @@ import { computed } from 'vue';
 import { schema } from 'normalizr';
 import useState from '@/composables/useState';
 import talentsJson from '@/db/talents';
-import useAddressable from '@/composables/useAddressable';
 import useTestimonial from '@/composables/useTestimonial';
 import useFeature from '@/composables/useFeature';
 import useLinkable from '@/composables/useLinkable';
@@ -11,7 +10,6 @@ import useStage from '@/composables/useStage';
 const {
   normalizeAndAssignData, allResources, findResource,
 } = useState();
-const { addressableSchema } = useAddressable();
 const { testimonialSchema } = useTestimonial();
 const { featureSchema } = useFeature();
 const { linkableSchema } = useLinkable();
@@ -22,7 +20,6 @@ const resourceName = 'talents';
 
 // schema
 const talentSchema = new schema.Entity(resourceName, {
-  addressable: addressableSchema,
   testimonials: [testimonialSchema],
   features: [featureSchema],
   linkables: [linkableSchema],
