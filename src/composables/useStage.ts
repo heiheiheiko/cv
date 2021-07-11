@@ -6,7 +6,7 @@ import useStageSkill from '@/composables/useStageSkill';
 import useLinkable from '@/composables/useLinkable';
 
 const {
-  allResources, findResource,
+  allResources, findResource, findResources,
 } = useState();
 const { addressableSchema } = useAddressable();
 const { stageSkillSchema } = useStageSkill();
@@ -28,8 +28,9 @@ const stages = computed(() => allResources(resourceName));
 export default function useStage() {
   // methods
   const findStage = (id: number) => findResource(resourceName, id);
+  const findStages = (ids: Array<number|string>) => findResources(resourceName, ids);
 
   return {
-    stages, findStage, stageSchema,
+    stages, findStage, stageSchema, findStages,
   };
 }

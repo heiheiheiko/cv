@@ -7,6 +7,7 @@
         <TalentSectionHero :talent="talent" />
         <TalentSectionFeature :features="talentFeatures" />
         <TalentSectionTestimonial :testimonial="gamerTestimonial" />
+        <TalentSectionStage :stages="talentStages" />
       </main>
       <TalentFooter />
     </div>
@@ -19,9 +20,11 @@ import TalentNavigation from '@/components/TalentNavigation.vue';
 import TalentSectionHero from '@/components/TalentSectionHero.vue';
 import TalentSectionFeature from '@/components/TalentSectionFeature.vue';
 import TalentSectionTestimonial from '@/components/TalentSectionTestimonial.vue';
+import TalentSectionStage from '@/components/TalentSectionStage.vue';
 import TalentFooter from '@/components/TalentFooter.vue';
 import useFeature from '@/composables/useFeature';
 import useTestimonial from '@/composables/useTestimonial';
+import useStages from '@/composables/useStage';
 
 export default defineComponent({
   components: {
@@ -29,6 +32,7 @@ export default defineComponent({
     TalentSectionHero,
     TalentSectionFeature,
     TalentSectionTestimonial,
+    TalentSectionStage,
     TalentFooter,
   },
   props: {
@@ -40,10 +44,12 @@ export default defineComponent({
   setup(props) {
     const { findFeatures } = useFeature();
     const { findTestimonialByStaticId } = useTestimonial();
+    const { findStages } = useStages();
 
     const talentFeatures = findFeatures(props.talent.features);
     const gamerTestimonial = findTestimonialByStaticId('gamer');
-    return { talentFeatures, gamerTestimonial };
+    const talentStages = findStages(props.talent.stages);
+    return { talentFeatures, gamerTestimonial, talentStages };
   },
 });
 </script>
