@@ -4,7 +4,7 @@ import useState from '@/composables/useState';
 import talentsJson from '@/db/talents';
 import useTestimonial from '@/composables/useTestimonial';
 import useFeature from '@/composables/useFeature';
-import useLinkable from '@/composables/useLinkable';
+import useLink from '@/composables/useLink';
 import useStage from '@/composables/useStage';
 
 const {
@@ -12,7 +12,7 @@ const {
 } = useState();
 const { testimonialSchema } = useTestimonial();
 const { featureSchema } = useFeature();
-const { linkableSchema } = useLinkable();
+const { linkSchema } = useLink();
 const { stageSchema } = useStage();
 
 // constants
@@ -22,7 +22,7 @@ const resourceName = 'talents';
 const talentSchema = new schema.Entity(resourceName, {
   testimonials: [testimonialSchema],
   features: [featureSchema],
-  linkables: [linkableSchema],
+  links: [linkSchema],
   stages: [stageSchema],
 });
 

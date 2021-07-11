@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 
 import {
-  Talent, Testimonial, Linkable, Feature,
+  Talent, Testimonial, Link, Feature,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
 
@@ -81,40 +81,34 @@ const testimonialAccomplisher: Testimonial = {
 };
 talent.testimonials = [testimonialGamer, testimonialExplorer, testimonialAccomplisher];
 
-// linkables
-const linkGithub: Linkable = {
+// links
+const linkGithub: Link = {
   id: 1,
   titleI18n: {
     de: 'Github',
     en: 'Github',
   },
   url: 'https://github.com/HBeineke',
-  parentId: talent.id,
-  parentType,
 };
 
-const linkXing: Linkable = {
+const linkXing: Link = {
   id: 2,
   titleI18n: {
     de: 'Xing',
     en: 'Xing',
   },
   url: 'https://www.xing.com/profile/Heiko_Beineke',
-  parentId: talent.id,
-  parentType,
 };
 
-const linkHomepage: Linkable = {
+const linkHomepage: Link = {
   id: 3,
   titleI18n: {
     de: 'Homepage',
     en: 'Homepage',
   },
   url: 'https://hb-curriculum-vitae.herokuapp.com/',
-  parentId: talent.id,
-  parentType,
 };
-talent.linkables = [linkGithub, linkXing, linkHomepage];
+talent.links = [linkGithub, linkXing, linkHomepage];
 
 // features
 const featureAgile: Feature = {

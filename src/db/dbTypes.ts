@@ -15,12 +15,10 @@ interface Testimonial{
   url: string,
 }
 
-interface Linkable{
+interface Link{
   id: number,
   titleI18n: I18nField,
   url: string,
-  parentId: number,
-  parentType: string,
 }
 
 enum SkillTypes {
@@ -124,13 +122,13 @@ interface Talent {
   sloganI18n: I18nField,
   sloganLongI18n: I18nField,
   testimonials?: Array<Testimonial>,
-  linkables?: Array<Linkable>
+  links?: Array<Link>
   stages?: Array<Stage>
   features?: Array<Feature>
 }
 
 export {
-  I18nField, Talent, Testimonial, Linkable, Skill, SkillTypes, Stage,
+  I18nField, Talent, Testimonial, Link, Skill, SkillTypes, Stage,
   StageTypes, StageSkill, PositionEnum, EmploymentEnum, Feature,
   OrganizationSizeEnum, BranchEnum, Organization,
 };
