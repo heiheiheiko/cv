@@ -33,12 +33,8 @@ import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 import { periodInWords } from '@/utils/dateUtils';
-import BaseAvatar from '@/components/BaseAvatar.vue';
 
 export default defineComponent({
-  components: {
-    BaseAvatar,
-  },
   props: {
     stage: {
       type: Object,

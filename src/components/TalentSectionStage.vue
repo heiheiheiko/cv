@@ -27,16 +27,10 @@ import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 import { StageTypes } from '@/db/dbTypes';
 
-import BaseSectionHeaderTitle from '@/components/BaseSectionHeaderTitle.vue';
-import BaseSectionHeaderSubtitle from '@/components/BaseSectionHeaderSubtitle.vue';
-import BaseSectionHeaderDescription from '@/components/BaseSectionHeaderDescription.vue';
 import StageFeed from '@/components/StageFeed.vue';
 
 export default defineComponent({
   components: {
-    BaseSectionHeaderTitle,
-    BaseSectionHeaderSubtitle,
-    BaseSectionHeaderDescription,
     StageFeed,
   },
   props: {

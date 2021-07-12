@@ -37,24 +37,7 @@ import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 
-import BaseSectionHeaderTitle from '@/components/BaseSectionHeaderTitle.vue';
-import BaseSectionHeaderSubtitle from '@/components/BaseSectionHeaderSubtitle.vue';
-import BaseSectionHeaderDescription from '@/components/BaseSectionHeaderDescription.vue';
-import BaseCardFeature from '@/components/BaseCardFeature.vue';
-import BaseCardFeatureTitle from '@/components/BaseCardFeatureTitle.vue';
-import BaseCardFeatureDescription from '@/components/BaseCardFeatureDescription.vue';
-import BaseCardFeatureIcon from '@/components/BaseCardFeatureIcon.vue';
-
 export default defineComponent({
-  components: {
-    BaseSectionHeaderTitle,
-    BaseSectionHeaderSubtitle,
-    BaseSectionHeaderDescription,
-    BaseCardFeature,
-    BaseCardFeatureIcon,
-    BaseCardFeatureTitle,
-    BaseCardFeatureDescription,
-  },
   props: {
     features: {
       type: Array,
