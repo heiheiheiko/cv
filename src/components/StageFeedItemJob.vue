@@ -10,19 +10,17 @@
     </div>
     <div class="min-w-0 flex-1">
       <div>
-        <div class="text-sm font-medium text-gray-900">
+        <BaseFeedItemTitle>
           {{ t(`position.${stage.position}`) }} –
           {{ t(`employment.${stage.employment}`) }}
-        </div>
-        <p class="mt-0.5 text-sm text-gray-500">
+        </BaseFeedItemTitle>
+        <BaseFeedItemSubtitle>
           {{ periodInWords(stage.startedAt, stage.endedAt) }},
           {{ $d(stage.startedAt, 'short') }} - {{ endedAtOrToday }}
-        </p>
-      </div>
-      <div class="mt-2 text-sm text-gray-700">
-        <p>
-          {{ translateI18nField(stage.descriptionI18n) }}
-        </p>
+        </BaseFeedItemSubtitle>
+        <BaseFeedItemSubtitle>
+          {{ organization.name }}
+        </BaseFeedItemSubtitle>
       </div>
     </div>
   </div>
@@ -33,6 +31,7 @@ import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 import { periodInWords } from '@/utils/dateUtils';
+import useOrganization from '@/composables/useOrganization';
 
 export default defineComponent({
   props: {
@@ -42,31 +41,17 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { findOrganization } = useOrganization();
     const { d, t } = useI18n({
       inheritLocale: true,
       useScope: 'local',
     });
 
-    // const periodInWords = (stage: Stage) => {
-    //   const totalMonths = dateDifferenceInMonth(stage.startedAt, stage.endedAt || new Date());
-    //   const years = Math.floor(totalMonths / 12);
-    //   const months = totalMonths % 12;
-    //   console.log(years);
-
-    //   const translatedMonths = `${months} ${t('datetime.month', months)}`;
-    //   const translatedYears = `${years} ${t('datetime.year', years)}`;
-
-    //   const result = [];
-    //   if (months > 0) { result.push(translatedMonths); }
-    //   if (years > 0) { result.push(translatedYears); }
-
-    //   return result.join(` ${t('general.and')} `);
-    // };
-
     const endedAtOrToday = props.stage.endedAt ? d(props.stage.endedAt, 'short') : t('today');
+    const organization = findOrganization(props.stage.organization);
 
     return {
-      translateI18nField, endedAtOrToday, t, periodInWords,
+      translateI18nField, endedAtOrToday, t, periodInWords, organization,
     };
   },
 });
