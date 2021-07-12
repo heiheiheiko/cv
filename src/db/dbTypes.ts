@@ -94,6 +94,7 @@ interface Stage{
   titleI18n: I18nField,
   descriptionI18n?: I18nField,
   type: StageTypes,
+  isTop: boolean,
   position?: PositionEnum,
   employment?: EmploymentEnum,
   startedAt: Date,

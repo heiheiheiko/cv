@@ -57,6 +57,7 @@ export default [
     startedAt: new Date('1986-07-18'),
     endedAt: null,
     icon: 'birthday-cake',
+    isTop: false,
   },
 
   // KVG Gesamtschule Nordwalde
@@ -74,6 +75,7 @@ export default [
     startedAt: new Date('1997-08-01'),
     endedAt: new Date('2003-07-01'),
     icon: 'book',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'kvg',
@@ -112,6 +114,7 @@ export default [
     startedAt: new Date('2003-08-01'),
     endedAt: new Date('2005-06-01'),
     icon: 'book',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'hermann',
@@ -151,6 +154,7 @@ export default [
     startedAt: new Date('2004-02-22'),
     endedAt: null,
     icon: 'heart',
+    isTop: false,
   },
 
   // Führerschein
@@ -164,6 +168,7 @@ export default [
     startedAt: new Date('2006-10-01'),
     endedAt: null,
     icon: 'car',
+    isTop: false,
   },
 
   // Technische Schulen des Kreises Steinfurt
@@ -185,6 +190,7 @@ export default [
     startedAt: new Date('2005-08-01'),
     endedAt: new Date('2008-07-01'),
     icon: 'book',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'tsst',
@@ -293,6 +299,7 @@ export default [
     startedAt: new Date('2002-03-01'),
     endedAt: new Date('2009-09-01'),
     icon: 'money-bill-alt',
+    isTop: false,
   },
 
   // Fachhochschule Münster (Steinfurt)
@@ -306,6 +313,7 @@ export default [
     startedAt: new Date('2008-10-01'),
     endedAt: new Date('20010-07-01'),
     icon: 'graduation-cap',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'fh-ms-fb2',
@@ -391,6 +399,7 @@ export default [
     startedAt: new Date('2010-12-01'),
     endedAt: new Date('2011-02-01'),
     icon: 'code',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'fh-ms-fb9',
@@ -473,6 +482,7 @@ export default [
     startedAt: new Date('2009-04-01'),
     endedAt: new Date('2011-07-01'),
     icon: 'code',
+    isTop: true,
     organization: {
       id: organizationId++,
       staticId: 'zeb',
@@ -549,6 +559,7 @@ export default [
     startedAt: new Date('2011-04-22'),
     endedAt: new Date('2014-09-22'),
     icon: 'home',
+    isTop: false,
   },
 
   // gloud GmbH
@@ -568,6 +579,7 @@ export default [
     startedAt: new Date('2012-01-01'),
     endedAt: new Date('2012-07-01'),
     icon: 'code',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'gloud',
@@ -656,6 +668,7 @@ export default [
     startedAt: new Date('2012-07-01'),
     endedAt: new Date('2012-09-01'),
     icon: 'code',
+    isTop: false,
     organization: orgaFhMsWi,
     stageSkills: [
       {
@@ -837,6 +850,7 @@ export default [
     startedAt: new Date('2013-02-22'),
     endedAt: null,
     icon: 'heart',
+    isTop: false,
   },
 
   // Compeon
@@ -856,6 +870,7 @@ export default [
     startedAt: new Date('2013-03-01'),
     endedAt: new Date('2013-09-01'),
     icon: 'code',
+    isTop: true,
     organization: {
       id: organizationId++,
       staticId: 'compeon',
@@ -1066,7 +1081,7 @@ export default [
     ] as Array<StageSkill>,
   },
 
-  // Fachhochschule Münster (Steinfurt)
+  // Fachhochschule Münster (Münster)
   {
     id: stageId++,
     titleI18n: {
@@ -1081,6 +1096,7 @@ export default [
     startedAt: new Date('2010-10-01'),
     endedAt: new Date('2013-09-01'),
     icon: 'graduation-cap',
+    isTop: true,
     organization: orgaFhMsWi,
     stageSkills: [
       {
@@ -1303,6 +1319,7 @@ export default [
     startedAt: new Date('2013-12-01'),
     endedAt: new Date('2014-06-01'),
     icon: 'code',
+    isTop: true,
     organization: orgaFuchs,
     stageSkills: [
       {
@@ -1556,6 +1573,7 @@ export default [
     startedAt: new Date('2014-06-01'),
     endedAt: new Date('2014-09-01'),
     icon: 'code',
+    isTop: false,
     organization: {
       id: organizationId++,
       staticId: 'deltacity',
@@ -1677,6 +1695,7 @@ export default [
     startedAt: new Date('2014-10-22'),
     endedAt: null,
     icon: 'home',
+    isTop: false,
   },
 
   // Kung Fu I
@@ -1690,6 +1709,7 @@ export default [
     startedAt: new Date('2010-04-22'),
     endedAt: new Date('2015-07-22'),
     icon: 'hand-rock',
+    isTop: false,
     organization: orgaTvb,
   },
 
@@ -1708,6 +1728,7 @@ export default [
     startedAt: new Date('2016-07-30'),
     endedAt: new Date('2016-08-07'),
     icon: 'hiking',
+    isTop: false,
   },
 
   // Fuchs 2
@@ -1727,6 +1748,7 @@ export default [
     startedAt: new Date('2014-10-01'),
     endedAt: new Date('2016-10-31'),
     icon: 'code',
+    isTop: true,
     organization: orgaFuchs,
     stageSkills: [
       {
@@ -1973,6 +1995,7 @@ export default [
     startedAt: new Date('2004-10-16'),
     endedAt: new Date('2018-09-18'),
     icon: 'dog',
+    isTop: false,
   },
 
   // Hermannsweg
@@ -1990,6 +2013,7 @@ export default [
     startedAt: new Date('2018-07-29'),
     endedAt: new Date('2018-08-03'),
     icon: 'hiking',
+    isTop: false,
   },
 
   // IDB
@@ -2009,6 +2033,7 @@ export default [
     startedAt: new Date('2016-11-01'),
     endedAt: new Date('2019-01-01'),
     icon: 'code',
+    isTop: true,
     organization: {
       id: organizationId++,
       staticId: 'idb',
@@ -2236,6 +2261,7 @@ export default [
     startedAt: new Date('2019-01-06'),
     endedAt: null,
     icon: 'dog',
+    isTop: false,
   },
 
   // Kung Fu I
@@ -2249,6 +2275,7 @@ export default [
     startedAt: new Date('2020-01-15'),
     endedAt: null,
     icon: 'hand-rock',
+    isTop: false,
     organization: orgaTvb,
   },
 
@@ -2269,6 +2296,7 @@ export default [
     startedAt: new Date('2019-06-01'),
     endedAt: new Date('2020-06-30'),
     icon: 'code',
+    isTop: true,
     organization: {
       id: organizationId++,
       staticId: 'crowdcode',
@@ -2465,6 +2493,7 @@ export default [
     startedAt: new Date('2020-03-14'),
     endedAt: null,
     icon: 'dog',
+    isTop: false,
   },
 
   // adcommander
@@ -2484,6 +2513,7 @@ export default [
     startedAt: new Date('2019-07-01'),
     endedAt: null,
     icon: 'code',
+    isTop: true,
     organization: {
       id: organizationId++,
       staticId: 'adcommander',
@@ -2705,5 +2735,7 @@ export default [
     startedAt: new Date('2021-03-30'),
     endedAt: null,
     icon: 'home',
+    isTop: false,
   },
+
 ] as Array<Stage>;
