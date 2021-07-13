@@ -1,5 +1,8 @@
 <template>
-  <div class="relative flex items-start space-x-3">
+  <div
+    class="relative flex items-start space-x-3"
+    @click="$emit('select', stage)"
+  >
     <div class="relative">
       <BaseAvatar
         color="red"
@@ -38,6 +41,7 @@ export default defineComponent({
       required: true,
     },
   },
+  emits: ['select'],
   setup(props) {
     const { findOrganization } = useOrganization();
     const { jobTitleDeco, jobSubtitleDeco } = useStage();
