@@ -11,12 +11,10 @@
     <div class="min-w-0 flex-1">
       <div>
         <BaseFeedItemTitle>
-          {{ t(`position.${stage.position}`) }} –
-          {{ t(`employment.${stage.employment}`) }}
+          {{ jobTitleDeco(stage) }}
         </BaseFeedItemTitle>
         <BaseFeedItemSubtitle>
-          {{ periodInWords(stage.startedAt, stage.endedAt) }},
-          {{ $d(stage.startedAt, 'short') }} - {{ endedAtOrToday }}
+          {{ jobSubtitleDeco(stage) }}
         </BaseFeedItemSubtitle>
         <BaseFeedItemSubtitle>
           {{ organization.name }}
@@ -29,9 +27,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
-import { useI18n } from 'vue-i18n';
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
+import useStage from '@/composables/useStage';
 
 export default defineComponent({
   props: {
@@ -42,50 +40,12 @@ export default defineComponent({
   },
   setup(props) {
     const { findOrganization } = useOrganization();
-    const { d, t } = useI18n({
-      inheritLocale: true,
-      useScope: 'local',
-    });
-
-    const endedAtOrToday = props.stage.endedAt ? d(props.stage.endedAt, 'short') : t('today');
+    const { jobTitleDeco, jobSubtitleDeco } = useStage();
     const organization = findOrganization(props.stage.organization);
 
     return {
-      translateI18nField, endedAtOrToday, t, periodInWords, organization,
+      translateI18nField, periodInWords, organization, jobTitleDeco, jobSubtitleDeco,
     };
   },
 });
 </script>
-
-<i18n>
-{
-  "de": {
-      "today": "Heute",
-      "position": {
-        "WEB_DEVELOPER": "Web Developer",
-        "JUNIOR_SOFTWARE_DEVELOPER": "Junior Software Developer",
-        "SOFTWARE_DEVELOPER": "Software Developer"
-      },
-      "employment": {
-        "STUDENT_ASSISTANT": "Studentische Hilfskraft",
-        "INTERN": "Praktikant",
-        "BACHELOR": "Bachelor",
-        "EMPLOYEE": "Angestellter"
-      },
-  },
-  "en": {
-      "today": "Today",
-      "position": {
-        "WEB_DEVELOPER": "Web Developer",
-        "JUNIOR_SOFTWARE_DEVELOPER": "Junior Software Developer",
-        "SOFTWARE_DEVELOPER": "Software Developer"
-      },
-      "employment": {
-        "STUDENT_ASSISTANT": "Student assistant",
-        "INTERN": "Intern",
-        "BACHELOR": "Bachelor",
-        "EMPLOYEE": "Employee"
-      },
-  }
-}
-</i18n>
