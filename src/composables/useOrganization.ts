@@ -1,5 +1,6 @@
 import { computed } from 'vue';
 import { schema } from 'normalizr';
+import { Organization } from '@/db/dbTypes';
 import useState from '@/composables/useState';
 
 const {
@@ -19,7 +20,11 @@ export default function useOrganization() {
   // methods
   const findOrganization = (id: number) => findResource(resourceName, id);
 
+  // decorators
+  const locationDeco = (organization: Organization) => `${organization.street}, 
+    ${organization.zip}, ${organization.city}`;
+
   return {
-    organizations, findOrganization, organizationSchema,
+    organizations, findOrganization, organizationSchema, locationDeco,
   };
 }
