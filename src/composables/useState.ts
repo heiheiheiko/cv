@@ -28,11 +28,6 @@ export default function useState() {
     return state[resourceName][id] || null;
   };
 
-  const findResources = (resourceName: string, ids: Array<number|string>) => {
-    if (state[resourceName] === undefined) { return {}; }
-    return ids.map((id) => state[resourceName][id] || null);
-  };
-
   const findResourceByAttribute = (
     resourceName: string,
     attributeKey:
@@ -53,7 +48,6 @@ export default function useState() {
     normalizeAndAssignData,
     allResources,
     findResource,
-    findResources,
     findResourceByAttribute,
   };
 }

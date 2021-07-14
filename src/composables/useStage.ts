@@ -8,9 +8,7 @@ import i18n from '@/i18n';
 
 const { t, d } = i18n.global;
 
-const {
-  allResources, findResource, findResources,
-} = useState();
+const { allResources, findResource } = useState();
 const { organizationSchema } = useOrganization();
 const { stageSkillSchema } = useStageSkill();
 
@@ -28,8 +26,8 @@ const stages = computed(() => allResources(resourceName));
 
 export default function useStage() {
   // methods
-  const findStage = (id: number) => findResource(resourceName, id);
-  const findStages = (ids: Array<number|string>) => findResources(resourceName, ids);
+  const findStage = (id: number|string) => findResource(resourceName, id);
+  const findStages = (ids: Array<number|string>) => ids.map((id) => findStage(id));
 
   // decorators
   const jobTitleDeco = (stage: Stage) => `${t(`resources.stage.enums.position.${stage.position}`)} 
