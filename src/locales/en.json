@@ -27,6 +27,9 @@
         }
       }
     },
+    "stageSkill": {
+      "name" : "Skill used | Skills used"
+    },
     "organization": {
       "name" : "Organization",
       "attributes": {

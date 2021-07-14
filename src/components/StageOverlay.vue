@@ -36,6 +36,23 @@
             </BaseDescriptionDetail>
           </div>
 
+          <div>
+            <BaseDescriptionTerm>
+              {{ $t('resources.stageSkill.name', 2) }}
+            </BaseDescriptionTerm>
+
+            <BaseDescriptionDetail>
+              <BaseBadge
+                v-for="skill in skills"
+                :key="skill.id"
+                class="mr-1 mb-1"
+                :color="skill.color()"
+              >
+                {{ translateI18nField(skill.titleI18n) }}
+              </BaseBadge>
+            </BaseDescriptionDetail>
+          </div>
+
           <div class="w-full border-t border-gray-300" />
 
           <h2 class="text-lg font-medium text-gray-900">
@@ -90,6 +107,7 @@ import { translateI18nField } from '@/utils/i18nUtils';
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
 import useStage from '@/composables/useStage';
+import useStageSkill from '@/composables/useStageSkill';
 
 export default {
   props: {
@@ -106,10 +124,19 @@ export default {
   setup(props) {
     const { findOrganization, locationDeco } = useOrganization();
     const { jobTitleDeco, jobSubtitleDeco } = useStage();
+    const { findSkillsThroughStageSkills } = useStageSkill();
+
     const organization = computed(() => findOrganization(props.stage.organization));
+    const skills = computed(() => findSkillsThroughStageSkills(props.stage.stageSkills));
 
     return {
-      translateI18nField, periodInWords, organization, jobTitleDeco, jobSubtitleDeco, locationDeco,
+      translateI18nField,
+      periodInWords,
+      organization,
+      jobTitleDeco,
+      jobSubtitleDeco,
+      locationDeco,
+      skills,
     };
   },
 };

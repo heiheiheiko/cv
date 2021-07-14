@@ -22,10 +22,10 @@ interface Link{
 }
 
 enum SkillTypes {
-  keyword = 'keyword',
-  technology = 'technology',
-  software = 'software',
-  soft = 'soft'
+  keyword = 'KEYWORD',
+  technology = 'TECHNOLOGY',
+  software = 'SOFTWARE',
+  soft = 'SOFT'
 }
 interface Skill{
   id: string,

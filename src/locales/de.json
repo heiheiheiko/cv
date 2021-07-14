@@ -24,8 +24,11 @@
           "INTERN": "Praktikant",
           "BACHELOR": "Bachelor",
           "EMPLOYEE": "Angestellter"
-        },
+        }
       }
+    },
+    "stageSkill": {
+      "name" : "Eingesetzter Skill | Eingesetzte Skills"
     },
     "organization": {
       "name" : "Organisation",
