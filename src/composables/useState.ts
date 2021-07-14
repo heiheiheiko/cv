@@ -23,8 +23,8 @@ export default function useState() {
     return Object.values(state[resourceName]);
   };
 
-  const findResource = (resourceName: string, id: number|string) => {
-    if (state[resourceName] === undefined) { return {}; }
+  const findResource = (resourceName: string, id: number|string|undefined) => {
+    if (state[resourceName] === undefined || id === undefined) { return {}; }
     return state[resourceName][id] || null;
   };
 

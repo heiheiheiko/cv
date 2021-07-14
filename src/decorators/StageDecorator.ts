@@ -5,13 +5,14 @@ import {
   Stage, I18nField, StageTypes, PositionEnum, EmploymentEnum,
   Organization, StageSkill,
 } from '@/db/dbTypes';
+import { translateI18nField } from '@/utils/i18nUtils';
 
 const { t, d } = i18n.global;
 
 export default class stageDecorator {
   id: number;
 
-  titleI18n: I18nField;
+  titleI18n: I18nField | undefined;
 
   isTop: boolean;
 
@@ -35,20 +36,27 @@ export default class stageDecorator {
 
   stageSkills: StageSkill[] | undefined;
 
+  courseI18n: I18nField | undefined;
+
+  note: string | undefined;
+
   constructor(stage: Stage) {
     this.id = stage.id;
-    this.titleI18n = stage.titleI18n;
-    this.descriptionI18n = stage.descriptionI18n;
     this.type = stage.type;
     this.isTop = stage.isTop;
-    this.position = stage.position;
-    this.employment = stage.employment;
     this.startedAt = stage.startedAt;
     this.endedAt = stage.endedAt;
     this.icon = stage.icon;
-    this.graduationI18n = stage.graduationI18n;
-    this.organization = stage.organization;
+    this.descriptionI18n = stage.descriptionI18n;
+    this.note = stage.note;
+
     this.stageSkills = stage.stageSkills;
+    this.organization = stage.organization;
+    this.position = stage.position;
+    this.employment = stage.employment;
+    this.courseI18n = stage.courseI18n;
+    this.graduationI18n = stage.graduationI18n;
+    this.titleI18n = stage.titleI18n;
   }
 
   color(): string {
@@ -68,9 +76,14 @@ export default class stageDecorator {
   title(): string {
     switch (this.type) {
       case StageTypes.education:
-        return 'green';
+        if (this.graduationI18n) {
+          return `${translateI18nField(this.courseI18n)} – 
+                ${translateI18nField(this.graduationI18n)}`;
+        }
+
+        return translateI18nField(this.courseI18n);
       case StageTypes.highlight:
-        return 'indigo';
+        return translateI18nField(this.titleI18n);
       case StageTypes.job:
         return `${t(`resources.stage.enums.position.${this.position}`)} – 
                 ${t(`resources.stage.enums.employment.${this.employment}`)}`;
@@ -81,17 +94,7 @@ export default class stageDecorator {
   }
 
   subtitle(): string {
-    switch (this.type) {
-      case StageTypes.education:
-        return 'green';
-      case StageTypes.highlight:
-        return 'indigo';
-      case StageTypes.job:
-        const endedAtOrToday = this.endedAt ? d(this.endedAt, 'short') : t('datetime.today');
-        return `${d(this.startedAt, 'short')} - ${endedAtOrToday}`;
-
-      default:
-        return 'gray';
-    }
+    const endedAtOrToday = this.endedAt ? d(this.endedAt, 'short') : t('datetime.today');
+    return `${d(this.startedAt, 'short')} - ${endedAtOrToday}`;
   }
 }

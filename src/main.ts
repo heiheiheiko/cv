@@ -4,7 +4,8 @@ import camelCase from 'lodash/camelCase';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSync, faDog, faHome, faPeopleArrows, faComments, faSpaceShuttle,
-  faCogs, faUserAstronaut, faDice, faCode,
+  faCogs, faUserAstronaut, faDice, faCode, faBook, faGraduationCap,
+  faBirthdayCake, faHeart, faCar, faMoneyBillAlt, faHandRock, faHiking,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
@@ -23,6 +24,14 @@ library.add(faCogs);
 library.add(faUserAstronaut);
 library.add(faDice);
 library.add(faCode);
+library.add(faBook);
+library.add(faGraduationCap);
+library.add(faBirthdayCake);
+library.add(faHeart);
+library.add(faCar);
+library.add(faMoneyBillAlt);
+library.add(faHandRock);
+library.add(faHiking);
 
 const app = createApp(App).use(i18n).use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);

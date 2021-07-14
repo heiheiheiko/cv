@@ -63,7 +63,7 @@ export default [
   // KVG Gesamtschule Nordwalde
   {
     id: stageId++,
-    titleI18n: {
+    courseI18n: {
       de: 'Realschule',
       en: 'Secondary school',
     },
@@ -102,7 +102,7 @@ export default [
   // Hermann-Emanuel-Berufskolleg
   {
     id: stageId++,
-    titleI18n: {
+    courseI18n: {
       de: 'Höhere Handelsschule',
       en: 'Commercial college',
     },
@@ -147,10 +147,10 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Traf die Liebe meines Lebens',
-      en: 'Met the love of my life',
+      de: 'Meine Frau getroffen',
+      en: 'Met my wife',
     },
-    type: StageTypes.education,
+    type: StageTypes.highlight,
     startedAt: new Date('2004-02-22'),
     endedAt: null,
     icon: 'heart',
@@ -164,7 +164,7 @@ export default [
       de: 'Führerschein Klasse B',
       en: 'Driving licence',
     },
-    type: StageTypes.education,
+    type: StageTypes.highlight,
     startedAt: new Date('2006-10-01'),
     endedAt: null,
     icon: 'car',
@@ -174,7 +174,7 @@ export default [
   // Technische Schulen des Kreises Steinfurt
   {
     id: stageId++,
-    titleI18n: {
+    courseI18n: {
       de: 'Informationstechnischer Assistent',
       en: 'IT assistant',
     },
@@ -305,7 +305,7 @@ export default [
   // Fachhochschule Münster (Steinfurt)
   {
     id: stageId++,
-    titleI18n: {
+    courseI18n: {
       de: 'Angewandte Informatik',
       en: 'Applied computer science',
     },
@@ -385,10 +385,6 @@ export default [
   // Fachhochschule Münster (Studentenjob)
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Website',
       en: 'Maintenance and further development of the website',
@@ -468,10 +464,6 @@ export default [
   // zeb
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
       en: 'Maintenance and further development of a prototype',
@@ -549,26 +541,22 @@ export default [
   },
 
   // Erste gemeinsame Wohnung
-  {
-    id: stageId++,
-    titleI18n: {
-      de: 'Erste gemeinsame Wohnung',
-      en: 'First shared apartment',
-    },
-    type: StageTypes.highlight,
-    startedAt: new Date('2011-04-22'),
-    endedAt: new Date('2014-09-22'),
-    icon: 'home',
-    isTop: false,
-  },
+  // {
+  //   id: stageId++,
+  //   titleI18n: {
+  //     de: 'Erste gemeinsame Wohnung',
+  //     en: 'First shared apartment',
+  //   },
+  //   type: StageTypes.highlight,
+  //   startedAt: new Date('2011-04-22'),
+  //   endedAt: new Date('2014-09-22'),
+  //   icon: 'home',
+  //   isTop: false,
+  // },
 
   // gloud GmbH
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
       en: 'Maintenance and further development of a prototype',
@@ -654,10 +642,6 @@ export default [
   // Fachhochschule Münster (Praktikum)
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Entwurf und Umsetzung einer Anwendung für die Hochschulverwaltung',
       en: 'Design and implementation of an application for the university administration',
@@ -843,8 +827,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Heiratete die Liebe meines Lebens',
-      en: 'Married the love of my life',
+      de: 'Meine Frau geheiratet',
+      en: 'Married my wife',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2013-02-22'),
@@ -856,10 +840,6 @@ export default [
   // Compeon
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung des Online-Finanzportals COMPEON;Bachelorarbeit: Konzeption, Implementierung und Evaluation einer webbasierten Anwendung zur Erfassung der Kundenzufriedenheit und zur Publikation von Kundenempfehlungen im Rahmen des Online-Finanzportals COMPEON',
       en: 'Maintenance and further development of the online financial portal COMPEON;Bachelor Thesis: Conception, implementation and evaluation of a web-based application for recording customer satisfaction and for publishing customer recommendations in the context of the online financial portal COMPEON',
@@ -1084,7 +1064,7 @@ export default [
   // Fachhochschule Münster (Münster)
   {
     id: stageId++,
-    titleI18n: {
+    courseI18n: {
       de: 'Wirtschaftsinformatik',
       en: 'Business computer science',
     },
@@ -1305,10 +1285,6 @@ export default [
   // Fuchs (Junior)
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Junior Software Developer',
-      en: 'Junior Software Developer',
-    },
     descriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
       en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
@@ -1559,10 +1535,6 @@ export default [
   // Deltacity
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Entwurf und Umsetzung einer individuellen CMS-Lösung',
       en: 'Design and implementation of an individual CMS solution',
@@ -1685,18 +1657,18 @@ export default [
   },
 
   // Umzug
-  {
-    id: stageId++,
-    titleI18n: {
-      de: 'Umzug in eine größere Wohnung',
-      en: 'Moving to a larger apartment',
-    },
-    type: StageTypes.highlight,
-    startedAt: new Date('2014-10-22'),
-    endedAt: null,
-    icon: 'home',
-    isTop: false,
-  },
+  // {
+  //   id: stageId++,
+  //   titleI18n: {
+  //     de: 'Umzug in eine größere Wohnung',
+  //     en: 'Moving to a larger apartment',
+  //   },
+  //   type: StageTypes.highlight,
+  //   startedAt: new Date('2014-10-22'),
+  //   endedAt: null,
+  //   icon: 'home',
+  //   isTop: false,
+  // },
 
   // Kung Fu I
   {
@@ -1734,10 +1706,6 @@ export default [
   // Fuchs 2
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Software Developer',
-      en: 'Software Developer',
-    },
     descriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
       en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
@@ -1988,8 +1956,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Stolzes Herr­chen von Geoffrey',
-      en: 'Proud dog daddy of Geoffrey',
+      de: 'Herr­chen von Geoffrey',
+      en: 'Dog daddy of Geoffrey',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2004-10-16'),
@@ -2019,10 +1987,6 @@ export default [
   // IDB
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Influencer Marketing Platform;Hauptverantwortlicher für das Frontend;Einführung von Vue',
       en: 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue',
@@ -2254,8 +2218,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Stolzes Herr­chen von Rumo',
-      en: 'Proud dog daddy of Rumo',
+      de: 'Herr­chen von Rumo',
+      en: 'Dog daddy of Rumo',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2019-01-06'),
@@ -2268,8 +2232,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Kung Fu Training wieder aufgenommen',
-      en: 'Kung Fu training resumed',
+      de: 'Kung Fu Training',
+      en: 'Kung Fu training',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2020-01-15'),
@@ -2282,10 +2246,6 @@ export default [
   // CROWDCODE
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Entwurf und Umsetzung einer PWA zur Planung eines Studiums;Hauptverantwortlicher für das Frontend;Einführung von Vue',
       en: 'Maintenance and further development of a PWA for study planning;Main responsible for the frontend;Introduction of Vue',
@@ -2486,8 +2446,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Stolzes Herr­chen von Rala',
-      en: 'Proud dog daddy of Rala',
+      de: 'Herr­chen von Rala',
+      en: 'Dog daddy of Rala',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2020-03-14'),
@@ -2499,10 +2459,6 @@ export default [
   // adcommander
   {
     id: stageId++,
-    titleI18n: {
-      de: 'Web Developer',
-      en: 'Web Developer',
-    },
     descriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Digital Signage Platform; Wartung und Weiterentwicklung der 24/7 Retail REST-Schnittstelle; Einführung von Vue; Mitgestaltung agiler Entwicklungsprozesse;',
       en: 'Maintenance and further development of the digital signage platform; Maintenance and further development of the 24/7 retail REST interface; Introduction of Vue; Participation in designing agile development processes;',
@@ -2728,8 +2684,8 @@ export default [
   {
     id: stageId++,
     titleI18n: {
-      de: 'Den Traum vom Eigenheim wahr gemacht',
-      en: 'The dream of owning a home made true',
+      de: 'Haus gekauft',
+      en: 'Bought house',
     },
     type: StageTypes.highlight,
     startedAt: new Date('2021-03-30'),

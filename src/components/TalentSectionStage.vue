@@ -14,7 +14,9 @@
 
       <div class="mt-12 text-left">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <StageFeed :stages="educationStages" />
           <StageFeed :stages="jobStages" />
+          <StageFeed :stages="highlightStages" />
         </div>
       </div>
     </div>
@@ -46,11 +48,11 @@ export default defineComponent({
     });
 
     const jobStages = props.stages.filter((stage) => stage.type === StageTypes.job);
-    // const educationStages = props.stages.filter((stage) => stage.type === StageTypes.education);
-    // const highlightStages = props.stages.filter((stage) => stage.type === StageTypes.highlight);
+    const educationStages = props.stages.filter((stage) => stage.type === StageTypes.education);
+    const highlightStages = props.stages.filter((stage) => stage.type === StageTypes.highlight);
 
     return {
-      translateI18nField, t, jobStages, // educationStages, highlightStages,
+      translateI18nField, t, jobStages, educationStages, highlightStages,
     };
   },
 });

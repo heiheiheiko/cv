@@ -12,13 +12,22 @@
       </BaseAvatar>
     </div>
     <div class="min-w-0 flex-1">
-      <slot />
+      <BaseFeedItemTitle>
+        {{ stage.title() }}
+      </BaseFeedItemTitle>
+      <BaseFeedItemSubtitle>
+        {{ stage.subtitle() }}
+      </BaseFeedItemSubtitle>
+      <BaseFeedItemSubtitle v-if="organization">
+        {{ organization.name }}
+      </BaseFeedItemSubtitle>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import useOrganization from '@/composables/useOrganization';
 
 export default defineComponent({
   props: {
@@ -28,5 +37,13 @@ export default defineComponent({
     },
   },
   emits: ['select'],
+  setup(props) {
+    const { findOrganization } = useOrganization();
+    const organization = findOrganization(props.stage.organization);
+
+    return {
+      organization,
+    };
+  },
 });
 </script>

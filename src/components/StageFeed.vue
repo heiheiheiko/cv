@@ -12,8 +12,20 @@
               class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
               aria-hidden="true"
             />
-            <StageFeedItemJob
+            <StageFeedItem
               v-if="stage.type === StageTypes.job"
+              :stage="stage"
+              @select="setOverlayStage"
+            />
+
+            <StageFeedItem
+              v-if="stage.type === StageTypes.education"
+              :stage="stage"
+              @select="setOverlayStage"
+            />
+
+            <StageFeedItem
+              v-if="stage.type === StageTypes.highlight"
               :stage="stage"
               @select="setOverlayStage"
             />
@@ -31,14 +43,13 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
-
 import { StageTypes } from '@/db/dbTypes';
-import StageFeedItemJob from '@/components/StageFeedItemJob.vue';
+import StageFeedItem from '@/components/StageFeedItem.vue';
 import StageOverlay from '@/components/StageOverlay.vue';
 
 export default defineComponent({
   components: {
-    StageFeedItemJob,
+    StageFeedItem,
     StageOverlay,
   },
   props: {

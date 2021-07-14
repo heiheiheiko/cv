@@ -25,7 +25,7 @@
       </div>
       <div class="px-4 pt-5 pb-5 sm:px-0 sm:pt-0">
         <BaseDescriptionList>
-          <div>
+          <div v-if="stage.descriptionI18n">
             <BaseDescriptionTerm>
               {{ $t('resources.stage.attributes.description') }}
             </BaseDescriptionTerm>
@@ -36,7 +36,7 @@
             </BaseDescriptionDetail>
           </div>
 
-          <div>
+          <div v-if="skills.length">
             <BaseDescriptionTerm>
               {{ $t('resources.stageSkill.name', 2) }}
             </BaseDescriptionTerm>
@@ -77,7 +77,7 @@
             </BaseDescriptionDetail>
           </div>
 
-          <div>
+          <div v-if="organization.organizationSize">
             <BaseDescriptionTerm>
               {{ $t('resources.organization.attributes.organizationSize') }}
             </BaseDescriptionTerm>
@@ -86,7 +86,7 @@
             </BaseDescriptionDetail>
           </div>
 
-          <div>
+          <div v-if="organization.branch">
             <BaseDescriptionTerm>
               {{ $t('resources.organization.attributes.branch') }}
             </BaseDescriptionTerm>

@@ -91,18 +91,21 @@ interface Organization{
 
 interface Stage{
   id: number,
-  titleI18n: I18nField,
-  descriptionI18n?: I18nField,
   type: StageTypes,
   isTop: boolean,
-  position?: PositionEnum,
-  employment?: EmploymentEnum,
   startedAt: Date,
   endedAt: Date | null,
   icon: string
-  graduationI18n?: I18nField
-  organization?: Organization,
-  stageSkills?: Array<StageSkill>
+  descriptionI18n?: I18nField,
+  note?: string,
+
+  stageSkills?: Array<StageSkill> // job, education
+  organization?: Organization, // job, education
+  position?: PositionEnum, // job
+  employment?: EmploymentEnum, // job
+  graduationI18n?: I18nField // education
+  courseI18n?: I18nField, // education
+  titleI18n?: I18nField, // highlight
 }
 
 interface Feature{

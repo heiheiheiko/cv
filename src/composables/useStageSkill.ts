@@ -19,11 +19,13 @@ const stageSkills = computed(() => allResources(resourceName));
 
 export default function useStageSkill() {
   // methods
-  const findStageSkill = (id: number|string) => findResource(resourceName, id);
+  const findStageSkill = (id: number|string|undefined) => findResource(resourceName, id);
 
-  const findStageSkills = (ids: Array<number|string>) => ids.map((id) => findStageSkill(id));
+  const findStageSkills = (ids: Array<number|string|undefined>) => ids
+    .map((id) => findStageSkill(id));
 
-  const findSkillsThroughStageSkills = (stageSkillIds: Array<number|string>) => {
+  const findSkillsThroughStageSkills = (stageSkillIds: Array<number|string|undefined>) => {
+    if (!stageSkillIds) { return []; }
     const localStageSkills = findStageSkills(stageSkillIds);
     const skillIds = Object.values(localStageSkills)
       .map((stageSkill: any) => stageSkill.skill);
