@@ -1,30 +1,18 @@
 <template>
-  <div
-    class="relative flex items-start space-x-3"
-    @click="$emit('select', stage)"
+  <StageFeedItem
+    :stage="stage"
+    @select="$emit('select', stage)"
   >
-    <div class="relative">
-      <BaseAvatar
-        :color="stage.color()"
-        class="ring-8 ring-white text-white"
-      >
-        <FontAwesomeIcon :icon="stage.icon" />
-      </BaseAvatar>
-    </div>
-    <div class="min-w-0 flex-1">
-      <div>
-        <BaseFeedItemTitle>
-          {{ stage.title() }}
-        </BaseFeedItemTitle>
-        <BaseFeedItemSubtitle>
-          {{ stage.subtitle() }}
-        </BaseFeedItemSubtitle>
-        <BaseFeedItemSubtitle>
-          {{ organization.name }}
-        </BaseFeedItemSubtitle>
-      </div>
-    </div>
-  </div>
+    <BaseFeedItemTitle>
+      {{ stage.title() }}
+    </BaseFeedItemTitle>
+    <BaseFeedItemSubtitle>
+      {{ stage.subtitle() }}
+    </BaseFeedItemSubtitle>
+    <BaseFeedItemSubtitle>
+      {{ organization.name }}
+    </BaseFeedItemSubtitle>
+  </StageFeedItem>
 </template>
 
 <script lang="ts">
@@ -32,8 +20,12 @@ import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
+import StageFeedItem from '@/components/StageFeedItem.vue';
 
 export default defineComponent({
+  components: {
+    StageFeedItem,
+  },
   props: {
     stage: {
       type: Object,
