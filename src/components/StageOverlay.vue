@@ -12,11 +12,11 @@
               <div>
                 <div class="flex items-center">
                   <h3 class="font-bold text-xl text-gray-900 sm:text-2xl">
-                    {{ jobTitleDeco(stage) }}
+                    {{ stage.title() }}
                   </h3>
                 </div>
                 <p class="text-sm text-gray-500">
-                  {{ jobSubtitleDeco(stage) }}
+                  {{ stage.subtitle() }}
                 </p>
               </div>
             </div>
@@ -106,7 +106,6 @@ import { translateI18nField } from '@/utils/i18nUtils';
 
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
-import useStage from '@/composables/useStage';
 import useStageSkill from '@/composables/useStageSkill';
 
 export default {
@@ -123,7 +122,6 @@ export default {
   emits: ['close'],
   setup(props) {
     const { findOrganization, locationDeco } = useOrganization();
-    const { jobTitleDeco, jobSubtitleDeco } = useStage();
     const { findSkillsThroughStageSkills } = useStageSkill();
 
     const organization = computed(() => findOrganization(props.stage.organization));
@@ -133,8 +131,6 @@ export default {
       translateI18nField,
       periodInWords,
       organization,
-      jobTitleDeco,
-      jobSubtitleDeco,
       locationDeco,
       skills,
     };

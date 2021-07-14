@@ -4,6 +4,7 @@ import { Stage } from '@/db/dbTypes';
 import useState from '@/composables/useState';
 import useOrganization from '@/composables/useOrganization';
 import useStageSkill from '@/composables/useStageSkill';
+import StageDecorator from '@/decorators/StageDecorator';
 import i18n from '@/i18n';
 
 const { t, d } = i18n.global;
@@ -26,18 +27,10 @@ const stages = computed(() => allResources(resourceName));
 
 export default function useStage() {
   // methods
-  const findStage = (id: number|string) => findResource(resourceName, id);
+  const findStage = (id: number|string) => new StageDecorator(findResource(resourceName, id));
   const findStages = (ids: Array<number|string>) => ids.map((id) => findStage(id));
 
-  // decorators
-  const jobTitleDeco = (stage: Stage) => `${t(`resources.stage.enums.position.${stage.position}`)} 
-    – ${t(`resources.stage.enums.employment.${stage.employment}`)}`;
-  const jobSubtitleDeco = (stage: Stage) => {
-    const endedAtOrToday = stage.endedAt ? d(stage.endedAt, 'short') : t('datetime.today');
-    return `${d(stage.startedAt, 'short')} - ${endedAtOrToday}`;
-  };
-
   return {
-    stages, findStage, stageSchema, findStages, jobTitleDeco, jobSubtitleDeco,
+    stages, findStage, stageSchema, findStages,
   };
 }

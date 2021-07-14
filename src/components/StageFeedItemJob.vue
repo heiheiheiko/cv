@@ -5,7 +5,7 @@
   >
     <div class="relative">
       <BaseAvatar
-        color="red"
+        :color="stage.color()"
         class="ring-8 ring-white text-white"
       >
         <FontAwesomeIcon :icon="stage.icon" />
@@ -14,10 +14,10 @@
     <div class="min-w-0 flex-1">
       <div>
         <BaseFeedItemTitle>
-          {{ jobTitleDeco(stage) }}
+          {{ stage.title() }}
         </BaseFeedItemTitle>
         <BaseFeedItemSubtitle>
-          {{ jobSubtitleDeco(stage) }}
+          {{ stage.subtitle() }}
         </BaseFeedItemSubtitle>
         <BaseFeedItemSubtitle>
           {{ organization.name }}
@@ -32,7 +32,6 @@ import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
-import useStage from '@/composables/useStage';
 
 export default defineComponent({
   props: {
@@ -44,11 +43,10 @@ export default defineComponent({
   emits: ['select'],
   setup(props) {
     const { findOrganization } = useOrganization();
-    const { jobTitleDeco, jobSubtitleDeco } = useStage();
     const organization = findOrganization(props.stage.organization);
 
     return {
-      translateI18nField, periodInWords, organization, jobTitleDeco, jobSubtitleDeco,
+      translateI18nField, periodInWords, organization,
     };
   },
 });
