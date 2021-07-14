@@ -22,8 +22,7 @@ export default function useSkill() {
 
   const findSkills = (ids: Array<number|string>) => {
     const localSkills = ids.map((id) => findSkill(id));
-    const orderedSkills = orderBy(localSkills, ['type', 'id']);
-    return orderedSkills.map((skill: Skill) => new SkillDecorator(skill));
+    return orderBy(localSkills, ['type', 'id']);
   };
 
   return {
