@@ -52,7 +52,6 @@ export default defineComponent({
     const overlayStage = ref({});
 
     const setOverlayStage = (stage) => {
-      console.log(stage);
       isOverlayOpen.value = true;
       overlayStage.value = stage;
     };
