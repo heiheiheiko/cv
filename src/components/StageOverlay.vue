@@ -64,7 +64,7 @@
               {{ $t('resources.organization.attributes.location') }}
             </BaseDescriptionTerm>
             <BaseDescriptionDetail>
-              {{ locationDeco(organization) }}
+              {{ organization.location() }}
             </BaseDescriptionDetail>
           </div>
 
@@ -121,7 +121,7 @@ export default {
   },
   emits: ['close'],
   setup(props) {
-    const { findOrganization, locationDeco } = useOrganization();
+    const { findOrganization } = useOrganization();
     const { findSkillsThroughStageSkills } = useStageSkill();
 
     const organization = computed(() => findOrganization(props.stage.organization));
@@ -131,7 +131,6 @@ export default {
       translateI18nField,
       periodInWords,
       organization,
-      locationDeco,
       skills,
     };
   },
