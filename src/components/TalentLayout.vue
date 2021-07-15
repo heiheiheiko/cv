@@ -8,6 +8,7 @@
         <TalentSectionFeature :features="talentFeatures" />
         <TalentSectionTestimonial :testimonial="gamerTestimonial" />
         <TalentSectionStage :stages="talentStages" />
+        <TalentSectionTestimonial :testimonial="explorerTestimonial" />
       </main>
       <TalentFooter />
     </div>
@@ -48,8 +49,11 @@ export default defineComponent({
 
     const talentFeatures = findFeatures(props.talent.features);
     const gamerTestimonial = findTestimonialByStaticId('gamer');
+    const explorerTestimonial = findTestimonialByStaticId('explorer');
     const talentStages = findStages(props.talent.stages);
-    return { talentFeatures, gamerTestimonial, talentStages };
+    return {
+      talentFeatures, gamerTestimonial, talentStages, explorerTestimonial,
+    };
   },
 });
 </script>
