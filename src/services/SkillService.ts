@@ -23,10 +23,6 @@ const buildSkillsWithUseInMonths = (stageIds: Array<number | string>): Array<Ski
         result[skill.id].useInMonths = 0;
         result[skill.id].tmp = [];
       }
-
-      if (skill.id === 'laravel') {
-        console.log(stage);
-      }
       result[skill.id].useInMonths
           += dateDifferenceInMonth(stage.startedAt, stage.endedAt || new Date());
 
@@ -35,12 +31,10 @@ const buildSkillsWithUseInMonths = (stageIds: Array<number | string>): Array<Ski
         dateDifferenceInMonth(stage.startedAt, stage.endedAt || new Date())];
     });
   });
-  console.log(result);
   const decoratedSkills = Object.values(result).map((skillBuildObject: any) => new SkillDecorator(
     skillBuildObject.skill,
     skillBuildObject.useInMonths,
   ));
-  // console.log(decoratedSkills);
   return (decoratedSkills);
 };
 
