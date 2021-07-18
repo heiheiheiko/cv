@@ -9,11 +9,14 @@ export default class SkillDecorator {
 
   type:SkillTypes;
 
-  constructor(skill: Skill) {
+  useInMonths: number | undefined;
+
+  constructor(skill: Skill, useInMonths: number|undefined = undefined) {
     this.id = skill.id;
     this.titleI18n = skill.titleI18n;
     this.isTop = skill.isTop;
     this.type = skill.type;
+    this.useInMonths = useInMonths;
   }
 
   color(): string {

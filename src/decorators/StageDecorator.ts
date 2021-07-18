@@ -34,7 +34,7 @@ export default class stageDecorator {
 
   organization: Organization | undefined;
 
-  stageSkills: StageSkill[] | undefined;
+  stageSkills: StageSkill[] | [];
 
   courseI18n: I18nField | undefined;
 
@@ -50,7 +50,7 @@ export default class stageDecorator {
     this.descriptionI18n = stage.descriptionI18n;
     this.note = stage.note;
 
-    this.stageSkills = stage.stageSkills;
+    this.stageSkills = stage.stageSkills || [];
     this.organization = stage.organization;
     this.position = stage.position;
     this.employment = stage.employment;
