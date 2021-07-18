@@ -311,7 +311,7 @@ export default [
     },
     type: StageTypes.education,
     startedAt: new Date('2008-10-01'),
-    endedAt: new Date('20010-07-01'),
+    endedAt: new Date('2010-07-01'),
     icon: 'graduation-cap',
     isTop: false,
     organization: {
@@ -2466,7 +2466,7 @@ export default [
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
     type: StageTypes.job,
-    startedAt: new Date('2019-07-01'),
+    startedAt: new Date('2020-07-01'),
     endedAt: null,
     icon: 'code',
     isTop: true,
