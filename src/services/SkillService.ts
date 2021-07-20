@@ -5,6 +5,7 @@ import useStageSkill from '@/composables/useStageSkill';
 import useSkill from '@/composables/useSkill';
 import { dateDifferenceInMonth } from '@/utils/dateUtils';
 import SkillDecorator from '@/decorators/SkillDecorator';
+import { orderBy } from 'lodash';
 
 const { findStages } = useStage();
 const { findStageSkill } = useStageSkill();
@@ -35,7 +36,7 @@ const buildSkillsWithUseInMonths = (stageIds: Array<number | string>): Array<Ski
     skillBuildObject.skill,
     skillBuildObject.useInMonths,
   ));
-  return (decoratedSkills);
+  return orderBy(decoratedSkills, ['type', 'id']);
 };
 
 export { buildSkillsWithUseInMonths };
