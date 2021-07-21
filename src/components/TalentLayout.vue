@@ -10,6 +10,7 @@
         <TalentSectionStage :stages="talentStages" />
         <TalentSectionTestimonial :testimonial="explorerTestimonial" />
         <TalentSectionSkill :talent="talent" />
+        <TalentSectionTestimonial :testimonial="accomplisherTestimonial" />
       </main>
       <TalentFooter />
     </div>
@@ -53,6 +54,7 @@ export default defineComponent({
     const talentFeatures = findFeatures(props.talent.features);
     const gamerTestimonial = findTestimonialByStaticId('gamer');
     const explorerTestimonial = findTestimonialByStaticId('explorer');
+    const accomplisherTestimonial = findTestimonialByStaticId('accomplisher');
     const talentStages = findStages(props.talent.stages);
 
     return {
@@ -60,6 +62,7 @@ export default defineComponent({
       gamerTestimonial,
       talentStages,
       explorerTestimonial,
+      accomplisherTestimonial,
     };
   },
 });
