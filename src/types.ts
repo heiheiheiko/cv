@@ -11,6 +11,7 @@ interface FilterSwitch {
   value: string,
   label: string,
   isActive: boolean,
+  color: string
 }
 
 export { Filter, FilterSwitch };

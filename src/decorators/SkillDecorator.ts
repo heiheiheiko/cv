@@ -19,8 +19,8 @@ export default class SkillDecorator {
     this.useInMonths = useInMonths;
   }
 
-  color(): string {
-    switch (this.type) {
+  static color(type: string): string {
+    switch (type) {
       case SkillTypes.keyword:
         return 'orange';
       case SkillTypes.technology:
@@ -33,5 +33,9 @@ export default class SkillDecorator {
       default:
         return 'gray';
     }
+  }
+
+  color(): string {
+    return SkillDecorator.color(this.type);
   }
 }

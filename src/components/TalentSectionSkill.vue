@@ -19,6 +19,7 @@
             :key="filter.id"
             :is-active="filter.isActive"
             class="mr-5"
+            :color="filter.color"
             @update="filter.isActive = !filter.isActive"
           >
             {{ filter.label }}
@@ -47,6 +48,7 @@ import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 import { SkillTypes } from '@/db/dbTypes';
 import { Filter, FilterSwitch } from '@/types';
+import SkillDecorator from '@/decorators/SkillDecorator';
 
 import { buildSkillsWithUseInMonths } from '@/services/SkillService';
 import _ from 'lodash';
@@ -71,6 +73,7 @@ export default defineComponent({
         value: SkillTypes.keyword,
         label: t(`resources.skill.enums.${SkillTypes.keyword}`, 2),
         isActive: true,
+        color: SkillDecorator.color(SkillTypes.keyword),
       },
       {
         id: 'type_technology',
@@ -78,6 +81,7 @@ export default defineComponent({
         value: SkillTypes.technology,
         label: t(`resources.skill.enums.${SkillTypes.technology}`, 2),
         isActive: true,
+        color: SkillDecorator.color(SkillTypes.technology),
       },
       {
         id: 'type_software',
@@ -85,6 +89,7 @@ export default defineComponent({
         value: SkillTypes.software,
         label: t(`resources.skill.enums.${SkillTypes.software}`, 2),
         isActive: true,
+        color: SkillDecorator.color(SkillTypes.software),
       },
       {
         id: 'top',
@@ -92,6 +97,7 @@ export default defineComponent({
         value: true,
         label: t('resources.skill.attributes.isTop', 2),
         isActive: true,
+        color: 'yellow',
       },
     ] as Array<FilterSwitch>);
 
