@@ -6,12 +6,16 @@ import useSkill from '@/composables/useSkill';
 import { dateDifferenceInMonth } from '@/utils/dateUtils';
 import SkillDecorator from '@/decorators/SkillDecorator';
 import { orderBy } from 'lodash';
+import { Filter } from '@/types';
 
 const { findStages } = useStage();
 const { findStageSkill } = useStageSkill();
 const { findSkill } = useSkill();
 
-const buildSkillsWithUseInMonths = (stageIds: Array<number | string>): Array<SkillDecorator> => {
+const buildSkillsWithUseInMonths = (
+  stageIds: Array<number | string>,
+  filters: Array<Filter>,
+): Array<SkillDecorator> => {
   const result = {} as any;
   const stages = findStages(stageIds);
   stages.forEach((stage) => {
@@ -32,11 +36,21 @@ const buildSkillsWithUseInMonths = (stageIds: Array<number | string>): Array<Ski
         dateDifferenceInMonth(stage.startedAt, stage.endedAt || new Date())];
     });
   });
+
   const decoratedSkills = Object.values(result).map((skillBuildObject: any) => new SkillDecorator(
     skillBuildObject.skill,
     skillBuildObject.useInMonths,
   ));
-  return orderBy(decoratedSkills, ['type', 'id']);
+
+  const filteredSkills = decoratedSkills.filter((decoratedSkill: Record<string, any>) => {
+    const filterChecks = filters.map((filter) => {
+      const { ...object } = decoratedSkill;
+      return filter.values.includes(object[filter.attribute]);
+    });
+    return filterChecks.every((filterCheck) => filterCheck);
+  });
+
+  return orderBy(filteredSkills, ['type', 'id']);
 };
 
 export { buildSkillsWithUseInMonths };

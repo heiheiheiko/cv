@@ -56,6 +56,18 @@
           "CLOUD": "Cloud"
         }
       }
+    },
+    "skill": {
+      "name": "Skill | Skills",
+      "attributes": {
+        "isTop": "Top Skill | Top Skills"
+      },
+      "enums": {
+         "KEYWORD": "Buzzword | Buzzwords",
+         "TECHNOLOGY": "Technologie | Technologien",
+         "SOFTWARE": "Software",
+         "SOFT": "Soft Skills"
+      }
     }
   }
 }

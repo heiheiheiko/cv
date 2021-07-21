@@ -9,7 +9,7 @@
         <TalentSectionTestimonial :testimonial="gamerTestimonial" />
         <TalentSectionStage :stages="talentStages" />
         <TalentSectionTestimonial :testimonial="explorerTestimonial" />
-        <TalentSectionSkill :skills="talentSkillsWithUseInMonths" />
+        <TalentSectionSkill :talent="talent" />
       </main>
       <TalentFooter />
     </div>
@@ -28,7 +28,6 @@ import TalentFooter from '@/components/TalentFooter.vue';
 import useFeature from '@/composables/useFeature';
 import useTestimonial from '@/composables/useTestimonial';
 import useStages from '@/composables/useStage';
-import { buildSkillsWithUseInMonths } from '@/services/SkillService';
 
 export default defineComponent({
   components: {
@@ -55,13 +54,12 @@ export default defineComponent({
     const gamerTestimonial = findTestimonialByStaticId('gamer');
     const explorerTestimonial = findTestimonialByStaticId('explorer');
     const talentStages = findStages(props.talent.stages);
-    const talentSkillsWithUseInMonths = buildSkillsWithUseInMonths(props.talent.stages);
+
     return {
       talentFeatures,
       gamerTestimonial,
       talentStages,
       explorerTestimonial,
-      talentSkillsWithUseInMonths,
     };
   },
 });
