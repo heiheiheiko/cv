@@ -27,15 +27,30 @@
         </div>
 
         <div class="mt-10 text-left">
-          <BaseBadge
+          <template
             v-for="skill in skillsWithUseInMonths"
             :key="skill.id"
-            :color="skill.color()"
-            size="large"
-            class="mr-2 mb-2 "
           >
-            {{ translateI18nField(skill.titleI18n) }}
-          </BaseBadge>
+            <TransitionRoot
+              appear
+              :show="skill.isVisible"
+              as="template"
+              enter="ease-in-out duration-150"
+              enter-from="opacity-0"
+              enter-to="opacity-100"
+              leave="ease-in-out duration-300"
+              leave-from="opacity-100"
+              leave-to="opacity-0"
+            >
+              <BaseBadge
+                :color="skill.color()"
+                size="large"
+                class="mr-2 mb-2"
+              >
+                {{ translateI18nField(skill.titleI18n) }}
+              </BaseBadge>
+            </TransitionRoot>
+          </template>
         </div>
       </div>
     </div>
@@ -52,8 +67,12 @@ import SkillDecorator from '@/decorators/SkillDecorator';
 
 import { buildSkillsWithUseInMonths } from '@/services/SkillService';
 import _ from 'lodash';
+import { TransitionRoot } from '@headlessui/vue';
 
 export default defineComponent({
+  components: {
+    TransitionRoot,
+  },
   props: {
     talent: {
       type: Object,

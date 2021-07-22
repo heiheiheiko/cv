@@ -11,12 +11,15 @@ export default class SkillDecorator {
 
   useInMonths: number | undefined;
 
+  isVisible: boolean
+
   constructor(skill: Skill, useInMonths: number|undefined = undefined) {
     this.id = skill.id;
     this.titleI18n = skill.titleI18n;
     this.isTop = skill.isTop;
     this.type = skill.type;
     this.useInMonths = useInMonths;
+    this.isVisible = true;
   }
 
   static color(type: string): string {
@@ -37,5 +40,13 @@ export default class SkillDecorator {
 
   color(): string {
     return SkillDecorator.color(this.type);
+  }
+
+  hide(): void {
+    this.isVisible = false;
+  }
+
+  show(): void {
+    this.isVisible = true;
   }
 }

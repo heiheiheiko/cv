@@ -42,15 +42,20 @@ const buildSkillsWithUseInMonths = (
     skillBuildObject.useInMonths,
   ));
 
-  const filteredSkills = decoratedSkills.filter((decoratedSkill: Record<string, any>) => {
+  decoratedSkills.forEach((decoratedSkill: Record<string, any>) => {
     const filterChecks = filters.map((filter) => {
       const { ...object } = decoratedSkill;
       return filter.values.includes(object[filter.attribute]);
     });
-    return filterChecks.every((filterCheck) => filterCheck);
+
+    if (filterChecks.every((filterCheck) => filterCheck)) {
+      decoratedSkill.show();
+    } else {
+      decoratedSkill.hide();
+    }
   });
 
-  return orderBy(filteredSkills, ['type', 'id']);
+  return orderBy(decoratedSkills, ['type', 'id']);
 };
 
 export { buildSkillsWithUseInMonths };
