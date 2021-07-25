@@ -6,6 +6,7 @@ import {
   Organization, StageSkill,
 } from '@/db/dbTypes';
 import { translateI18nField } from '@/utils/i18nUtils';
+import ReferenceTypeDecorator from '@/decorators/ReferenceTypesDecorator';
 
 const { t, d } = i18n.global;
 
@@ -60,17 +61,11 @@ export default class stageDecorator {
   }
 
   color(): string {
-    switch (this.type) {
-      case ReferenceTypes.educational:
-        return 'green';
-      case ReferenceTypes.personal:
-        return 'indigo';
-      case ReferenceTypes.professional:
-        return 'red';
+    return ReferenceTypeDecorator.color(this.type);
+  }
 
-      default:
-        return 'gray';
-    }
+  colorGradient(): string {
+    return ReferenceTypeDecorator.colorGradient(this.type);
   }
 
   title(): string {

@@ -6,6 +6,7 @@
     <div class="relative">
       <BaseAvatar
         :color="stage.color()"
+        :color-gradient="stage.colorGradient()"
         class="ring-8 ring-white text-white"
       >
         <FontAwesomeIcon :icon="stage.icon" />
