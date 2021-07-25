@@ -1,4 +1,5 @@
 import { Skill, I18nField, SkillTypes } from '@/db/dbTypes';
+import { usageInWords } from '@/utils/dateUtils';
 
 export default class SkillDecorator {
   id: string;
@@ -36,6 +37,10 @@ export default class SkillDecorator {
       default:
         throw new Error(`${type} is not a valid SkillTypes`);
     }
+  }
+
+  usageInWords(): string {
+    return usageInWords(this.useInMonths);
   }
 
   color(): string {

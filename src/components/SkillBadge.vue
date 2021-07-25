@@ -9,6 +9,9 @@
     <BaseBadgeBody :size="size">
       {{ translateI18nField(skill.titleI18n) }}
     </BaseBadgeBody>
+    <span class="text-gray-500 text-lg ml-2">
+      {{ skill.usageInWords() }}
+    </span>
   </BaseBadge>
 </template>
 

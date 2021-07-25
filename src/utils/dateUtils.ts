@@ -25,6 +25,15 @@ const periodInWords = (startedAt: Date, endedAt: Date): string => {
   return result.join(` ${t('general.and')} `);
 };
 
+const usageInWords = (useInMonths: number | undefined): string => {
+  if (!useInMonths) { return ''; }
+  const usageInYears = Math.floor(useInMonths / 12);
+  if (usageInYears > 1) {
+    return `${usageInYears} ${t('datetime.year', usageInYears)}`;
+  }
+  return `${useInMonths} ${t('datetime.month', useInMonths)}`;
+};
+
 export {
-  dateDifferenceInMonth, periodInWords,
+  dateDifferenceInMonth, periodInWords, usageInWords,
 };
