@@ -6,6 +6,7 @@ import useTestimonial from '@/composables/useTestimonial';
 import useFeature from '@/composables/useFeature';
 import useLink from '@/composables/useLink';
 import useStage from '@/composables/useStage';
+import useInterest from './useInterest';
 
 const {
   normalizeAndAssignData, allResources, findResource,
@@ -14,6 +15,7 @@ const { testimonialSchema } = useTestimonial();
 const { featureSchema } = useFeature();
 const { linkSchema } = useLink();
 const { stageSchema } = useStage();
+const { InterestSchema } = useInterest();
 
 // constants
 const resourceName = 'talents';
@@ -24,6 +26,7 @@ const talentSchema = new schema.Entity(resourceName, {
   features: [featureSchema],
   links: [linkSchema],
   stages: [stageSchema],
+  interests: [InterestSchema]
 });
 
 // computed
