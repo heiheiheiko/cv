@@ -13,19 +13,19 @@
               aria-hidden="true"
             />
             <StageFeedItem
-              v-if="stage.type === StageTypes.job"
+              v-if="stage.type === ReferenceTypes.professional"
               :stage="stage"
               @select="setOverlayStage"
             />
 
             <StageFeedItem
-              v-if="stage.type === StageTypes.education"
+              v-if="stage.type === ReferenceTypes.educational"
               :stage="stage"
               @select="setOverlayStage"
             />
 
             <StageFeedItem
-              v-if="stage.type === StageTypes.highlight"
+              v-if="stage.type === ReferenceTypes.personal"
               :stage="stage"
               @select="setOverlayStage"
             />
@@ -43,7 +43,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
-import { StageTypes } from '@/db/dbTypes';
+import { ReferenceTypes } from '@/db/dbTypes';
 import StageFeedItem from '@/components/StageFeedItem.vue';
 import StageOverlay from '@/components/StageOverlay.vue';
 
@@ -67,7 +67,7 @@ export default defineComponent({
       overlayStage.value = stage;
     };
     return {
-      StageTypes, overlayStage, setOverlayStage, isOverlayOpen,
+      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen,
     };
   },
 });

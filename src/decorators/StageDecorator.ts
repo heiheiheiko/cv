@@ -2,7 +2,7 @@
 import i18n from '@/i18n';
 
 import {
-  Stage, I18nField, StageTypes, PositionEnum, EmploymentEnum,
+  Stage, I18nField, ReferenceTypes, PositionEnum, EmploymentEnum,
   Organization, StageSkill,
 } from '@/db/dbTypes';
 import { translateI18nField } from '@/utils/i18nUtils';
@@ -16,7 +16,7 @@ export default class stageDecorator {
 
   isTop: boolean;
 
-  type:StageTypes;
+  type:ReferenceTypes;
 
   descriptionI18n: I18nField | undefined;
 
@@ -61,11 +61,11 @@ export default class stageDecorator {
 
   color(): string {
     switch (this.type) {
-      case StageTypes.education:
+      case ReferenceTypes.educational:
         return 'green';
-      case StageTypes.highlight:
+      case ReferenceTypes.personal:
         return 'indigo';
-      case StageTypes.job:
+      case ReferenceTypes.professional:
         return 'red';
 
       default:
@@ -75,16 +75,16 @@ export default class stageDecorator {
 
   title(): string {
     switch (this.type) {
-      case StageTypes.education:
+      case ReferenceTypes.educational:
         if (this.graduationI18n) {
           return `${translateI18nField(this.courseI18n)} – 
                 ${translateI18nField(this.graduationI18n)}`;
         }
 
         return translateI18nField(this.courseI18n);
-      case StageTypes.highlight:
+      case ReferenceTypes.personal:
         return translateI18nField(this.titleI18n);
-      case StageTypes.job:
+      case ReferenceTypes.professional:
         return `${t(`resources.stage.enums.position.${this.position}`)} – 
                 ${t(`resources.stage.enums.employment.${this.employment}`)}`;
 

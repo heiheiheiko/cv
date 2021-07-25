@@ -27,7 +27,7 @@
 import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
-import { StageTypes } from '@/db/dbTypes';
+import { ReferenceTypes } from '@/db/dbTypes';
 
 import StageFeed from '@/components/StageFeed.vue';
 
@@ -47,9 +47,10 @@ export default defineComponent({
       useScope: 'local',
     });
 
-    const jobStages = props.stages.filter((stage) => stage.type === StageTypes.job);
-    const educationStages = props.stages.filter((stage) => stage.type === StageTypes.education);
-    const highlightStages = props.stages.filter((stage) => stage.type === StageTypes.highlight);
+    const jobStages = props.stages.filter((stage) => stage.type === ReferenceTypes.professional);
+    // eslint-disable-next-line max-len
+    const educationStages = props.stages.filter((stage) => stage.type === ReferenceTypes.educational);
+    const highlightStages = props.stages.filter((stage) => stage.type === ReferenceTypes.personal);
 
     return {
       translateI18nField, t, jobStages, educationStages, highlightStages,

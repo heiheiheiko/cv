@@ -97,7 +97,7 @@ interface Organization{
 
 interface Stage{
   id: number,
-  type: StageTypes,
+  type: ReferenceTypes,
   isTop: boolean,
   startedAt: Date,
   endedAt: Date | null,
