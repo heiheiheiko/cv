@@ -10,7 +10,7 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import useColor from '@/composables/useColor';
-import { Size } from '@/types';
+import { Dimension } from '@/types';
 
 const sizeClass = {
   tiny: 'h-6 w-6',
@@ -18,7 +18,7 @@ const sizeClass = {
   normal: 'h-10 w-10',
   large: 'h-12 w-12',
   huge: 'h-14 w-14',
-} as Size;
+} as Dimension;
 
 export default defineComponent({
   props: {
