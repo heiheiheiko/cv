@@ -115,7 +115,7 @@ export default [
       de: 'Agile Methodology',
       en: 'Agile Methodology',
     },
-    type: ReferenceTypes.professional,
+    type: ReferenceTypes.educational,
     icon: 'project-diagram',
   },
   {
@@ -133,7 +133,7 @@ export default [
       de: 'Emotionale Intelligenz',
       en: 'Emotional intelligence',
     },
-    type: ReferenceTypes.professional,
+    type: ReferenceTypes.educational,
     icon: 'user-friends',
   },
 ] as Array<Interest>;

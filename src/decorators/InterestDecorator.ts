@@ -20,4 +20,8 @@ export default class InterestDecorator {
   color(): string {
     return ReferenceTypeDecorator.color(this.type);
   }
+
+  colorGradient(): string {
+    return ReferenceTypeDecorator.colorGradient(this.type);
+  }
 }
