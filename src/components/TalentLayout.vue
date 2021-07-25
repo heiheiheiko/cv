@@ -11,6 +11,7 @@
         <TalentSectionTestimonial :testimonial="explorerTestimonial" />
         <TalentSectionSkill :talent="talent" />
         <TalentSectionTestimonial :testimonial="accomplisherTestimonial" />
+        <TalentSectionInterst :talent="talent" />
       </main>
       <TalentFooter />
     </div>
@@ -29,6 +30,7 @@ import TalentFooter from '@/components/TalentFooter.vue';
 import useFeature from '@/composables/useFeature';
 import useTestimonial from '@/composables/useTestimonial';
 import useStages from '@/composables/useStage';
+import TalentSectionInterst from '@/components/TalentSectionInterest.vue';
 
 export default defineComponent({
   components: {
@@ -38,6 +40,7 @@ export default defineComponent({
     TalentSectionTestimonial,
     TalentSectionStage,
     TalentSectionSkill,
+    TalentSectionInterst,
     TalentFooter,
   },
   props: {
