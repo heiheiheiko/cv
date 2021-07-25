@@ -6,7 +6,7 @@
     <span class="absolute flex-shrink-0 flex items-center justify-center">
       <span
         class="rounded-full"
-        :class="[`bg-${color}-500`, dotSizeClass[size]]"
+        :class="[`bg-${color}`, dotSizeClass[size]]"
         aria-hidden="true"
       />
     </span>

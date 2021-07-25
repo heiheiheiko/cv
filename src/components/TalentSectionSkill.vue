@@ -116,7 +116,7 @@ export default defineComponent({
         value: true,
         label: t('resources.skill.attributes.isTop', 2),
         isActive: true,
-        color: 'yellow',
+        color: 'macaroniAndCheese',
       },
     ] as Array<FilterSwitch>);
 

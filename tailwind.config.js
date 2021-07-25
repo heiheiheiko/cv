@@ -20,6 +20,9 @@ module.exports = {
         // green gradient
         mountainMeadow: '#14b8a6',
         bondiBlue: '#0891b2',
+        // orange gradient
+        macaroniAndCheese: '#ffc371',
+        bittersweet: '#ff7e5f',
       },
     },
   },

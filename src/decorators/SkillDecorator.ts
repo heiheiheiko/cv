@@ -22,19 +22,19 @@ export default class SkillDecorator {
     this.isVisible = true;
   }
 
-  static color(type: string): string {
+  static color(type: SkillTypes): string {
     switch (type) {
       case SkillTypes.keyword:
-        return 'orange';
+        return 'royalBlue';
       case SkillTypes.technology:
-        return 'indigo';
+        return 'outrageousOrange';
       case SkillTypes.software:
-        return 'teal';
+        return 'mountainMeadow';
       case SkillTypes.soft:
         return 'purple';
 
       default:
-        return 'gray';
+        throw new Error(`${type} is not a valid SkillTypes`);
     }
   }
 
