@@ -3,11 +3,11 @@ import { ReferenceTypes } from '@/db/dbTypes';
 export default class ReferenceTypeDecorator {
   static color(type: ReferenceTypes): string {
     switch (type) {
-      case ReferenceTypes.educational:
+      case ReferenceTypes.personal:
         return 'robinsEggBlue';
       case ReferenceTypes.professional:
         return 'outrageousOrange';
-      case ReferenceTypes.personal:
+      case ReferenceTypes.educational:
         return 'royalBlue';
 
       default:
@@ -17,11 +17,11 @@ export default class ReferenceTypeDecorator {
 
   static colorGradient(type: ReferenceTypes): string {
     switch (type) {
-      case ReferenceTypes.educational:
+      case ReferenceTypes.personal:
         return 'pelorous';
       case ReferenceTypes.professional:
         return 'ceriseRed';
-      case ReferenceTypes.personal:
+      case ReferenceTypes.educational:
         return 'wisteria';
 
       default:
