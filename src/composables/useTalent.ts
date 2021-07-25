@@ -26,7 +26,7 @@ const talentSchema = new schema.Entity(resourceName, {
   features: [featureSchema],
   links: [linkSchema],
   stages: [stageSchema],
-  interests: [InterestSchema]
+  interests: [InterestSchema],
 });
 
 // computed

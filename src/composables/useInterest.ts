@@ -4,7 +4,6 @@ import useState from '@/composables/useState';
 import InterestDecorator from '@/decorators/InterestDecorator';
 import { orderBy } from 'lodash';
 
-
 const { allResources, findResource } = useState();
 
 // constants

@@ -41,6 +41,9 @@
             >{{ item.name }}</a>
           </div>
         </div>
+        <div class="hidden md:flex md:items-center md:space-x-6">
+          <TheLocaleSelect />
+        </div>
       </nav>
     </div>
 
@@ -89,6 +92,9 @@
                      text-gray-900 hover:bg-gray-50"
               >{{ item.name }}</a>
             </div>
+            <div class="mt-6 px-5">
+              <TheLocaleSelect />
+            </div>
           </div>
         </div>
       </PopoverPanel>
@@ -106,6 +112,7 @@ import {
   XIcon,
 } from '@heroicons/vue/outline';
 import { useI18n } from 'vue-i18n';
+import TheLocaleSelect from '@/components/TheLocaleSelect.vue';
 
 export default defineComponent({
   components: {
@@ -114,6 +121,7 @@ export default defineComponent({
     PopoverPanel,
     MenuIcon,
     XIcon,
+    TheLocaleSelect,
   },
   setup() {
     const { t } = useI18n();
