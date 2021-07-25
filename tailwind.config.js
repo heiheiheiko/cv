@@ -11,15 +11,15 @@ module.exports = {
         orange: colors.orange,
         indigo: colors.indigo,
         purple: colors.purple,
-        // can you feel the love tonight
+        // blue gradient
         royalBlue: '#4568dc',
-        wisteria: '#b06ab3',
-        // bloody mary
+        affair: '#7b4397',
+        // red gradient
         outrageousOrange: '#ff512f',
-        ceriseRed: '#dd2476',
-        // socialive
-        robinsEggBlue: '#06beb6',
-        pelorous: '#48b1bf',
+        lipstick: '#aa076b',
+        // green gradient
+        mountainMeadow: '#14b8a6',
+        bondiBlue: '#0891b2',
       },
     },
   },

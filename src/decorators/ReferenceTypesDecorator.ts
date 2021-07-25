@@ -4,7 +4,7 @@ export default class ReferenceTypeDecorator {
   static color(type: ReferenceTypes): string {
     switch (type) {
       case ReferenceTypes.personal:
-        return 'robinsEggBlue';
+        return 'mountainMeadow';
       case ReferenceTypes.professional:
         return 'outrageousOrange';
       case ReferenceTypes.educational:
@@ -18,11 +18,11 @@ export default class ReferenceTypeDecorator {
   static colorGradient(type: ReferenceTypes): string {
     switch (type) {
       case ReferenceTypes.personal:
-        return 'pelorous';
+        return 'bondiBlue';
       case ReferenceTypes.professional:
-        return 'ceriseRed';
+        return 'lipstick';
       case ReferenceTypes.educational:
-        return 'wisteria';
+        return 'affair';
 
       default:
         throw new Error(`${type} is not a valid ReferenceType`);
