@@ -11,6 +11,15 @@ module.exports = {
         orange: colors.orange,
         indigo: colors.indigo,
         purple: colors.purple,
+        // can you feel the love tonight
+        royalBlue: '#4568dc',
+        wisteria: '#b06ab3',
+        // bloody mary
+        outrageousOrange: '#ff512f',
+        ceriseRed: '#dd2476',
+        // socialive
+        robinsEggBlue: '#06beb6',
+        pelorous: '#48b1bf',
       },
     },
   },
