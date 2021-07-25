@@ -42,13 +42,7 @@
               leave-from="opacity-100"
               leave-to="opacity-0"
             >
-              <BaseBadge
-                :color="skill.color()"
-                size="large"
-                class="mr-2 mb-2"
-              >
-                {{ translateI18nField(skill.titleI18n) }}
-              </BaseBadge>
+              <SkillBadge :skill="skill" />
             </TransitionRoot>
           </template>
         </div>
@@ -64,6 +58,7 @@ import { useI18n } from 'vue-i18n';
 import { SkillTypes } from '@/db/dbTypes';
 import { Filter, FilterSwitch } from '@/types';
 import SkillDecorator from '@/decorators/SkillDecorator';
+import SkillBadge from '@/components/SkillBadge.vue';
 
 import { buildSkillsWithUseInMonths } from '@/services/SkillService';
 import _ from 'lodash';
@@ -72,6 +67,7 @@ import { TransitionRoot } from '@headlessui/vue';
 export default defineComponent({
   components: {
     TransitionRoot,
+    SkillBadge,
   },
   props: {
     talent: {
