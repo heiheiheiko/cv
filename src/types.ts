@@ -14,4 +14,12 @@ interface FilterSwitch {
   color: string
 }
 
-export { Filter, FilterSwitch };
+interface Size {
+  tiny: string,
+  small: string,
+  normal: string,
+  large: string,
+  huge: string,
+}
+
+export { Filter, FilterSwitch, Size };

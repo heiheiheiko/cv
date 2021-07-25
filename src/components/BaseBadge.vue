@@ -21,6 +21,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { Size } from '@/types';
 
 const dotSizeClass = {
   tiny: 'h-1 w-1',
@@ -28,7 +29,7 @@ const dotSizeClass = {
   normal: 'h-1.5 w-1.5',
   large: 'h-2.5 w-2.5',
   huge: 'h-3.5 w-3.5',
-} as any;
+} as Size;
 
 const textSpaceClass = {
   tiny: 'ml-2.5',
@@ -36,7 +37,7 @@ const textSpaceClass = {
   normal: 'ml-3.5',
   large: 'ml-5',
   huge: 'ml-6',
-} as any;
+} as Size;
 
 const textSizeClass = {
   tiny: 'text-xs',
@@ -44,7 +45,7 @@ const textSizeClass = {
   normal: 'text-base',
   large: 'text-2xl',
   huge: 'text-4xl',
-} as any;
+} as Size;
 
 export default defineComponent({
   props: {
