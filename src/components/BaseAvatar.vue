@@ -1,14 +1,15 @@
 <template>
   <div
     class="flex items-center justify-center rounded-full"
-    :class="[sizeClass[size], `bg-${color}-500`]"
+    :class="[sizeClass[size], colorClass]"
   >
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
+import useColor from '@/composables/useColor';
 
 const sizeClass = {
   tiny: 'h-6 w-6',
@@ -24,13 +25,20 @@ export default defineComponent({
       type: String,
       default: 'gray',
     },
+    colorGradient: {
+      type: String,
+      default: '',
+    },
     size: {
       type: String,
       default: 'normal',
     },
   },
-  setup() {
-    return { sizeClass };
+  setup(props) {
+    const { bgOrGradientClass } = useColor();
+
+    const colorClass = computed(() => bgOrGradientClass(props.color, props.colorGradient));
+    return { sizeClass, colorClass };
   },
 });
 </script>
