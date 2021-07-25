@@ -8,8 +8,11 @@
     "month":  "Monat | Monate"
   },
   "resources": {
+    "feature": {
+      "name" : "Feature | Features"
+    },
     "stage": {
-      "name" : "Lebensabschnitt",
+      "name" : "Lebensabschnitt | Lebensabschnitte",
       "attributes": {
         "description": "Beschreibung"
       },
@@ -68,6 +71,9 @@
          "SOFTWARE": "Software",
          "SOFT": "Soft Skills"
       }
+    },
+    "interest": {
+      "name" : "Interesse | Interessen"
     }
   }
 }

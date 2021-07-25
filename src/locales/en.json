@@ -8,10 +8,13 @@
     "month":  "month | months"
   },
   "resources": {
+    "feature": {
+      "name" : "Feature | Features"
+    },
     "stage": {
-      "name" : "Stage of live",
+      "name" : "Stage of live | Stages of live",
       "attributes": {
-        "description": "Beschreibung"
+        "description": "Description"
       },
       "enums": {
         "position": {
@@ -68,6 +71,9 @@
          "SOFTWARE": "Software",
          "SOFT": "Soft Skills"
       }
+    },
+    "interest": {
+      "name" : "Interest | Interests"
     }
   }
 }

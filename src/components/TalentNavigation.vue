@@ -116,36 +116,16 @@ export default defineComponent({
     XIcon,
   },
   setup() {
-    const { t } = useI18n({
-      inheritLocale: true,
-      useScope: 'local',
-    });
+    const { t } = useI18n();
 
     const navigation = [
-      { name: t('dashboard'), href: '#', isActive: true },
-      { name: t('team'), href: '#', isActive: false },
-      { name: t('projects'), href: '#', isActive: false },
+      { name: t('resources.feature.name', 2), href: '#features-section', isActive: true },
+      { name: t('resources.stage.name', 2), href: '#stages-section', isActive: false },
+      { name: t('resources.skill.name', 2), href: '#skills-section', isActive: false },
+      { name: t('resources.interest.name', 2), href: '#interests-section', isActive: false },
     ];
 
-    return {
-      navigation,
-      t,
-    };
+    return { navigation };
   },
 });
 </script>
-
-<i18n>
-{
-  "en": {
-      "dashboard": "Dashboard",
-      "team": "Team",
-      "projects": "Projects",
-  },
-  "de": {
-      "dashboard": "Dashboard",
-      "team": "Team",
-      "projects": "Projekte",
-  }
-}
-</i18n>
