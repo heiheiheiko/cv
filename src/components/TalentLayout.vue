@@ -13,7 +13,7 @@
         <TalentSectionTestimonial :testimonial="accomplisherTestimonial" />
         <TalentSectionInterst :talent="talent" />
       </main>
-      <TalentFooter />
+      <TalentFooter :talent="talent" />
     </div>
   </div>
 </template>

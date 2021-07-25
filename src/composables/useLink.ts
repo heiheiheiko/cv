@@ -17,9 +17,14 @@ const links = computed(() => allResources(resourceName));
 
 export default function useLink() {
   // methods
-  const findLink = (id: number) => findResource(resourceName, id);
+  const findLink = (id: number|string) => findResource(resourceName, id);
+
+  const findLinks = (ids: Array<number|string>) => {
+    const _links = ids.map((id) => findLink(id));
+    return _links;
+  };
 
   return {
-    links, findLink, linkSchema,
+    links, findLink, linkSchema, findLinks,
   };
 }
