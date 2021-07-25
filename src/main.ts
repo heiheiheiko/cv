@@ -9,6 +9,10 @@ import {
   faChess, faGamepad, faTree, faAddressCard, faMapMarkedAlt, faGhost,
   faProjectDiagram, faGem, faUserFriends,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub, faXing, faKickstarterK,
+} from '@fortawesome/free-brands-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import './registerServiceWorker';
@@ -43,6 +47,9 @@ library.add(faGhost);
 library.add(faProjectDiagram);
 library.add(faGem);
 library.add(faUserFriends);
+library.add(faGithub);
+library.add(faXing);
+library.add(faKickstarterK);
 
 const app = createApp(App).use(i18n).use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);

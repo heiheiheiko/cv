@@ -8,6 +8,7 @@ import interests from '@/db/interests';
 
 let featureId = 1;
 let testimonialId = 1;
+let linkId = 1;
 const parentType = 'talent';
 
 // talent
@@ -84,32 +85,36 @@ talent.testimonials = [testimonialGamer, testimonialExplorer, testimonialAccompl
 
 // links
 const linkGithub: Link = {
-  id: 1,
+  id: linkId++,
   titleI18n: {
     de: 'Github',
     en: 'Github',
   },
-  url: 'https://github.com/HBeineke',
+  icon: 'github',
+  url: 'https://github.com/heiheiheiko',
 };
 
 const linkXing: Link = {
-  id: 2,
+  id: linkId++,
   titleI18n: {
     de: 'Xing',
     en: 'Xing',
   },
+  icon: 'xing',
   url: 'https://www.xing.com/profile/Heiko_Beineke',
 };
 
-const linkHomepage: Link = {
-  id: 3,
+const linkKickstarter: Link = {
+  id: linkId++,
   titleI18n: {
-    de: 'Homepage',
-    en: 'Homepage',
+    de: 'Kickstarter',
+    en: 'Kickstarter',
   },
-  url: 'https://hb-curriculum-vitae.herokuapp.com/',
+  icon: 'kickstarter-k',
+  url: 'https://www.kickstarter.com/profile/heiko-beineke',
 };
-talent.links = [linkGithub, linkXing, linkHomepage];
+
+talent.links = [linkKickstarter, linkXing, linkGithub];
 
 // features
 const featureAgile: Feature = {

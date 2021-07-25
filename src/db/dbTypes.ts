@@ -25,6 +25,7 @@ interface Link{
   id: number,
   titleI18n: I18nField,
   url: string,
+  icon: string
 }
 
 enum SkillTypes {
