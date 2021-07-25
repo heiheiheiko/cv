@@ -32,6 +32,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
+import useColor from '@/composables/useColor';
 
 export default defineComponent({
   props: {
@@ -53,13 +54,9 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const colorClass = computed(() => {
-      if (props.colorGradient) {
-        console.log(props.colorGradient);
-        return `bg-gradient-to-r from-${props.color} to-${props.colorGradient}`;
-      }
-      return `bg-${props.color}`;
-    });
+    const { bgOrGradientClass } = useColor();
+
+    const colorClass = computed(() => bgOrGradientClass(props.color, props.colorGradient));
 
     return {
       translateI18nField, colorClass,
