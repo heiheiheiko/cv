@@ -6,6 +6,8 @@ import {
   faSync, faDog, faHome, faPeopleArrows, faComments, faSpaceShuttle,
   faCogs, faUserAstronaut, faDice, faCode, faBook, faGraduationCap,
   faBirthdayCake, faHeart, faCar, faMoneyBillAlt, faHandRock, faHiking,
+  faChess, faGamepad, faTree, faAddressCard, faMapMarkedAlt, faGhost,
+  faProjectDiagram, faGem, faUserFriends,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
@@ -32,6 +34,15 @@ library.add(faCar);
 library.add(faMoneyBillAlt);
 library.add(faHandRock);
 library.add(faHiking);
+library.add(faChess);
+library.add(faGamepad);
+library.add(faTree);
+library.add(faAddressCard);
+library.add(faMapMarkedAlt);
+library.add(faGhost);
+library.add(faProjectDiagram);
+library.add(faGem);
+library.add(faUserFriends);
 
 const app = createApp(App).use(i18n).use(router);
 app.component('FontAwesomeIcon', FontAwesomeIcon);

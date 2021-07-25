@@ -1,5 +1,11 @@
 /* eslint-disable no-shadow */
 
+enum ReferenceTypes {
+  educational = 'EDUCATIONAL',
+  personal = 'PERSONAL',
+  professional = 'PROFESSIONAL',
+}
+
 interface I18nField {
   [unit: string] : string,
   de: string,
@@ -115,6 +121,13 @@ interface Feature{
   icon: string
 }
 
+interface Interest{
+  id: number,
+  titleI18n: I18nField,
+  type: ReferenceTypes
+  icon: string
+}
+
 interface Talent {
   id: number,
   name: string,
@@ -129,10 +142,12 @@ interface Talent {
   links?: Array<Link>
   stages?: Array<Stage>
   features?: Array<Feature>
+  interests?: Array<Interest>
 }
 
 export {
   I18nField, Talent, Testimonial, Link, Skill, SkillTypes, Stage,
   StageTypes, StageSkill, PositionEnum, EmploymentEnum, Feature,
   OrganizationSizeEnum, BranchEnum, Organization,
+  Interest, ReferenceTypes,
 };

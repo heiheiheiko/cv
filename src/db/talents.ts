@@ -4,6 +4,7 @@ import {
   Talent, Testimonial, Link, Feature,
 } from '@/db/dbTypes';
 import stages from '@/db/stages';
+import interests from '@/db/interests';
 
 let featureId = 1;
 let testimonialId = 1;
@@ -166,11 +167,11 @@ const featureRespect: Feature = {
 const featureCommunication: Feature = {
   id: featureId++,
   titleI18n: {
-    de: 'Offene Kommunikation',
-    en: 'Open communication',
+    de: 'Offeneheit',
+    en: 'Openness',
   },
   descriptionI18n: {
-    de: 'Ich mache auch mal auf Probleme aufmerksam und beteilige mich aktiv an der Lösung',
+    de: 'Offene Gesprächs- und Fehlerkulturen haben sich bewährt und fördern das lösungsorientierte Denken',
     en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
   icon: 'comments',
@@ -183,7 +184,7 @@ const featureVision: Feature = {
     en: 'Product vision',
   },
   descriptionI18n: {
-    de: 'Ich lasse mich gerne begeistern und nutze meine kreative Energie am liebsten um ein Produkt zu formen',
+    de: 'Ich lasse mich gerne begeistern und stecke meine kreative Energie am liebsten in ein digitales Produkt',
     en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
   },
   icon: 'space-shuttle',
@@ -235,6 +236,8 @@ talent.features = [
 ];
 
 talent.stages = stages;
+talent.interests = interests;
+
 export default [
   talent,
 ];
