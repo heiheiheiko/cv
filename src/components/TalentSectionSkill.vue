@@ -55,12 +55,12 @@ import { defineComponent, reactive, computed } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
 import { SkillTypes } from '@/db/dbTypes';
-import { Filter, FilterSwitch } from '@/types';
+import { FilterSwitch } from '@/types';
 import SkillDecorator from '@/decorators/SkillDecorator';
 import SkillBadge from '@/components/SkillBadge.vue';
+import useFilterable from '@/composables/useFilterable';
 
 import { buildSkillsWithUseInMonths } from '@/services/SkillService';
-import _ from 'lodash';
 import { TransitionRoot } from '@headlessui/vue';
 
 export default defineComponent({
@@ -79,6 +79,8 @@ export default defineComponent({
       inheritLocale: true,
       useScope: 'local',
     });
+
+    const { buildFilters } = useFilterable();
 
     const filterSwitches = reactive([
       {
@@ -115,16 +117,7 @@ export default defineComponent({
       },
     ] as Array<FilterSwitch>);
 
-    function buildFilters() {
-      const activeFilterSwitches = filterSwitches.filter((filterSwitch) => filterSwitch.isActive);
-      const groupedFilterSwitches = _(activeFilterSwitches).groupBy('attribute');
-      return groupedFilterSwitches.map((_filterSwitches, attribute) => ({
-        attribute,
-        values: _filterSwitches.map((filterSwitch) => filterSwitch.value),
-      } as Filter));
-    }
-
-    const filters = computed(() => buildFilters());
+    const filters = computed(() => buildFilters(filterSwitches));
 
     const skillsWithUseInMonths = computed(() => buildSkillsWithUseInMonths(
       props.talent.stages,
