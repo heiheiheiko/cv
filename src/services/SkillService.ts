@@ -7,10 +7,12 @@ import { dateDifferenceInMonth } from '@/utils/dateUtils';
 import SkillDecorator from '@/decorators/SkillDecorator';
 import { orderBy } from 'lodash';
 import { Filter } from '@/types';
+import useFilterable from '@/composables/useFilterable';
 
 const { findStages } = useStage();
 const { findStageSkill } = useStageSkill();
 const { findSkill } = useSkill();
+const { filterFilterables } = useFilterable();
 
 const buildSkillsWithUseInMonths = (
   stageIds: Array<number | string>,
@@ -42,18 +44,7 @@ const buildSkillsWithUseInMonths = (
     skillBuildObject.useInMonths,
   ));
 
-  decoratedSkills.forEach((decoratedSkill: Record<string, any>) => {
-    const filterChecks = filters.map((filter) => {
-      const { ...object } = decoratedSkill;
-      return filter.values.includes(object[filter.attribute]);
-    });
-
-    if (filterChecks.every((filterCheck) => filterCheck)) {
-      decoratedSkill.show();
-    } else {
-      decoratedSkill.hide();
-    }
-  });
+  filterFilterables(decoratedSkills, filters);
 
   return orderBy(decoratedSkills, ['type', 'id']);
 };

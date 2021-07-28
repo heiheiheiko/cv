@@ -1,7 +1,8 @@
 import { Skill, I18nField, SkillTypes } from '@/db/dbTypes';
 import { usageInWords } from '@/utils/dateUtils';
+import { Filterable } from '@/types';
 
-export default class SkillDecorator {
+export default class SkillDecorator implements Filterable {
   id: string;
 
   titleI18n: I18nField;
