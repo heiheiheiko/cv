@@ -14,9 +14,15 @@
     "stage": {
       "name" : "Stage of live | Stages of live",
       "attributes": {
-        "description": "Description"
+        "description": "Description",
+        "isTop": "Most interesting"
       },
       "enums": {
+        "type": {
+          "EDUCATIONAL": "Education",
+          "PROFESSIONAL": "Carrier",
+          "PERSONAL": "Personal"
+        },
         "position": {
           "WEB_DEVELOPER": "Web Developer",
           "JUNIOR_SOFTWARE_DEVELOPER": "Junior Software Developer",

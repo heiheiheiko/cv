@@ -58,6 +58,7 @@ export default [
     endedAt: null,
     icon: 'birthday-cake',
     isTop: false,
+    isVisible: true,
   },
 
   // KVG Gesamtschule Nordwalde
@@ -76,6 +77,7 @@ export default [
     endedAt: new Date('2003-07-01'),
     icon: 'book',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'kvg',
@@ -115,6 +117,7 @@ export default [
     endedAt: new Date('2005-06-01'),
     icon: 'book',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'hermann',
@@ -155,6 +158,7 @@ export default [
     endedAt: null,
     icon: 'heart',
     isTop: false,
+    isVisible: true,
   },
 
   // Führerschein
@@ -169,6 +173,7 @@ export default [
     endedAt: null,
     icon: 'car',
     isTop: false,
+    isVisible: true,
   },
 
   // Technische Schulen des Kreises Steinfurt
@@ -191,6 +196,7 @@ export default [
     endedAt: new Date('2008-07-01'),
     icon: 'book',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'tsst',
@@ -300,6 +306,7 @@ export default [
     endedAt: new Date('2009-09-01'),
     icon: 'money-bill-alt',
     isTop: false,
+    isVisible: true,
   },
 
   // Fachhochschule Münster (Steinfurt)
@@ -314,6 +321,7 @@ export default [
     endedAt: new Date('2010-07-01'),
     icon: 'graduation-cap',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'fh-ms-fb2',
@@ -396,6 +404,7 @@ export default [
     endedAt: new Date('2011-02-01'),
     icon: 'code',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'fh-ms-fb9',
@@ -475,6 +484,7 @@ export default [
     endedAt: new Date('2011-07-01'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'zeb',
@@ -552,6 +562,7 @@ export default [
   //   endedAt: new Date('2014-09-22'),
   //   icon: 'home',
   //   isTop: false,
+  //   isVisible: true,
   // },
 
   // gloud GmbH
@@ -568,6 +579,7 @@ export default [
     endedAt: new Date('2012-07-01'),
     icon: 'code',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'gloud',
@@ -653,6 +665,7 @@ export default [
     endedAt: new Date('2012-09-01'),
     icon: 'code',
     isTop: false,
+    isVisible: true,
     organization: orgaFhMsWi,
     stageSkills: [
       {
@@ -835,6 +848,7 @@ export default [
     endedAt: null,
     icon: 'heart',
     isTop: false,
+    isVisible: true,
   },
 
   // Compeon
@@ -851,6 +865,7 @@ export default [
     endedAt: new Date('2013-09-01'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'compeon',
@@ -1077,6 +1092,7 @@ export default [
     endedAt: new Date('2013-09-01'),
     icon: 'graduation-cap',
     isTop: true,
+    isVisible: true,
     organization: orgaFhMsWi,
     stageSkills: [
       {
@@ -1296,6 +1312,7 @@ export default [
     endedAt: new Date('2014-06-01'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: orgaFuchs,
     stageSkills: [
       {
@@ -1546,6 +1563,7 @@ export default [
     endedAt: new Date('2014-09-01'),
     icon: 'code',
     isTop: false,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'deltacity',
@@ -1668,6 +1686,7 @@ export default [
   //   endedAt: null,
   //   icon: 'home',
   //   isTop: false,
+  //   isVisible: true,
   // },
 
   // Kung Fu I
@@ -1682,6 +1701,7 @@ export default [
     endedAt: new Date('2015-07-22'),
     icon: 'hand-rock',
     isTop: false,
+    isVisible: true,
     organization: orgaTvb,
   },
 
@@ -1701,6 +1721,7 @@ export default [
     endedAt: new Date('2016-08-07'),
     icon: 'hiking',
     isTop: false,
+    isVisible: true,
   },
 
   // Fuchs 2
@@ -1717,6 +1738,7 @@ export default [
     endedAt: new Date('2016-10-31'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: orgaFuchs,
     stageSkills: [
       {
@@ -1964,6 +1986,7 @@ export default [
     endedAt: new Date('2018-09-18'),
     icon: 'dog',
     isTop: false,
+    isVisible: true,
   },
 
   // Hermannsweg
@@ -1982,6 +2005,7 @@ export default [
     endedAt: new Date('2018-08-03'),
     icon: 'hiking',
     isTop: false,
+    isVisible: true,
   },
 
   // IDB
@@ -1998,6 +2022,7 @@ export default [
     endedAt: new Date('2019-01-01'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'idb',
@@ -2226,6 +2251,7 @@ export default [
     endedAt: null,
     icon: 'dog',
     isTop: false,
+    isVisible: true,
   },
 
   // Kung Fu I
@@ -2240,6 +2266,7 @@ export default [
     endedAt: null,
     icon: 'hand-rock',
     isTop: false,
+    isVisible: true,
     organization: orgaTvb,
   },
 
@@ -2257,6 +2284,7 @@ export default [
     endedAt: new Date('2020-06-30'),
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'crowdcode',
@@ -2454,6 +2482,7 @@ export default [
     endedAt: null,
     icon: 'dog',
     isTop: false,
+    isVisible: true,
   },
 
   // adcommander
@@ -2470,6 +2499,7 @@ export default [
     endedAt: null,
     icon: 'code',
     isTop: true,
+    isVisible: true,
     organization: {
       id: organizationId++,
       staticId: 'adcommander',
@@ -2692,6 +2722,7 @@ export default [
     endedAt: null,
     icon: 'home',
     isTop: false,
+    isVisible: true,
   },
 
 ] as Array<Stage>;

@@ -1,6 +1,8 @@
 <template>
   <BaseSection id="stages-section">
-    <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-8xl">
+    <div
+      class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-8xl"
+    >
       <BaseSectionHeaderTitle>
         {{ t('resources.stage.name', 2) }}
       </BaseSectionHeaderTitle>
@@ -12,22 +14,38 @@
       </BaseSectionHeaderDescription>
 
       <div class="mt-12 text-left">
-        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-          <StageFeed :stages="educationStages" />
-          <StageFeed :stages="jobStages" />
-          <StageFeed :stages="highlightStages" />
+        <div class="flex items-center justify-center">
+          <BaseSwitch
+            v-for="filter in filterSwitches"
+            :key="filter.id"
+            :is-active="filter.isActive"
+            class="mr-5"
+            :color="filter.color"
+            @update="filter.isActive = !filter.isActive"
+          >
+            {{ filter.label }}
+          </BaseSwitch>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <StageFeed :stages="filteredEducationalStages" />
+          <StageFeed :stages="filteredProfessionalStages" />
+          <StageFeed :stages="filteredPersonalStages" />
         </div>
       </div>
     </div>
   </BaseSection>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, reactive, computed } from 'vue';
+
 import { translateI18nField } from '@/utils/i18nUtils';
 import { useI18n } from 'vue-i18n';
+import ReferenceTypesDecorator from '@/decorators/ReferenceTypesDecorator';
 import { ReferenceTypes } from '@/db/dbTypes';
-
+import { FilterSwitch } from '@/types';
+import useFilterable from '@/composables/useFilterable';
 import StageFeed from '@/components/StageFeed.vue';
 
 export default defineComponent({
@@ -46,13 +64,69 @@ export default defineComponent({
       useScope: 'local',
     });
 
-    const jobStages = props.stages.filter((stage) => stage.type === ReferenceTypes.professional);
+    const { buildFilters, filterFilterables } = useFilterable();
+
+    const filterSwitches = reactive([
+      {
+        id: 'type_educational',
+        attribute: 'type',
+        value: ReferenceTypes.educational,
+        label: t(`resources.stage.enums.type.${ReferenceTypes.educational}`, 2),
+        isActive: true,
+        color: ReferenceTypesDecorator.color(ReferenceTypes.educational),
+      },
+      {
+        id: 'type_professional',
+        attribute: 'type',
+        value: ReferenceTypes.professional,
+        label: t(`resources.stage.enums.type.${ReferenceTypes.professional}`, 2),
+        isActive: true,
+        color: ReferenceTypesDecorator.color(ReferenceTypes.professional),
+      },
+      {
+        id: 'type_personal',
+        attribute: 'type',
+        value: ReferenceTypes.personal,
+        label: t(`resources.stage.enums.type.${ReferenceTypes.personal}`, 2),
+        isActive: true,
+        color: ReferenceTypesDecorator.color(ReferenceTypes.personal),
+      },
+      {
+        id: 'top',
+        attribute: 'isTop',
+        value: true,
+        label: t('resources.stage.attributes.isTop', 2),
+        isActive: true,
+        color: 'macaroniAndCheese',
+      },
+    ] as Array<FilterSwitch>);
+
+    const filters = computed(() => buildFilters(filterSwitches));
+
+    const professionalStages = props.stages
+      .filter((stage) => stage.type === ReferenceTypes.professional);
+    const filteredProfessionalStages = computed(() => filterFilterables(
+      professionalStages, filters.value,
+    ));
+
     // eslint-disable-next-line max-len
-    const educationStages = props.stages.filter((stage) => stage.type === ReferenceTypes.educational);
-    const highlightStages = props.stages.filter((stage) => stage.type === ReferenceTypes.personal);
+    const educationalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.educational);
+    const filteredEducationalStages = computed(() => filterFilterables(
+      educationalStages, filters.value,
+    ));
+
+    const personalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.personal);
+    const filteredPersonalStages = computed(() => filterFilterables(
+      personalStages, filters.value,
+    ));
 
     return {
-      translateI18nField, t, jobStages, educationStages, highlightStages,
+      translateI18nField,
+      t,
+      filteredProfessionalStages,
+      filteredEducationalStages,
+      filteredPersonalStages,
+      filterSwitches,
     };
   },
 });
@@ -61,7 +135,7 @@ export default defineComponent({
 <i18n>
 {
   "de": {
-      "title": "Was ich so erlebt habe",
+      "title": "Was ich so gemacht habe",
       "subtitle": "Bla blub",
   },
   "en": {

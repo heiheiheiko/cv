@@ -100,19 +100,20 @@ interface Stage{
   id: number,
   type: ReferenceTypes,
   isTop: boolean,
+  isVisible: boolean,
   startedAt: Date,
   endedAt: Date | null,
   icon: string
   descriptionI18n?: I18nField,
   note?: string,
 
-  stageSkills?: Array<StageSkill> // job, education
-  organization?: Organization, // job, education
-  position?: PositionEnum, // job
-  employment?: EmploymentEnum, // job
-  graduationI18n?: I18nField // education
-  courseI18n?: I18nField, // education
-  titleI18n?: I18nField, // highlight
+  stageSkills?: Array<StageSkill> // professional, educational
+  organization?: Organization, // professional, educational
+  position?: PositionEnum, // professional
+  employment?: EmploymentEnum, // professional
+  graduationI18n?: I18nField // educational
+  courseI18n?: I18nField, // educational
+  titleI18n?: I18nField, // personal
 }
 
 interface Feature{

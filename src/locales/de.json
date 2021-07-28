@@ -14,9 +14,15 @@
     "stage": {
       "name" : "Lebensabschnitt | Lebensabschnitte",
       "attributes": {
-        "description": "Beschreibung"
+        "description": "Beschreibung",
+        "isTop": "Am interessantesten "
       },
       "enums": {
+        "type": {
+          "EDUCATIONAL": "Bildung",
+          "PROFESSIONAL": "Karriere",
+          "PERSONAL": "Persönlich"
+        },
         "position": {
           "WEB_DEVELOPER": "Web Developer",
           "JUNIOR_SOFTWARE_DEVELOPER": "Junior Software Developer",

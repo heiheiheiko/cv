@@ -1,4 +1,5 @@
 /* eslint-disable no-case-declarations */
+
 import i18n from '@/i18n';
 
 import {
@@ -7,15 +8,18 @@ import {
 } from '@/db/dbTypes';
 import { translateI18nField } from '@/utils/i18nUtils';
 import ReferenceTypeDecorator from '@/decorators/ReferenceTypesDecorator';
+import { Filterable } from '@/types';
 
 const { t, d } = i18n.global;
 
-export default class stageDecorator {
+export default class StageDecorator implements Filterable {
   id: number;
 
   titleI18n: I18nField | undefined;
 
   isTop: boolean;
+
+  isVisible: boolean;
 
   type:ReferenceTypes;
 
@@ -45,6 +49,7 @@ export default class stageDecorator {
     this.id = stage.id;
     this.type = stage.type;
     this.isTop = stage.isTop;
+    this.isVisible = stage.isVisible;
     this.startedAt = stage.startedAt;
     this.endedAt = stage.endedAt;
     this.icon = stage.icon;
@@ -91,5 +96,13 @@ export default class stageDecorator {
   subtitle(): string {
     const endedAtOrToday = this.endedAt ? d(this.endedAt, 'short') : t('datetime.today');
     return `${d(this.startedAt, 'short')} - ${endedAtOrToday}`;
+  }
+
+  hide(): void {
+    this.isVisible = false;
+  }
+
+  show(): void {
+    this.isVisible = true;
   }
 }
