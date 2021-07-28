@@ -3,7 +3,7 @@
     <div class="flow-root">
       <ul class="-mb-8">
         <li
-          v-for="(stage, stageIdx) in stages"
+          v-for="stage in stages"
           :key="stage.id"
         >
           <TransitionRoot
@@ -19,7 +19,7 @@
           >
             <div class="relative pb-8">
               <span
-                v-if="(stageIdx !== stages.length - 1)"
+                v-if="(stage.id !== visibleStages[visibleStages.length -1].id)"
                 class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
                 aria-hidden="true"
               />
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { ReferenceTypes } from '@/db/dbTypes';
 import StageFeedItem from '@/components/StageFeedItem.vue';
 import StageOverlay from '@/components/StageOverlay.vue';
@@ -72,16 +72,18 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const isOverlayOpen = ref(false);
     const overlayStage = ref({});
+    // eslint-disable-next-line max-len
+    const visibleStages = computed(() => props.stages.filter((stage) => stage.isVisible));
 
     const setOverlayStage = (stage) => {
       isOverlayOpen.value = true;
       overlayStage.value = stage;
     };
     return {
-      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen,
+      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen, visibleStages,
     };
   },
 });
