@@ -1,7 +1,8 @@
 import { Interest, ReferenceTypes, I18nField } from '@/db/dbTypes';
+import { Colorable } from '@/types';
 import ReferenceTypeDecorator from './ReferenceTypesDecorator';
 
-export default class InterestDecorator {
+export default class InterestDecorator implements Colorable {
   id: number;
 
   titleI18n: I18nField;

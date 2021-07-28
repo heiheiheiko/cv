@@ -28,6 +28,11 @@ interface Filterable {
   hide(): void;
 }
 
+interface Colorable {
+  color(): string;
+  colorGradient(): string;
+}
+
 export {
-  Filter, FilterSwitch, Dimension, Filterable,
+  Filter, FilterSwitch, Dimension, Filterable, Colorable,
 };

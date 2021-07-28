@@ -8,11 +8,11 @@ import {
 } from '@/db/dbTypes';
 import { translateI18nField } from '@/utils/i18nUtils';
 import ReferenceTypeDecorator from '@/decorators/ReferenceTypesDecorator';
-import { Filterable } from '@/types';
+import { Filterable, Colorable } from '@/types';
 
 const { t, d } = i18n.global;
 
-export default class StageDecorator implements Filterable {
+export default class StageDecorator implements Filterable, Colorable {
   id: number;
 
   titleI18n: I18nField | undefined;
