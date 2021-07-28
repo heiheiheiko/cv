@@ -19,7 +19,7 @@
           >
             <div class="relative pb-8">
               <span
-                v-if="(stage.id !== visibleStages[visibleStages.length -1].id)"
+                v-if="!isLastVisibleStage(stage)"
                 class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200"
                 aria-hidden="true"
               />
@@ -54,11 +54,12 @@
 </template>
 
 <script>
-import { computed, defineComponent, ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import { ReferenceTypes } from '@/db/dbTypes';
 import StageFeedItem from '@/components/StageFeedItem.vue';
 import StageOverlay from '@/components/StageOverlay.vue';
 import { TransitionRoot } from '@headlessui/vue';
+import _ from 'lodash';
 
 export default defineComponent({
   components: {
@@ -76,14 +77,14 @@ export default defineComponent({
     const isOverlayOpen = ref(false);
     const overlayStage = ref({});
     // eslint-disable-next-line max-len
-    const visibleStages = computed(() => props.stages.filter((stage) => stage.isVisible));
+    const isLastVisibleStage = (stage) => stage === _.last(props.stages.filter((_stage) => _stage.isVisible));
 
     const setOverlayStage = (stage) => {
       isOverlayOpen.value = true;
       overlayStage.value = stage;
     };
     return {
-      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen, visibleStages,
+      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen, isLastVisibleStage,
     };
   },
 });
