@@ -11,11 +11,21 @@
             class="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden
                    sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full"
           >
-            <img
+            <div
+              class="object-cover lg:h-full lg:w-full bg-gradient-to-l from-teal-500 to-cyan-600
+                     flex items-center justify-center"
+            >
+              <FontAwesomeIcon
+                icon="user-astronaut"
+                class="text-white"
+                size="10x"
+              />
+            </div>
+            <!-- <img
               class="object-cover lg:h-full lg:w-full"
               src="https://via.placeholder.com/2100x1400/14b8a6/FFFFFF?Text=Down.com"
               alt=""
-            >
+            > -->
             <!-- <img
               class="object-cover lg:h-full lg:w-full"
               :src="getImgUrl('accomplisher_430x700.jpg')"
@@ -47,7 +57,7 @@
               </p>
             </div>
             <footer class="mt-6">
-              <p class="text-base font-medium text-white">
+              <p class="text-lg font-medium text-white">
                 {{ testimonial.quotedPerson }}
               </p>
               <p class="text-base font-medium text-cyan-100">
