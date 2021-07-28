@@ -11,7 +11,11 @@ export default function useFilterable() {
     } as Filter));
   };
 
-  const filterFilterables = (filterables: Array<Filterable>, filters: Array<Filter>) => {
+  const filterFilterables = (
+    filterables: Array<Filterable>,
+    filters: Array<Filter>,
+    orderOptions = ['id'],
+  ) => {
     filterables.forEach((filterable: Record<string, any>) => {
       const filterChecks = filters.map((filter: Filter) => {
         const { ...object } = filterable;
@@ -25,7 +29,7 @@ export default function useFilterable() {
       }
     });
 
-    return _.orderBy(filterables, ['type', 'id']);
+    return _.orderBy(filterables, ...orderOptions);
   };
 
   return {

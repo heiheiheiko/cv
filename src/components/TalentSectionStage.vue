@@ -106,18 +106,18 @@ export default defineComponent({
     const professionalStages = props.stages
       .filter((stage) => stage.type === ReferenceTypes.professional);
     const filteredProfessionalStages = computed(() => filterFilterables(
-      professionalStages, filters.value,
+      professionalStages, filters.value, ['startedAt', 'desc'],
     ));
 
     // eslint-disable-next-line max-len
     const educationalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.educational);
     const filteredEducationalStages = computed(() => filterFilterables(
-      educationalStages, filters.value,
+      educationalStages, filters.value, ['startedAt', 'desc'],
     ));
 
     const personalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.personal);
     const filteredPersonalStages = computed(() => filterFilterables(
-      personalStages, filters.value,
+      personalStages, filters.value, ['startedAt', 'desc'],
     ));
 
     return {
