@@ -131,6 +131,7 @@ interface Interest{
 
 interface Talent {
   id: number,
+  slug: string,
   name: string,
   positionI18n: I18nField,
   birthday: Date,

@@ -3,10 +3,10 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: { name: 'TalentShow', params: { id: 1 } },
+    redirect: { name: 'TalentShow', params: { slug: 'heiko' } },
   },
   {
-    path: '/talent/:id',
+    path: '/talent/:slug',
     name: 'TalentShow',
     component: () => import(/* webpackChunkName: "core" */ '../views/TalentShow.vue'),
   },

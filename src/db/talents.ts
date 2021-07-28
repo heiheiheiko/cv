@@ -14,6 +14,7 @@ const parentType = 'talent';
 // talent
 const talent: Talent = {
   id: 1,
+  slug: 'heiko',
   name: 'Heiko Beineke',
   positionI18n: {
     de: 'Software Engineer',

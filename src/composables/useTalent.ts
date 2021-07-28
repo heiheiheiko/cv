@@ -9,7 +9,7 @@ import useStage from '@/composables/useStage';
 import useInterest from './useInterest';
 
 const {
-  normalizeAndAssignData, allResources, findResource,
+  normalizeAndAssignData, allResources, findResource, findResourceByAttribute,
 } = useState();
 const { testimonialSchema } = useTestimonial();
 const { featureSchema } = useFeature();
@@ -36,8 +36,9 @@ export default function useTalent() {
   // methods
   const fetchTalents = () => normalizeAndAssignData(talentsJson, [talentSchema]);
   const findTalent = (id: number) => findResource(resourceName, id);
+  const findTalentBySlug = (slug: string) => findResourceByAttribute(resourceName, 'slug', slug);
 
   return {
-    talents, fetchTalents, findTalent,
+    talents, fetchTalents, findTalent, findTalentBySlug,
   };
 }

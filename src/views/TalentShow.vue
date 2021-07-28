@@ -15,13 +15,13 @@ export default defineComponent({
   },
   setup() {
     const route = useRoute();
-    const { findTalent, fetchTalents } = useTalent();
+    const { findTalentBySlug, fetchTalents } = useTalent();
 
-    const talentId = parseInt(route.params.id as string, 10);
-    const talent = computed(() => findTalent(talentId));
+    const talentSlug = route.params.slug as string;
+    const talent = computed(() => findTalentBySlug(talentSlug));
 
     return {
-      findTalent, fetchTalents, talent,
+      fetchTalents, talent,
     };
   },
   created() {
