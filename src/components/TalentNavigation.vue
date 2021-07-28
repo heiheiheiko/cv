@@ -10,14 +10,14 @@
       >
         <div class="flex items-center flex-1">
           <div class="flex items-center justify-between w-full md:w-auto">
-            <a href="#">
-              <span class="sr-only">Workflow</span>
-              <img
-                class="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg"
-                alt=""
-              >
-            </a>
+            <div class="text-white hover:text-gray-300">
+              <span class="sr-only">logo</span>
+
+              <FontAwesomeIcon
+                icon="user-astronaut"
+                size="2x"
+              />
+            </div>
             <div class="-mr-2 flex items-center md:hidden">
               <PopoverButton
                 class="bg-gray-900 rounded-md p-2 inline-flex items-center

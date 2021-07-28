@@ -9,13 +9,13 @@ import interests from '@/db/interests';
 let featureId = 1;
 let testimonialId = 1;
 let linkId = 1;
-const parentType = 'talent';
 
 // talent
 const talent: Talent = {
   id: 1,
   slug: 'heiko',
   name: 'Heiko Beineke',
+  icon: 'user-astronaut',
   positionI18n: {
     de: 'Software Engineer',
     en: 'Software Engineer',

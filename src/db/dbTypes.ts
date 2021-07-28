@@ -134,6 +134,7 @@ interface Talent {
   id: number,
   slug: string,
   name: string,
+  icon: string,
   positionI18n: I18nField,
   birthday: Date,
   email: string,
