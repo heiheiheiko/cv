@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="stages-section"
-    class="relative bg-white py-16 sm:py-24 lg:py-32"
-  >
+  <BaseSection id="stages-section">
     <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
       <BaseSectionHeaderTitle>
         {{ t('resources.stage.name', 2) }}
@@ -22,7 +19,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </BaseSection>
 </template>
 
 <script>

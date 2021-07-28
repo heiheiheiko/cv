@@ -1,9 +1,5 @@
 <template>
-  <!-- eslint-disable max-len -->
-  <div
-    id="features-section"
-    class="relative bg-white py-16 sm:py-24 lg:py-32"
-  >
+  <BaseSection id="features-section">
     <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
       <BaseSectionHeaderTitle>
         {{ t('resources.feature.name', 2) }}
@@ -32,7 +28,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </BaseSection>
 </template>
 
 <script>
