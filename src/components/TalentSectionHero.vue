@@ -16,25 +16,35 @@
                 {{ talent.name }}
               </span>
             </h1>
-            <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-              {{ translateI18nField(talent.sloganLongI18n) }}
+            <p
+              class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl"
+            >
+              {{ translateI18nField(talent.sloganI18n) }}
             </p>
-            <div class="mt-10 sm:mt-12">
-              <button
-                type="submit"
-                class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
+            <div class="mt-10 sm:mt-12 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+              <a
+                v-for="link in links"
+                :key="link.id"
+                :href="link.url"
+                target="_blank"
+                class="block w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600
+                text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2
+                focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
               >
-                Start free trial
-              </button>
+                <FontAwesomeIcon
+                  :icon="['fab', link.icon]"
+                  size="lg"
+                />
+                <span class="ml-2"> {{ translateI18nField(link.titleI18n) }} </span>
+              </a>
             </div>
           </div>
         </div>
         <div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
           <div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-            <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
             <img
               class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-              src="https://tailwindui.com/img/component-images/cloud-illustration-teal-cyan.svg"
+              :src="getHeroImgageUrl()"
               alt=""
             >
           </div>
@@ -45,8 +55,11 @@
 </template>
 
 <script>
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
 import { defineComponent } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
+import useLink from '@/composables/useLink';
 
 export default defineComponent({
   props: {
@@ -55,9 +68,16 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
+    const { findLinks } = useLink();
+
+    function getHeroImgageUrl() {
+      return require('../assets/images/hero.svg');
+    }
+    const links = findLinks(props.talent.links);
+
     return {
-      translateI18nField,
+      translateI18nField, links, getHeroImgageUrl,
     };
   },
 });
