@@ -103,21 +103,22 @@ export default defineComponent({
 
     const filters = computed(() => buildFilters(filterSwitches));
 
-    const professionalStages = props.stages
-      .filter((stage) => stage.type === ReferenceTypes.professional);
+    const professionalStages: any = props.stages
+      .filter((stage: any) => stage.type === ReferenceTypes.professional);
     const filteredProfessionalStages = computed(() => filterFilterables(
-      professionalStages, filters.value, ['startedAt', 'desc'],
+      professionalStages, filters.value as any, ['startedAt', 'desc'],
     ));
 
-    // eslint-disable-next-line max-len
-    const educationalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.educational);
+    const educationalStages: any = props.stages
+      .filter((stage: any) => stage.type === ReferenceTypes.educational);
     const filteredEducationalStages = computed(() => filterFilterables(
-      educationalStages, filters.value, ['startedAt', 'desc'],
+      educationalStages, filters.value as any, ['startedAt', 'desc'],
     ));
 
-    const personalStages = props.stages.filter((stage) => stage.type === ReferenceTypes.personal);
+    const personalStages: any = props.stages
+      .filter((stage: any) => stage.type === ReferenceTypes.personal);
     const filteredPersonalStages = computed(() => filterFilterables(
-      personalStages, filters.value, ['startedAt', 'desc'],
+      personalStages, filters.value as any, ['startedAt', 'desc'],
     ));
 
     return {
