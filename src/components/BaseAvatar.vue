@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
-import useColor from '@/composables/useColor';
+import useColorable from '@/composables/useColorable';
 import { Dimension } from '@/types';
 
 const sizeClass = {
@@ -36,7 +36,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const { bgOrGradientClass } = useColor();
+    const { bgOrGradientClass } = useColorable();
 
     const colorClass = computed(() => bgOrGradientClass(props.color, props.colorGradient));
     return { sizeClass, colorClass };
