@@ -22,4 +22,12 @@ interface Dimension {
   huge: string,
 }
 
-export { Filter, FilterSwitch, Dimension };
+interface Filterable {
+  isVisible: boolean;
+  show(): void;
+  hide(): void;
+}
+
+export {
+  Filter, FilterSwitch, Dimension, Filterable,
+};
