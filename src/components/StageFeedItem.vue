@@ -8,8 +8,12 @@
         :color="stage.color()"
         :color-gradient="stage.colorGradient()"
         class="ring-8 ring-white text-white"
+        size="large"
       >
-        <FontAwesomeIcon :icon="stage.icon" />
+        <FontAwesomeIcon
+          :icon="stage.icon"
+          size="lg"
+        />
       </BaseAvatar>
     </div>
     <div class="min-w-0 flex-1">

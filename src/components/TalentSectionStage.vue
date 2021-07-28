@@ -1,6 +1,6 @@
 <template>
   <BaseSection id="stages-section">
-    <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-8xl">
       <BaseSectionHeaderTitle>
         {{ t('resources.stage.name', 2) }}
       </BaseSectionHeaderTitle>
@@ -12,7 +12,7 @@
       </BaseSectionHeaderDescription>
 
       <div class="mt-12 text-left">
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
           <StageFeed :stages="educationStages" />
           <StageFeed :stages="jobStages" />
           <StageFeed :stages="highlightStages" />
