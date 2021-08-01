@@ -105,7 +105,7 @@ interface Stage{
   endedAt: Date | null,
   icon: string
   descriptionI18n?: I18nField,
-  note?: string,
+  noteI18n?: I18nField,
 
   stageSkills?: Array<StageSkill> // professional, educational
   organization?: Organization, // professional, educational

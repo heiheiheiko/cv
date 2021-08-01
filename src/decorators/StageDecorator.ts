@@ -43,7 +43,7 @@ export default class StageDecorator implements Filterable, Colorable {
 
   courseI18n: I18nField | undefined;
 
-  note: string | undefined;
+  noteI18n: I18nField | undefined;
 
   constructor(stage: Stage) {
     this.id = stage.id;
@@ -54,7 +54,7 @@ export default class StageDecorator implements Filterable, Colorable {
     this.endedAt = stage.endedAt;
     this.icon = stage.icon;
     this.descriptionI18n = stage.descriptionI18n;
-    this.note = stage.note;
+    this.noteI18n = stage.noteI18n;
 
     this.stageSkills = stage.stageSkills || [];
     this.organization = stage.organization;
@@ -77,16 +77,14 @@ export default class StageDecorator implements Filterable, Colorable {
     switch (this.type) {
       case ReferenceTypes.educational:
         if (this.graduationI18n) {
-          return `${translateI18nField(this.courseI18n)} – 
-                ${translateI18nField(this.graduationI18n)}`;
+          return `${translateI18nField(this.courseI18n)} – ${translateI18nField(this.graduationI18n)}`;
         }
 
         return translateI18nField(this.courseI18n);
       case ReferenceTypes.personal:
         return translateI18nField(this.titleI18n);
       case ReferenceTypes.professional:
-        return `${t(`resources.stage.enums.position.${this.position}`)} – 
-                ${t(`resources.stage.enums.employment.${this.employment}`)}`;
+        return `${t(`resources.stage.enums.position.${this.position}`)} – ${t(`resources.stage.enums.employment.${this.employment}`)}`;
 
       default:
         return 'gray';
