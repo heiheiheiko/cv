@@ -4,10 +4,10 @@ export default {
   id: 1,
   staticId: 'empire',
   name: 'Galactic Empire',
-  street: 'Main road 1',
-  zip: '00001',
+  street: 'Core Worlds 1',
+  zip: '000l9',
   city: 'Coruscant',
   website: 'https://galactic-empire.org',
   organizationSize: OrganizationSizeEnum.between501And1000,
-  branch: BranchEnum.education,
+  branch: BranchEnum.agency,
 } as Organization;
