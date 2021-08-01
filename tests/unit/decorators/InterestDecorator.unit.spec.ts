@@ -1,7 +1,7 @@
 import { ReferenceTypes } from '@/db/dbTypes';
 import InterestDecorator from '@/decorators/InterestDecorator';
 import { Colorable } from '@/types';
-import jediOrderInterestFixture from '../fixtures/interests/1-jedi-order';
+import jediOrderInterestFixture from '../fixtures/interests/1.jedi-order';
 import { sharedColorableSpecsByReferenceType } from './sharedColorableSpecs';
 
 describe('InterestDecorator', () => {
