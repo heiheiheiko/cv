@@ -1,6 +1,6 @@
 import SkillDecorator from '@/decorators/SkillDecorator';
 import { Filterable } from '@/types';
-import lightsaberFightSkillFixture from '../fixtures/skills/1-lightsaber-fight';
+import lightsaberFightSkillFixture from '../fixtures/skills/1.lightsaber-fight';
 import { sharedFilterableSpecs } from './sharedFilterableSpecs';
 
 describe('SkillDecorator', () => {
