@@ -2,6 +2,7 @@
   <div
     class="flex items-center justify-center rounded-full"
     :class="[sizeClass[size], colorClass]"
+    data-spec-class="avatar"
   >
     <slot />
   </div>
