@@ -375,17 +375,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'svn'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'uml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'software'),
       },
     ] as Array<StageSkill>,
   },
@@ -445,27 +435,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'css'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'sublime'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
     ] as Array<StageSkill>,
   },
@@ -530,17 +505,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'svn'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jira'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
       {
         id: stageSkillId++,
@@ -616,17 +581,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'highcharts'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -642,11 +597,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'sublime'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
     ] as Array<StageSkill>,
   },
@@ -711,11 +661,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'rails'),
       },
       {
@@ -736,32 +681,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'haml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'js'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jquery'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -786,11 +711,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'agile'),
       },
       {
@@ -802,11 +722,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'ubuntu'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
       {
         id: stageSkillId++,
@@ -916,11 +831,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'rspec'),
       },
       {
@@ -936,32 +846,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'haml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'js'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jquery'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -991,11 +881,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'agile'),
       },
       {
@@ -1007,11 +892,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'ubuntu'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
       {
         id: stageSkillId++,
@@ -1066,11 +946,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'cip'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'lean'),
       },
     ] as Array<StageSkill>,
@@ -1118,16 +993,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'software'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'frontend'),
       },
       {
@@ -1163,11 +1028,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'rspec'),
       },
       {
@@ -1183,32 +1043,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'haml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'js'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jquery'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -1229,11 +1069,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'github'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
       },
       {
         id: stageSkillId++,
@@ -1274,11 +1109,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'google'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'xml'),
       },
       {
         id: stageSkillId++,
@@ -1363,11 +1193,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'rspec'),
       },
       {
@@ -1388,11 +1213,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'haml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'bootstrap'),
       },
       {
@@ -1403,22 +1223,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jquery'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -1448,11 +1253,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'agile'),
       },
       {
@@ -1469,11 +1269,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'mac'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
       {
         id: stageSkillId++,
@@ -1508,11 +1303,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'xml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'errbit'),
       },
       {
@@ -1528,24 +1318,13 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'diffmerge'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'cip'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'microservices'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'webservices'),
+        skill: findOrFail(skills, 'slack'),
       },
-
     ] as Array<StageSkill>,
   },
 
@@ -1604,22 +1383,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'html'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'js'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
       },
       {
         id: stageSkillId++,
@@ -1654,22 +1423,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'sourcetree'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'mysql'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'diffmerge'),
       },
     ] as Array<StageSkill>,
   },
@@ -1789,11 +1548,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'rspec'),
       },
       {
@@ -1814,11 +1568,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'haml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'bootstrap'),
       },
       {
@@ -1829,22 +1578,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'coffee'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'jquery'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -1874,11 +1608,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'agile'),
       },
       {
@@ -1895,11 +1624,6 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'mac'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
       },
       {
         id: stageSkillId++,
@@ -1934,11 +1658,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'xml'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'errbit'),
       },
       {
@@ -1954,22 +1673,12 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'diffmerge'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'cip'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'microservices'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'webservices'),
+        skill: findOrFail(skills, 'slack'),
       },
     ] as Array<StageSkill>,
   },
@@ -2034,11 +1743,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'frontend'),
       },
       {
@@ -2069,22 +1773,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'reviews'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'cip'),
       },
       {
         id: stageSkillId++,
@@ -2114,12 +1803,27 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'officedog'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'python'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'django'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'pytest'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'pythonunittest'),
       },
       {
         id: stageSkillId++,
@@ -2159,27 +1863,32 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'jquery'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'highcharts'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'vue'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'jest'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'redux'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'storybook'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'webpack'),
       },
       {
         id: stageSkillId++,
@@ -2235,6 +1944,11 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'gimp'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'slack'),
       },
     ] as Array<StageSkill>,
   },
@@ -2300,11 +2014,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'frontend'),
       },
       {
@@ -2335,17 +2044,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'reviews'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
       },
       {
         id: stageSkillId++,
@@ -2365,12 +2064,32 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'officedog'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'java'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'junit'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'spring'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'rest'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'openapi'),
       },
       {
         id: stageSkillId++,
@@ -2415,17 +2134,27 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
+        skill: findOrFail(skills, 'redux'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
+        skill: findOrFail(skills, 'jest'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'webpack'),
+        skill: findOrFail(skills, 'cypress'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'gridsome'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'teams'),
       },
       {
         id: stageSkillId++,
@@ -2525,11 +2254,6 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'web'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'frontend'),
       },
       {
@@ -2560,17 +2284,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findOrFail(skills, 'tdd'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
         skill: findOrFail(skills, 'reviews'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'mvc'),
       },
       {
         id: stageSkillId++,
@@ -2590,6 +2304,11 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'officedog'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'php'),
       },
       {
@@ -2600,12 +2319,22 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'phpunit'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'java'),
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findOrFail(skills, 'spring'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'junit'),
       },
       {
         id: stageSkillId++,
@@ -2635,17 +2364,22 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'vue3'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'jest'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'cypress'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'storybook'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'ajax'),
-      },
-      {
-        id: stageSkillId++,
-        stageId: stageId - 1,
-        skill: findOrFail(skills, 'json'),
       },
       {
         id: stageSkillId++,
@@ -2695,7 +2429,22 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findOrFail(skills, 'openapi'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findOrFail(skills, 'microservices'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'slack'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findOrFail(skills, 'postman'),
       },
       {
         id: stageSkillId++,

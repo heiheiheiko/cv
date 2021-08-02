@@ -3,6 +3,7 @@ import {
 } from '@/db/dbTypes';
 
 export default [
+
   {
     id: 'project',
     type: SkillTypes.keyword,
@@ -20,36 +21,6 @@ export default [
     titleI18n: {
       de: 'Prozessoptimierung',
       en: 'Process Optimization',
-    },
-  },
-
-  {
-    id: 'softwarequality',
-    type: SkillTypes.keyword,
-    isTop: true,
-    titleI18n: {
-      de: 'Softwarequalität',
-      en: 'Software Quality',
-    },
-  },
-
-  {
-    id: 'software',
-    type: SkillTypes.keyword,
-    isTop: false,
-    titleI18n: {
-      de: 'Software Engineering',
-      en: 'Software Engineering',
-    },
-  },
-
-  {
-    id: 'web',
-    type: SkillTypes.keyword,
-    isTop: false,
-    titleI18n: {
-      de: 'Web Engineering',
-      en: 'Web Engineering',
     },
   },
 
@@ -74,6 +45,26 @@ export default [
   },
 
   {
+    id: 'testing',
+    type: SkillTypes.keyword,
+    isTop: true,
+    titleI18n: {
+      de: 'Testing',
+      en: 'Testing',
+    },
+  },
+
+  {
+    id: 'softwarequality',
+    type: SkillTypes.keyword,
+    isTop: true,
+    titleI18n: {
+      de: 'Softwarequalität',
+      en: 'Software Quality',
+    },
+  },
+
+  {
     id: 'usability',
     type: SkillTypes.keyword,
     isTop: true,
@@ -94,46 +85,6 @@ export default [
   },
 
   {
-    id: 'testing',
-    type: SkillTypes.keyword,
-    isTop: true,
-    titleI18n: {
-      de: 'Testing',
-      en: 'Testing',
-    },
-  },
-
-  {
-    id: 'tdd',
-    type: SkillTypes.keyword,
-    isTop: false,
-    titleI18n: {
-      de: 'Test Driven',
-      en: 'Test Driven',
-    },
-  },
-
-  {
-    id: 'reviews',
-    type: SkillTypes.keyword,
-    isTop: true,
-    titleI18n: {
-      de: 'Code Reviews',
-      en: 'Code Reviews',
-    },
-  },
-
-  {
-    id: 'mvc',
-    type: SkillTypes.keyword,
-    isTop: false,
-    titleI18n: {
-      de: 'MVC',
-      en: 'MVC',
-    },
-  },
-
-  {
     id: 'rest',
     type: SkillTypes.keyword,
     isTop: false,
@@ -144,12 +95,12 @@ export default [
   },
 
   {
-    id: 'webservices',
+    id: 'openapi',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
-      de: 'Webservices',
-      en: 'Webservices',
+      de: 'OpenAPI',
+      en: 'OpenAPI',
     },
   },
 
@@ -164,14 +115,15 @@ export default [
   },
 
   {
-    id: 'cip',
+    id: 'jam',
     type: SkillTypes.keyword,
-    isTop: false,
+    isTop: true,
     titleI18n: {
-      de: 'KVP',
-      en: 'CIP',
+      de: 'JAMstack',
+      en: 'JAMstack',
     },
   },
+
   {
     id: 'agile',
     type: SkillTypes.keyword,
@@ -185,7 +137,7 @@ export default [
   {
     id: 'kanban',
     type: SkillTypes.keyword,
-    isTop: false,
+    isTop: true,
     titleI18n: {
       de: 'Kanban',
       en: 'Kanban',
@@ -203,9 +155,19 @@ export default [
   },
 
   {
+    id: 'reviews',
+    type: SkillTypes.keyword,
+    isTop: false,
+    titleI18n: {
+      de: 'Code Reviews',
+      en: 'Code Reviews',
+    },
+  },
+
+  {
     id: 'lean',
     type: SkillTypes.keyword,
-    isTop: true,
+    isTop: false,
     titleI18n: {
       de: 'Lean Startup',
       en: 'Lean Startup',
@@ -223,9 +185,19 @@ export default [
   },
 
   {
-    id: 'german',
+    id: 'officedog',
     type: SkillTypes.keyword,
     isTop: true,
+    titleI18n: {
+      de: 'Bürohund',
+      en: 'Office dog',
+    },
+  },
+
+  {
+    id: 'german',
+    type: SkillTypes.keyword,
+    isTop: false,
     titleI18n: {
       de: 'Deutsch (Muttersprache)',
       en: 'German (Native language)',
@@ -303,9 +275,19 @@ export default [
   },
 
   {
-    id: 'php',
+    id: 'junit',
     type: SkillTypes.technology,
     isTop: false,
+    titleI18n: {
+      de: 'JUnit',
+      en: 'JUnit',
+    },
+  },
+
+  {
+    id: 'php',
+    type: SkillTypes.technology,
+    isTop: true,
     titleI18n: {
       de: 'PHP',
       en: 'PHP',
@@ -325,10 +307,20 @@ export default [
   {
     id: 'laravel',
     type: SkillTypes.technology,
-    isTop: false,
+    isTop: true,
     titleI18n: {
       de: 'Laravel',
       en: 'Laravel',
+    },
+  },
+
+  {
+    id: 'phpunit',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'PHPUnit',
+      en: 'PHPUnit',
     },
   },
 
@@ -393,6 +385,206 @@ export default [
   },
 
   {
+    id: 'pytest',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'pytest',
+      en: 'pytest',
+    },
+  },
+
+  {
+    id: 'pythonunittest',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'unittest (Python)',
+      en: 'unittest (Python)',
+    },
+  },
+
+  {
+    id: 'js',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'JavaScript',
+      en: 'JavaScript',
+    },
+  },
+
+  {
+    id: 'jquery',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'jQuery',
+      en: 'jQuery',
+    },
+  },
+
+  {
+    id: 'angular',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'AngularJS',
+      en: 'AngularJS',
+    },
+  },
+
+  {
+    id: 'vue',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Vue 2',
+      en: 'Vue 2',
+    },
+  },
+
+  {
+    id: 'vue3',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Vue 3',
+      en: 'Vue 3',
+    },
+  },
+
+  {
+    id: 'jest',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Jest',
+      en: 'Jest',
+    },
+  },
+
+  {
+    id: 'cypress',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Cypress',
+      en: 'Cypress',
+    },
+  },
+
+  {
+    id: 'redux',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Redux | Vuex',
+      en: 'Redux | Vuex',
+    },
+  },
+
+  {
+    id: 'storybook',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Storybook',
+      en: 'Storybook',
+    },
+  },
+
+  {
+    id: 'gridsome',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Gridsome',
+      en: 'Gridsome',
+    },
+  },
+
+  {
+    id: 'highcharts',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'Highcharts',
+      en: 'Highcharts',
+    },
+  },
+
+  {
+    id: 'html',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'HTML5',
+      en: 'HTML5',
+    },
+  },
+
+  {
+    id: 'css',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'CSS3',
+      en: 'CSS3',
+    },
+  },
+
+  {
+    id: 'sass',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Sass',
+      en: 'Sass',
+    },
+  },
+
+  {
+    id: 'bootstrap',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'Bootstrap',
+      en: 'Bootstrap',
+    },
+  },
+
+  {
+    id: 'bulma',
+    type: SkillTypes.technology,
+    isTop: false,
+    titleI18n: {
+      de: 'Bulma',
+      en: 'Bulma',
+    },
+  },
+
+  {
+    id: 'tailwind',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Tailwind CSS',
+      en: 'Tailwind CSS',
+    },
+  },
+
+  {
+    id: 'vuetify',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Vuetify',
+      en: 'Vuetify',
+    },
+  },
+
+  {
     id: 'sql',
     type: SkillTypes.technology,
     isTop: false,
@@ -433,182 +625,12 @@ export default [
   },
 
   {
-    id: 'html',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'HTML5',
-      en: 'HTML5',
-    },
-  },
-
-  {
-    id: 'haml',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Haml',
-      en: 'Haml',
-    },
-  },
-
-  {
-    id: 'css',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'CSS3',
-      en: 'CSS3',
-    },
-  },
-
-  {
-    id: 'sass',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'Sass',
-      en: 'Sass',
-    },
-  },
-
-  {
-    id: 'bootstrap',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Bootstrap',
-      en: 'Bootstrap',
-    },
-  },
-
-  {
-    id: 'bulma',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Bulma',
-      en: 'Bulma',
-    },
-  },
-
-  {
-    id: 'tailwind',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Tailwind CSS',
-      en: 'Tailwind CSS',
-    },
-  },
-
-  {
-    id: 'js',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'JavaScript',
-      en: 'JavaScript',
-    },
-  },
-
-  {
-    id: 'vue',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'Vue',
-      en: 'Vue',
-    },
-  },
-
-  {
-    id: 'storybook',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Storybook',
-      en: 'Storybook',
-    },
-  },
-
-  {
-    id: 'coffee',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'CoffeeScript',
-      en: 'CoffeeScript',
-    },
-  },
-
-  {
-    id: 'jquery',
-    type: SkillTypes.technology,
-    isTop: true,
-    titleI18n: {
-      de: 'jQuery',
-      en: 'jQuery',
-    },
-  },
-
-  {
-    id: 'angular',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'AngularJS',
-      en: 'AngularJS',
-    },
-  },
-
-  {
-    id: 'highcharts',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Highcharts',
-      en: 'Highcharts',
-    },
-  },
-
-  {
-    id: 'ajax',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Ajax',
-      en: 'Ajax',
-    },
-  },
-
-  {
     id: 'amqp',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
       de: 'AMQP',
       en: 'AMQP',
-    },
-  },
-
-  {
-    id: 'json',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'JSON',
-      en: 'JSON',
-    },
-  },
-
-  {
-    id: 'xml',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'XML',
-      en: 'XML',
     },
   },
 
@@ -629,36 +651,6 @@ export default [
     titleI18n: {
       de: 'UML',
       en: 'UML',
-    },
-  },
-
-  {
-    id: 'webpack',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'webpack',
-      en: 'webpack',
-    },
-  },
-
-  {
-    id: 'vuetify',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'Vuetify',
-      en: 'Vuetify',
-    },
-  },
-
-  {
-    id: 'jam',
-    type: SkillTypes.technology,
-    isTop: false,
-    titleI18n: {
-      de: 'JAMstack',
-      en: 'JAMstack',
     },
   },
 
@@ -689,16 +681,6 @@ export default [
     titleI18n: {
       de: 'Mac OS',
       en: 'Mac OS',
-    },
-  },
-
-  {
-    id: 'svn',
-    type: SkillTypes.software,
-    isTop: false,
-    titleI18n: {
-      de: 'SVN',
-      en: 'SVN',
     },
   },
 
@@ -735,7 +717,7 @@ export default [
   {
     id: 'gitlab',
     type: SkillTypes.software,
-    isTop: false,
+    isTop: true,
     titleI18n: {
       de: 'GitLab',
       en: 'GitLab',
@@ -765,20 +747,10 @@ export default [
   {
     id: 'kraken',
     type: SkillTypes.software,
-    isTop: false,
+    isTop: true,
     titleI18n: {
       de: 'GitKraken',
       en: 'GitKraken',
-    },
-  },
-
-  {
-    id: 'diffmerge',
-    type: SkillTypes.software,
-    isTop: false,
-    titleI18n: {
-      de: 'DiffMerge',
-      en: 'DiffMerge',
     },
   },
 
@@ -803,6 +775,26 @@ export default [
   },
 
   {
+    id: 'pycharm',
+    type: SkillTypes.software,
+    isTop: false,
+    titleI18n: {
+      de: 'PyCharm',
+      en: 'PyCharm',
+    },
+  },
+
+  {
+    id: 'intellij',
+    type: SkillTypes.software,
+    isTop: false,
+    titleI18n: {
+      de: 'IntelliJ',
+      en: 'IntelliJ',
+    },
+  },
+
+  {
     id: 'sublime',
     type: SkillTypes.software,
     isTop: false,
@@ -823,22 +815,22 @@ export default [
   },
 
   {
-    id: 'pycharm',
+    id: 'vscode',
     type: SkillTypes.software,
-    isTop: false,
+    isTop: true,
     titleI18n: {
-      de: 'PyCharm',
-      en: 'PyCharm',
+      de: 'Visual Studio Code',
+      en: 'Visual Studio Code',
     },
   },
 
   {
-    id: 'vscode',
+    id: 'postman',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
-      de: 'Visual Studio Code',
-      en: 'Visual Studio Code',
+      de: 'Postman',
+      en: 'Postman',
     },
   },
 
@@ -883,12 +875,32 @@ export default [
   },
 
   {
-    id: 'rabbit',
+    id: 'confluence',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
-      de: 'RabbitMQ',
-      en: 'RabbitMQ',
+      de: 'Confluence',
+      en: 'Confluence',
+    },
+  },
+
+  {
+    id: 'slack',
+    type: SkillTypes.software,
+    isTop: true,
+    titleI18n: {
+      de: 'Slack',
+      en: 'Slack',
+    },
+  },
+
+  {
+    id: 'teams',
+    type: SkillTypes.software,
+    isTop: true,
+    titleI18n: {
+      de: 'Microsoft Teams',
+      en: 'Microsoft Teams',
     },
   },
 
@@ -943,6 +955,16 @@ export default [
   },
 
   {
+    id: 'rabbit',
+    type: SkillTypes.software,
+    isTop: false,
+    titleI18n: {
+      de: 'RabbitMQ',
+      en: 'RabbitMQ',
+    },
+  },
+
+  {
     id: 'camtasia',
     type: SkillTypes.software,
     isTop: false,
@@ -955,7 +977,7 @@ export default [
   {
     id: 'gimp',
     type: SkillTypes.software,
-    isTop: true,
+    isTop: false,
     titleI18n: {
       de: 'GIMP',
       en: 'GIMP',
@@ -979,97 +1001,6 @@ export default [
     titleI18n: {
       de: 'G Suite',
       en: 'G Suite',
-    },
-  },
-
-  {
-    id: 'intellij',
-    type: SkillTypes.software,
-    isTop: false,
-    titleI18n: {
-      de: 'IntelliJ',
-      en: 'IntelliJ',
-    },
-  },
-
-  {
-    id: 'confluence',
-    type: SkillTypes.software,
-    isTop: false,
-    titleI18n: {
-      de: 'Confluence',
-      en: 'Confluence',
-    },
-  },
-
-  {
-    id: 'solution',
-    type: SkillTypes.soft,
-    isTop: true,
-    titleI18n: {
-      de: 'Problemlösungsorientiert',
-      en: 'Solution-oriented',
-    },
-  },
-
-  {
-    id: 'learn',
-    type: SkillTypes.soft,
-    isTop: true,
-    titleI18n: {
-      de: 'Lernfreudig',
-      en: 'Willingness to learn',
-    },
-  },
-
-  {
-    id: 'independent',
-    type: SkillTypes.soft,
-    isTop: false,
-    titleI18n: {
-      de: 'Selbständiges Arbeiten',
-      en: 'Independent working',
-
-    },
-  },
-
-  {
-    id: 'teamplayer',
-    type: SkillTypes.soft,
-    isTop: true,
-    titleI18n: {
-      de: 'Teamplayer',
-      en: 'Teamplayer',
-    },
-  },
-
-  {
-    id: 'quality',
-    type: SkillTypes.soft,
-    isTop: true,
-    titleI18n: {
-      de: 'Qualitätsbewusst',
-      en: 'Quality-conscious',
-    },
-  },
-
-  {
-    id: 'enthusiastic',
-    type: SkillTypes.soft,
-    isTop: false,
-    titleI18n: {
-      de: 'Begeisterungsfähig',
-      en: 'Enthusiastic',
-    },
-  },
-
-  {
-    id: 'grounded',
-    type: SkillTypes.soft,
-    isTop: false,
-    titleI18n: {
-      de: 'Bodenständig',
-      en: 'Grounded',
     },
   },
 
