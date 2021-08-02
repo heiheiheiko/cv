@@ -461,6 +461,17 @@ export default [
 
   {
     id: skillId++,
+    staticId: 'ts',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'TypeScript',
+      en: 'TypeScript',
+    },
+  },
+
+  {
+    id: skillId++,
     staticId: 'jquery',
     type: SkillTypes.technology,
     isTop: false,

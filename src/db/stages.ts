@@ -2364,6 +2364,11 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'ts'),
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
         skill: findByStaticIdOrFail(skills, 'vue'),
       },
       {
