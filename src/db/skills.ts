@@ -197,12 +197,12 @@ export default [
 
   {
     id: skillId++,
-    staticId: 'homeoffice',
+    staticId: 'remote',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
-      de: 'Homeoffice',
-      en: 'Homeoffice',
+      de: 'Remote Work',
+      en: 'Remote Work',
     },
   },
 

@@ -1798,7 +1798,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'homeoffice'),
+        skill: findByStaticIdOrFail(skills, 'remote'),
       },
       {
         id: stageSkillId++,
@@ -2064,7 +2064,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'homeoffice'),
+        skill: findByStaticIdOrFail(skills, 'remote'),
       },
       {
         id: stageSkillId++,
@@ -2304,7 +2304,7 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'homeoffice'),
+        skill: findByStaticIdOrFail(skills, 'remote'),
       },
       {
         id: stageSkillId++,
