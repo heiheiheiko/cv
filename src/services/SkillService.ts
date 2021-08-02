@@ -23,7 +23,7 @@ const buildSkillsWithUseInMonths = (
   stages.forEach((stage) => {
     stage.stageSkills.forEach((stageSkillId) => {
       const stageSkill = findStageSkill(stageSkillId as unknown as number);
-      const skill = findSkill(stageSkill.skill as unknown as string);
+      const skill = findSkill(stageSkill.skill as unknown as number);
       if (!result[skill.id]) {
         result[skill.id] = {} as any;
         result[skill.id].skill = skill;

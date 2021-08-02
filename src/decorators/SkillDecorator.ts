@@ -3,7 +3,9 @@ import { usageInWords } from '@/utils/dateUtils';
 import { Filterable } from '@/types';
 
 export default class SkillDecorator implements Filterable {
-  id: string;
+  id: number;
+
+  staticId: string;
 
   titleI18n: I18nField;
 
@@ -17,6 +19,7 @@ export default class SkillDecorator implements Filterable {
 
   constructor(skill: Skill, useInMonths: number|undefined = undefined) {
     this.id = skill.id;
+    this.staticId = skill.staticId;
     this.titleI18n = skill.titleI18n;
     this.isTop = skill.isTop;
     this.type = skill.type;

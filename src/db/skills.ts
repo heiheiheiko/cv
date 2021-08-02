@@ -1,11 +1,16 @@
+/* eslint-disable no-plusplus */
+
 import {
   Skill, SkillTypes,
 } from '@/db/dbTypes';
 
+let skillId = 1;
+
 export default [
 
   {
-    id: 'project',
+    id: skillId++,
+    staticId: 'project',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -15,7 +20,8 @@ export default [
   },
 
   {
-    id: 'process',
+    id: skillId++,
+    staticId: 'process',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -25,7 +31,8 @@ export default [
   },
 
   {
-    id: 'frontend',
+    id: skillId++,
+    staticId: 'frontend',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -35,7 +42,8 @@ export default [
   },
 
   {
-    id: 'backend',
+    id: skillId++,
+    staticId: 'backend',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -45,7 +53,8 @@ export default [
   },
 
   {
-    id: 'testing',
+    id: skillId++,
+    staticId: 'testing',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -55,7 +64,8 @@ export default [
   },
 
   {
-    id: 'softwarequality',
+    id: skillId++,
+    staticId: 'softwarequality',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -65,7 +75,8 @@ export default [
   },
 
   {
-    id: 'usability',
+    id: skillId++,
+    staticId: 'usability',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -75,7 +86,8 @@ export default [
   },
 
   {
-    id: 'mobile',
+    id: skillId++,
+    staticId: 'mobile',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -85,7 +97,8 @@ export default [
   },
 
   {
-    id: 'rest',
+    id: skillId++,
+    staticId: 'rest',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -95,7 +108,8 @@ export default [
   },
 
   {
-    id: 'openapi',
+    id: skillId++,
+    staticId: 'openapi',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -105,7 +119,8 @@ export default [
   },
 
   {
-    id: 'microservices',
+    id: skillId++,
+    staticId: 'microservices',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -115,7 +130,8 @@ export default [
   },
 
   {
-    id: 'jam',
+    id: skillId++,
+    staticId: 'jam',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -125,7 +141,8 @@ export default [
   },
 
   {
-    id: 'agile',
+    id: skillId++,
+    staticId: 'agile',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -135,7 +152,8 @@ export default [
   },
 
   {
-    id: 'kanban',
+    id: skillId++,
+    staticId: 'kanban',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -145,7 +163,8 @@ export default [
   },
 
   {
-    id: 'scrum',
+    id: skillId++,
+    staticId: 'scrum',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -155,7 +174,8 @@ export default [
   },
 
   {
-    id: 'reviews',
+    id: skillId++,
+    staticId: 'reviews',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -165,7 +185,8 @@ export default [
   },
 
   {
-    id: 'lean',
+    id: skillId++,
+    staticId: 'lean',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -175,7 +196,8 @@ export default [
   },
 
   {
-    id: 'homeoffice',
+    id: skillId++,
+    staticId: 'homeoffice',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -185,7 +207,8 @@ export default [
   },
 
   {
-    id: 'officedog',
+    id: skillId++,
+    staticId: 'officedog',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -195,7 +218,8 @@ export default [
   },
 
   {
-    id: 'german',
+    id: skillId++,
+    staticId: 'german',
     type: SkillTypes.keyword,
     isTop: false,
     titleI18n: {
@@ -205,7 +229,8 @@ export default [
   },
 
   {
-    id: 'english',
+    id: skillId++,
+    staticId: 'english',
     type: SkillTypes.keyword,
     isTop: true,
     titleI18n: {
@@ -215,7 +240,8 @@ export default [
   },
 
   {
-    id: 'assembler',
+    id: skillId++,
+    staticId: 'assembler',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -225,7 +251,8 @@ export default [
   },
 
   {
-    id: 'vba',
+    id: skillId++,
+    staticId: 'vba',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -235,7 +262,8 @@ export default [
   },
 
   {
-    id: 'c',
+    id: skillId++,
+    staticId: 'c',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -245,7 +273,8 @@ export default [
   },
 
   {
-    id: 'c#',
+    id: skillId++,
+    staticId: 'c#',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -255,7 +284,8 @@ export default [
   },
 
   {
-    id: 'java',
+    id: skillId++,
+    staticId: 'java',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -265,7 +295,8 @@ export default [
   },
 
   {
-    id: 'spring',
+    id: skillId++,
+    staticId: 'spring',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -275,7 +306,8 @@ export default [
   },
 
   {
-    id: 'junit',
+    id: skillId++,
+    staticId: 'junit',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -285,7 +317,8 @@ export default [
   },
 
   {
-    id: 'php',
+    id: skillId++,
+    staticId: 'php',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -295,7 +328,8 @@ export default [
   },
 
   {
-    id: 'zend',
+    id: skillId++,
+    staticId: 'zend',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -305,7 +339,8 @@ export default [
   },
 
   {
-    id: 'laravel',
+    id: skillId++,
+    staticId: 'laravel',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -315,7 +350,8 @@ export default [
   },
 
   {
-    id: 'phpunit',
+    id: skillId++,
+    staticId: 'phpunit',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -325,7 +361,8 @@ export default [
   },
 
   {
-    id: 'ruby',
+    id: skillId++,
+    staticId: 'ruby',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -335,7 +372,8 @@ export default [
   },
 
   {
-    id: 'rails',
+    id: skillId++,
+    staticId: 'rails',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -345,7 +383,8 @@ export default [
   },
 
   {
-    id: 'rspec',
+    id: skillId++,
+    staticId: 'rspec',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -355,7 +394,8 @@ export default [
   },
 
   {
-    id: 'capybara',
+    id: skillId++,
+    staticId: 'capybara',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -365,7 +405,8 @@ export default [
   },
 
   {
-    id: 'python',
+    id: skillId++,
+    staticId: 'python',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -375,7 +416,8 @@ export default [
   },
 
   {
-    id: 'django',
+    id: skillId++,
+    staticId: 'django',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -385,7 +427,8 @@ export default [
   },
 
   {
-    id: 'pytest',
+    id: skillId++,
+    staticId: 'pytest',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -395,7 +438,8 @@ export default [
   },
 
   {
-    id: 'pythonunittest',
+    id: skillId++,
+    staticId: 'pythonunittest',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -405,7 +449,8 @@ export default [
   },
 
   {
-    id: 'js',
+    id: skillId++,
+    staticId: 'js',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -415,7 +460,8 @@ export default [
   },
 
   {
-    id: 'jquery',
+    id: skillId++,
+    staticId: 'jquery',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -425,7 +471,8 @@ export default [
   },
 
   {
-    id: 'angular',
+    id: skillId++,
+    staticId: 'angular',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -435,7 +482,8 @@ export default [
   },
 
   {
-    id: 'vue',
+    id: skillId++,
+    staticId: 'vue',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -445,7 +493,8 @@ export default [
   },
 
   {
-    id: 'vue3',
+    id: skillId++,
+    staticId: 'vue3',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -455,7 +504,8 @@ export default [
   },
 
   {
-    id: 'jest',
+    id: skillId++,
+    staticId: 'jest',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -465,7 +515,8 @@ export default [
   },
 
   {
-    id: 'cypress',
+    id: skillId++,
+    staticId: 'cypress',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -475,7 +526,8 @@ export default [
   },
 
   {
-    id: 'redux',
+    id: skillId++,
+    staticId: 'redux',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -485,7 +537,8 @@ export default [
   },
 
   {
-    id: 'storybook',
+    id: skillId++,
+    staticId: 'storybook',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -495,7 +548,8 @@ export default [
   },
 
   {
-    id: 'gridsome',
+    id: skillId++,
+    staticId: 'gridsome',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -505,7 +559,8 @@ export default [
   },
 
   {
-    id: 'highcharts',
+    id: skillId++,
+    staticId: 'highcharts',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -515,7 +570,8 @@ export default [
   },
 
   {
-    id: 'html',
+    id: skillId++,
+    staticId: 'html',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -525,7 +581,8 @@ export default [
   },
 
   {
-    id: 'css',
+    id: skillId++,
+    staticId: 'css',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -535,7 +592,8 @@ export default [
   },
 
   {
-    id: 'sass',
+    id: skillId++,
+    staticId: 'sass',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -545,7 +603,8 @@ export default [
   },
 
   {
-    id: 'bootstrap',
+    id: skillId++,
+    staticId: 'bootstrap',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -555,7 +614,8 @@ export default [
   },
 
   {
-    id: 'bulma',
+    id: skillId++,
+    staticId: 'bulma',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -565,7 +625,8 @@ export default [
   },
 
   {
-    id: 'tailwind',
+    id: skillId++,
+    staticId: 'tailwind',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -575,7 +636,8 @@ export default [
   },
 
   {
-    id: 'vuetify',
+    id: skillId++,
+    staticId: 'vuetify',
     type: SkillTypes.technology,
     isTop: true,
     titleI18n: {
@@ -585,7 +647,8 @@ export default [
   },
 
   {
-    id: 'sql',
+    id: skillId++,
+    staticId: 'sql',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -595,7 +658,8 @@ export default [
   },
 
   {
-    id: 'oracle',
+    id: skillId++,
+    staticId: 'oracle',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -605,7 +669,8 @@ export default [
   },
 
   {
-    id: 'mysql',
+    id: skillId++,
+    staticId: 'mysql',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -615,7 +680,8 @@ export default [
   },
 
   {
-    id: 'postgres',
+    id: skillId++,
+    staticId: 'postgres',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -625,7 +691,8 @@ export default [
   },
 
   {
-    id: 'amqp',
+    id: skillId++,
+    staticId: 'amqp',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -635,7 +702,8 @@ export default [
   },
 
   {
-    id: 'bpmn',
+    id: skillId++,
+    staticId: 'bpmn',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -645,7 +713,8 @@ export default [
   },
 
   {
-    id: 'uml',
+    id: skillId++,
+    staticId: 'uml',
     type: SkillTypes.technology,
     isTop: false,
     titleI18n: {
@@ -655,7 +724,8 @@ export default [
   },
 
   {
-    id: 'windows',
+    id: skillId++,
+    staticId: 'windows',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -665,7 +735,8 @@ export default [
   },
 
   {
-    id: 'ubuntu',
+    id: skillId++,
+    staticId: 'ubuntu',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -675,7 +746,8 @@ export default [
   },
 
   {
-    id: 'mac',
+    id: skillId++,
+    staticId: 'mac',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -685,7 +757,8 @@ export default [
   },
 
   {
-    id: 'git',
+    id: skillId++,
+    staticId: 'git',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -695,7 +768,8 @@ export default [
   },
 
   {
-    id: 'github',
+    id: skillId++,
+    staticId: 'github',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -705,7 +779,8 @@ export default [
   },
 
   {
-    id: 'bitbucket',
+    id: skillId++,
+    staticId: 'bitbucket',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -715,7 +790,8 @@ export default [
   },
 
   {
-    id: 'gitlab',
+    id: skillId++,
+    staticId: 'gitlab',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -725,7 +801,8 @@ export default [
   },
 
   {
-    id: 'tower',
+    id: skillId++,
+    staticId: 'tower',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -735,7 +812,8 @@ export default [
   },
 
   {
-    id: 'sourcetree',
+    id: skillId++,
+    staticId: 'sourcetree',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -745,7 +823,8 @@ export default [
   },
 
   {
-    id: 'kraken',
+    id: skillId++,
+    staticId: 'kraken',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -755,7 +834,8 @@ export default [
   },
 
   {
-    id: 'vs',
+    id: skillId++,
+    staticId: 'vs',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -765,7 +845,8 @@ export default [
   },
 
   {
-    id: 'eclipse',
+    id: skillId++,
+    staticId: 'eclipse',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -775,7 +856,8 @@ export default [
   },
 
   {
-    id: 'pycharm',
+    id: skillId++,
+    staticId: 'pycharm',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -785,7 +867,8 @@ export default [
   },
 
   {
-    id: 'intellij',
+    id: skillId++,
+    staticId: 'intellij',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -795,7 +878,8 @@ export default [
   },
 
   {
-    id: 'sublime',
+    id: skillId++,
+    staticId: 'sublime',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -805,7 +889,8 @@ export default [
   },
 
   {
-    id: 'atom',
+    id: skillId++,
+    staticId: 'atom',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -815,7 +900,8 @@ export default [
   },
 
   {
-    id: 'vscode',
+    id: skillId++,
+    staticId: 'vscode',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -825,7 +911,8 @@ export default [
   },
 
   {
-    id: 'postman',
+    id: skillId++,
+    staticId: 'postman',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -835,7 +922,8 @@ export default [
   },
 
   {
-    id: 'jira',
+    id: skillId++,
+    staticId: 'jira',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -845,7 +933,8 @@ export default [
   },
 
   {
-    id: 'basecamp',
+    id: skillId++,
+    staticId: 'basecamp',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -855,7 +944,8 @@ export default [
   },
 
   {
-    id: 'redmine',
+    id: skillId++,
+    staticId: 'redmine',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -865,7 +955,8 @@ export default [
   },
 
   {
-    id: 'trello',
+    id: skillId++,
+    staticId: 'trello',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -875,7 +966,8 @@ export default [
   },
 
   {
-    id: 'confluence',
+    id: skillId++,
+    staticId: 'confluence',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -885,7 +977,8 @@ export default [
   },
 
   {
-    id: 'slack',
+    id: skillId++,
+    staticId: 'slack',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -895,7 +988,8 @@ export default [
   },
 
   {
-    id: 'teams',
+    id: skillId++,
+    staticId: 'teams',
     type: SkillTypes.software,
     isTop: true,
     titleI18n: {
@@ -905,7 +999,8 @@ export default [
   },
 
   {
-    id: 'travis',
+    id: skillId++,
+    staticId: 'travis',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -915,7 +1010,8 @@ export default [
   },
 
   {
-    id: 'jenkins',
+    id: skillId++,
+    staticId: 'jenkins',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -925,7 +1021,8 @@ export default [
   },
 
   {
-    id: 'airbrake',
+    id: skillId++,
+    staticId: 'airbrake',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -935,7 +1032,8 @@ export default [
   },
 
   {
-    id: 'errbit',
+    id: skillId++,
+    staticId: 'errbit',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -945,7 +1043,8 @@ export default [
   },
 
   {
-    id: 'heroku',
+    id: skillId++,
+    staticId: 'heroku',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -955,7 +1054,8 @@ export default [
   },
 
   {
-    id: 'rabbit',
+    id: skillId++,
+    staticId: 'rabbit',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -965,7 +1065,8 @@ export default [
   },
 
   {
-    id: 'camtasia',
+    id: skillId++,
+    staticId: 'camtasia',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -975,7 +1076,8 @@ export default [
   },
 
   {
-    id: 'gimp',
+    id: skillId++,
+    staticId: 'gimp',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -985,7 +1087,8 @@ export default [
   },
 
   {
-    id: 'office',
+    id: skillId++,
+    staticId: 'office',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {
@@ -995,7 +1098,8 @@ export default [
   },
 
   {
-    id: 'google',
+    id: skillId++,
+    staticId: 'google',
     type: SkillTypes.software,
     isTop: false,
     titleI18n: {

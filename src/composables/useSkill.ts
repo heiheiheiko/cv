@@ -18,9 +18,9 @@ const skills = computed(() => allResources(resourceName));
 
 export default function useSkill() {
   // methods
-  const findSkill = (id: number|string) => new SkillDecorator(findResource(resourceName, id));
+  const findSkill = (id: number) => new SkillDecorator(findResource(resourceName, id));
 
-  const findSkills = (ids: Array<number|string>) => {
+  const findSkills = (ids: Array<number>) => {
     const localSkills = ids.map((id) => findSkill(id));
     return orderBy(localSkills, ['type', 'id']);
   };

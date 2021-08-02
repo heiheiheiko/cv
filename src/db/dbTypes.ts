@@ -35,7 +35,8 @@ enum SkillTypes {
   soft = 'SOFT'
 }
 interface Skill{
-  id: string,
+  id: number,
+  staticId: string,
   titleI18n: I18nField,
   isTop: boolean,
   type: SkillTypes,
