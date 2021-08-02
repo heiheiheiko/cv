@@ -16,7 +16,7 @@
                      flex items-center justify-center"
             >
               <FontAwesomeIcon
-                icon="user-astronaut"
+                :icon="testimonial.icon"
                 class="text-white"
                 size="10x"
               />

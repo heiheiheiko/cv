@@ -19,6 +19,7 @@ interface Testimonial{
   quotedPerson: string,
   quotedPersonPositionI18n: I18nField,
   url: string,
+  icon: string
 }
 
 interface Link{

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-plusplus */
 
 import {
@@ -22,18 +23,13 @@ const talent: Talent = {
   },
   birthday: new Date('1986-07-18'),
   email: 'heiko.beineke@gmail.com',
-  mobilePhone: '0151 555 45 345',
   familyStatusI18n: {
     de: 'verheiratet',
     en: 'married',
   },
   sloganI18n: {
-    de: 'Digitale Mehrwerte schaffen',
-    en: 'Create digital added valuer',
-  },
-  sloganLongI18n: {
-    de: 'Ich schaffe digitale Mehrwerte, löse knifflige Probleme, treibe lang ersehnten Fortschritt voran, entwickle Produkte die begeistern und helfe Menschen damit einfach großartiger zu sein.',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    de: 'Authentisch, open-minded und committed digitale Mehrwerte schaffen',
+    en: 'Creating digital added value in a authentic, open-minded and committed way',
   },
 };
 
@@ -42,8 +38,8 @@ const testimonialGamer: Testimonial = {
   id: testimonialId++,
   staticId: 'gamer',
   quoteI18n: {
-    de: 'Ich habe vielseitige Interessen, bin annähernd für jeden Unfug zu haben, verbringe meine Zeit am liebsten mit Menschen die ich mag und möchte einfach eine gute Zeit haben.',
-    en: 'Lorem Ipsum',
+    de: 'Ich habe vielseitige Interessen, bin annähernd für jeden Unfug zu haben und verbringe meine Zeit am liebsten mit Menschen die ich mag',
+    en: 'I have a wide range of interests, I am almost ready for any nonsense and I like to spend my time with people I like',
   },
   quotedPerson: 'Heiko Beineke',
   quotedPersonPositionI18n: {
@@ -51,14 +47,15 @@ const testimonialGamer: Testimonial = {
     en: 'Gamer',
   },
   url: 'gamer_430x700.jpg',
+  icon: 'dice',
 };
 
 const testimonialExplorer: Testimonial = {
   id: testimonialId++,
   staticId: 'explorer',
   quoteI18n: {
-    de: 'Ich bin weltoffen, probiere gerne neue Dinge aus, schätze die Herausforderung, agiere auch gerne mal außerhalb meiner Komfortzone und erfinde mich damit immer wieder neu.',
-    en: 'Lorem Ipsum',
+    de: 'Ich bin open-minded, probiere gerne neue Dinge aus, schätze die Herausforderung, agiere auch mal gerne außerhalb meiner Komfortzone und erfinde mich so immer mal wieder neu',
+    en: 'I am open minded, I like to try out new things, I appreciate challenges, I also like to act outside of my comfort zone and I reinvent myself from time to time in that way',
   },
   quotedPerson: 'Heiko Beineke',
   quotedPersonPositionI18n: {
@@ -66,14 +63,15 @@ const testimonialExplorer: Testimonial = {
     en: 'Explorer',
   },
   url: 'explorer_430x700.jpg',
+  icon: 'hiking',
 };
 
 const testimonialAccomplisher: Testimonial = {
   id: testimonialId++,
   staticId: 'accomplisher',
   quoteI18n: {
-    de: 'Ich schaffe digitale Mehrwerte, löse knifflige Probleme, treibe lang ersehnten Fortschritt voran, entwickle Produkte die begeistern und helfe damit Menschen einfach großartiger zu sein.',
-    en: 'Lorem Ipsum',
+    de: 'Ich löse knifflige Probleme, treibe ersehnten Fortschritt voran, entwickle Produkte die begeistern, schaffe digitale Mehrwerte und helfe damit Menschen einfach großartiger zu sein',
+    en: 'I solve tricky problems, I drive long-awaited progress, I develop products that inspire, I create digital added value and I help people to be just better',
   },
   quotedPerson: 'Heiko Beineke',
   quotedPersonPositionI18n: {
@@ -81,6 +79,7 @@ const testimonialAccomplisher: Testimonial = {
     en: 'Accomplisher',
   },
   url: 'accomplisher_430x700.jpg',
+  icon: 'user-astronaut',
 };
 talent.testimonials = [testimonialGamer, testimonialExplorer, testimonialAccomplisher];
 
@@ -125,8 +124,8 @@ const featureAgile: Feature = {
     en: 'Agile Enthusiast',
   },
   descriptionI18n: {
-    de: 'Agile Methoden bieten den Rahmen um als Team über sich hinaus zu wachsen',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Agile Methoden bieten genau den richtigen Rahmen um als Team über sich hinaus wachsen zu können',
+    en: 'Agile methods offer exactly the right framework to grow as a team',
   },
   icon: 'sync',
 };
@@ -138,8 +137,8 @@ const featureDog: Feature = {
     en: 'Pack leader',
   },
   descriptionI18n: {
-    de: 'Ich habe 2 erfahrene Office-Hunde im Gepäck, die regelmäßig für gute Laune sorgen',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Ich habe 2 erfahrene Bürohunde im Gepäck, die regelmäßig für gute Laune sorgen und dabei nicht stören',
+    en: 'I have 2 experienced office dogs with me, who regularly put people in a good mood and do not disturb them',
   },
   icon: 'dog',
 };
@@ -147,12 +146,12 @@ const featureDog: Feature = {
 const featureRemote: Feature = {
   id: featureId++,
   titleI18n: {
-    de: 'Remote Work',
-    en: 'Remote Work',
+    de: 'Remote-Work',
+    en: 'Remote work',
   },
   descriptionI18n: {
-    de: 'Hin und wieder bietet das heimische Büro den nötigen Abstand, um Dinge einfach mal fertig zu machen',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Hin und wieder bietet Remote-Work den nötigen Abstand, um Dinge einfach mal fertig zu machen',
+    en: 'From time to time, remote work provides the necessary distance to just get things done',
   },
   icon: 'home',
 };
@@ -164,8 +163,8 @@ const featureRespect: Feature = {
     en: 'Respectful togetherness',
   },
   descriptionI18n: {
-    de: 'Ein vertrauensvoller und respektvoller Umgang auf Augenhöhe ist für mich eine Selbstverständlichkeit',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Ein vertrauensvoller und respektvoller Umgang auf Augenhöhe ist der Schlüssel für erfogreiche Zusammenarbeit',
+    en: 'A trusting and respectful interaction at eye level is the key to successful cooperation',
   },
   icon: 'people-arrows',
 };
@@ -177,8 +176,8 @@ const featureCommunication: Feature = {
     en: 'Openness',
   },
   descriptionI18n: {
-    de: 'Offene Gesprächs- und Fehlerkulturen haben sich bewährt und fördern das lösungsorientierte Denken',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Offene Gesprächs- und Fehlerkulturen fördern das lösungsorientierte Denken und verringern somit Reaktionzeiten',
+    en: 'Open discussion and error cultures promote solution-oriented thinking and thus reduce reaction times',
   },
   icon: 'comments',
 };
@@ -190,8 +189,8 @@ const featureVision: Feature = {
     en: 'Product vision',
   },
   descriptionI18n: {
-    de: 'Ich lasse mich gerne begeistern und stecke meine kreative Energie am liebsten in ein digitales Produkt',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Ich lasse mich gerne von einer Vision begeistern und stecke meine kreative Energie am liebsten in digitale Produkte',
+    en: 'I like to be inspired by a vision and love to put my creative energy into digital products',
   },
   icon: 'space-shuttle',
 };
@@ -199,12 +198,12 @@ const featureVision: Feature = {
 const featureForward: Feature = {
   id: featureId++,
   titleI18n: {
-    de: 'Dinge vorantreiben',
-    en: 'Moving things forward',
+    de: 'Fortschritt',
+    en: 'Progress',
   },
   descriptionI18n: {
-    de: 'Wenn Gestaltungsspielräume vorhanden sind, bringe ich auch gerne mal eigene Ideen mit ein',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Wo es sinnvoll ist, versuche ich Fortschritt weiter voranzutreiben, indem ich meine eigenen Erfahrungen miteinbringe',
+    en: 'Wherever it makes sense, I try to drive progress forward by bringing in my own experience',
   },
   icon: 'cogs',
 };
@@ -216,8 +215,8 @@ const featurePassion: Feature = {
     en: 'Passion',
   },
   descriptionI18n: {
-    de: 'Ich identifiziere mich mit meiner Arbeit und habe hohe Ansprüche an mich selbst',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    de: 'Gute Arbeit zu leisten ist mir wichtig und regelmäßiges reflektieren hilft mir dabei nicht auf der Stelle zu treten',
+    en: 'Doing a good job is important to me and regular reflection helps me not to stand still',
   },
   icon: 'user-astronaut',
 };
@@ -230,7 +229,7 @@ const featureFun: Feature = {
   },
   descriptionI18n: {
     de: 'Ich schätze es sehr, wenn man als Team auch mal abseits der Arbeit zusammenkommt',
-    en: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    en: 'I really appreciate it when you get together as a team outside of work as well',
   },
   icon: 'dice',
 };

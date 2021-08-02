@@ -63,8 +63,8 @@ export default defineComponent({
       "subtitle": "Die Summe meiner Erfahrungen machen mich zu der Person, die ich heute bin",
   },
   "en": {
-      "title": "Lorem ipsum",
-      "subtitle": "Lorem ipsum",
+      "title": "What makes me special",
+      "subtitle": "The sum total of my experiences makes me to the person who I am today",
   }
 }
 </i18n>
