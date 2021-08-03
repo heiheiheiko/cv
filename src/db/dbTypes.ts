@@ -108,6 +108,7 @@ interface Stage{
   icon: string
   descriptionI18n?: I18nField,
   noteI18n?: I18nField,
+  imageName?: string,
 
   stageSkills?: Array<StageSkill> // professional, educational
   organization?: Organization, // professional, educational

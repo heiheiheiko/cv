@@ -57,7 +57,7 @@ export default [
     startedAt: new Date('1986-07-18'),
     endedAt: null,
     icon: 'birthday-cake',
-    isTop: false,
+    isTop: true,
     isVisible: true,
   },
 
@@ -157,7 +157,7 @@ export default [
     startedAt: new Date('2004-02-22'),
     endedAt: null,
     icon: 'heart',
-    isTop: false,
+    isTop: true,
     isVisible: true,
   },
 
@@ -290,12 +290,12 @@ export default [
     ] as Array<StageSkill>,
   },
 
-  // Verschiedene Aushilfsprofessionals
+  // Verschiedene Aushilfsjobs
   {
     id: stageId++,
     titleI18n: {
-      de: 'Verschiedene Aushilfsprofessionals',
-      en: 'Various backup professionals',
+      de: 'Verschiedene Aushilfsjobs',
+      en: 'Various backup jobs',
     },
     descriptionI18n: {
       de: 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles);Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)',
@@ -762,7 +762,7 @@ export default [
     startedAt: new Date('2013-02-22'),
     endedAt: null,
     icon: 'heart',
-    isTop: false,
+    isTop: true,
     isVisible: true,
   },
 
@@ -1144,6 +1144,7 @@ export default [
     isTop: true,
     isVisible: true,
     organization: orgaFuchs,
+    imageName: 'fuchs.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1462,6 +1463,7 @@ export default [
     isTop: false,
     isVisible: true,
     organization: orgaTvb,
+    imageName: 'kungfu.jpg',
   },
 
   // Hermannsweg
@@ -1481,6 +1483,7 @@ export default [
     icon: 'hiking',
     isTop: false,
     isVisible: true,
+    imageName: 'hermannsweg.jpg',
   },
 
   // Fuchs 2
@@ -1499,6 +1502,7 @@ export default [
     isTop: true,
     isVisible: true,
     organization: orgaFuchs,
+    imageName: 'fuchs.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1696,9 +1700,10 @@ export default [
     icon: 'dog',
     isTop: false,
     isVisible: true,
+    imageName: 'geoffrey.jpg',
   },
 
-  // Hermannsweg
+  // Eggeweg
   {
     id: stageId++,
     titleI18n: {
@@ -1715,6 +1720,7 @@ export default [
     icon: 'hiking',
     isTop: false,
     isVisible: true,
+    imageName: 'eggeweg.jpg',
   },
 
   // IDB
@@ -1739,6 +1745,7 @@ export default [
       organizationSize: OrganizationSizeEnum.between11And50,
       branch: BranchEnum.marketing,
     } as Organization,
+    imageName: 'influencerdb.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1964,8 +1971,9 @@ export default [
     startedAt: new Date('2019-01-06'),
     endedAt: null,
     icon: 'dog',
-    isTop: false,
+    isTop: true,
     isVisible: true,
+    imageName: 'rumo.jpg',
   },
 
   // Kung Fu I
@@ -1982,6 +1990,7 @@ export default [
     isTop: false,
     isVisible: true,
     organization: orgaTvb,
+    imageName: 'kungfu.jpg',
   },
 
   // CROWDCODE
@@ -2010,6 +2019,7 @@ export default [
       organizationSize: OrganizationSizeEnum.between1And10,
       branch: BranchEnum.agency,
     } as Organization,
+    imageName: 'crowdcode.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2204,7 +2214,7 @@ export default [
     ] as Array<StageSkill>,
   },
 
-  // Rumo
+  // Rala
   {
     id: stageId++,
     titleI18n: {
@@ -2215,8 +2225,9 @@ export default [
     startedAt: new Date('2020-03-14'),
     endedAt: null,
     icon: 'dog',
-    isTop: false,
+    isTop: true,
     isVisible: true,
+    imageName: 'rala.jpg',
   },
 
   // adcommander
@@ -2245,6 +2256,7 @@ export default [
       organizationSize: OrganizationSizeEnum.between11And50,
       branch: BranchEnum.marketing,
     } as Organization,
+    imageName: 'adcommander.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2480,8 +2492,9 @@ export default [
     startedAt: new Date('2021-03-30'),
     endedAt: null,
     icon: 'home',
-    isTop: false,
+    isTop: true,
     isVisible: true,
+    imageName: 'house.jpg',
   },
 
 ] as Array<Stage>;

@@ -45,6 +45,8 @@ export default class StageDecorator implements Filterable, Colorable {
 
   noteI18n: I18nField | undefined;
 
+  imageName: string | undefined;
+
   constructor(stage: Stage) {
     this.id = stage.id;
     this.type = stage.type;
@@ -55,6 +57,7 @@ export default class StageDecorator implements Filterable, Colorable {
     this.icon = stage.icon;
     this.descriptionI18n = stage.descriptionI18n;
     this.noteI18n = stage.noteI18n;
+    this.imageName = stage.imageName;
 
     this.stageSkills = stage.stageSkills || [];
     this.organization = stage.organization;

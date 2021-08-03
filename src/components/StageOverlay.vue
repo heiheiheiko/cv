@@ -7,6 +7,16 @@
     <div>
       <div class="pb-1 sm:pb-6">
         <div>
+          <div
+            v-if="stage.imageName"
+            class="relative h-40 sm:h-56 -mt-6 mb-4 sm:mb-6 "
+          >
+            <img
+              class="absolute h-full w-full object-cover"
+              :src="getStageImageUrl(stage.imageName)"
+              alt=""
+            >
+          </div>
           <div class="px-4 sm:flex sm:items-end sm:px-6">
             <div class="sm:flex-1">
               <div>
@@ -100,7 +110,7 @@
   </BaseOverlaySlide>
 </template>
 
-<script>
+<script lang="ts">
 import { computed } from 'vue';
 import { translateI18nField } from '@/utils/i18nUtils';
 
@@ -121,17 +131,25 @@ export default {
   },
   emits: ['close'],
   setup(props) {
+    /* eslint-disable import/no-dynamic-require */
+    /* eslint-disable global-require */
+
     const { findOrganization } = useOrganization();
     const { findSkillsThroughStageSkills } = useStageSkill();
 
     const organization = computed(() => findOrganization(props.stage.organization));
     const skills = computed(() => findSkillsThroughStageSkills(props.stage.stageSkills));
 
+    function getStageImageUrl(imageName: string) {
+      return require(`../assets/images/stages/${imageName}`);
+    }
+
     return {
       translateI18nField,
       periodInWords,
       organization,
       skills,
+      getStageImageUrl,
     };
   },
 };
