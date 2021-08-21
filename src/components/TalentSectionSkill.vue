@@ -41,7 +41,10 @@
               leave-from="opacity-100"
               leave-to="opacity-0"
             >
-              <SkillBadge :skill="skill" />
+              <SkillBadge
+                :skill="skill"
+                class="mr-2 mb-2"
+              />
             </TransitionRoot>
           </template>
         </div>

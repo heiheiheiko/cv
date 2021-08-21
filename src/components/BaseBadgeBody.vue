@@ -1,6 +1,6 @@
 <template>
   <span
-    class="font-medium text-gray-900"
+    class="text-gray-900"
     :class="[textSizeClass[size], textSpaceClass[size]]"
   >
     <slot />

@@ -52,14 +52,13 @@
             </BaseDescriptionTerm>
 
             <BaseDescriptionDetail>
-              <BaseBadge
+              <SkillBadge
                 v-for="skill in skills"
                 :key="skill.id"
                 class="mr-1 mb-1"
-                :color="skill.color()"
-              >
-                {{ translateI18nField(skill.titleI18n) }}
-              </BaseBadge>
+                :skill="skill"
+                size="small"
+              />
             </BaseDescriptionDetail>
           </div>
 
@@ -123,8 +122,10 @@ import { translateI18nField } from '@/utils/i18nUtils';
 import { periodInWords } from '@/utils/dateUtils';
 import useOrganization from '@/composables/useOrganization';
 import useStageSkill from '@/composables/useStageSkill';
+import SkillBadge from '@/components/SkillBadge.vue';
 
 export default {
+  components: { SkillBadge },
   props: {
     stage: {
       type: Object,

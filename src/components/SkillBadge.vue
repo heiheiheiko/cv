@@ -1,5 +1,5 @@
 <template>
-  <BaseBadge class="mr-2 mb-2">
+  <BaseBadge>
     <BaseBadgePrepand>
       <BaseDot
         :size="size"
@@ -9,7 +9,10 @@
     <BaseBadgeBody :size="size">
       {{ translateI18nField(skill.titleI18n) }}
     </BaseBadgeBody>
-    <span class="text-gray-500 text-lg ml-2">
+    <span
+      v-if="skill.useInMonths"
+      class="text-gray-500 text-lg ml-2"
+    >
       {{ skill.usageInWords() }}
     </span>
   </BaseBadge>
