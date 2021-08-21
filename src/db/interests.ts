@@ -47,8 +47,8 @@ export default [
   {
     id: interestId++,
     titleI18n: {
-      de: 'Naturschutz',
-      en: 'Natural conservancy',
+      de: 'Nachhaltigkeit',
+      en: 'Sustainability',
     },
     type: ReferenceTypes.personal,
     icon: 'tree',
@@ -56,23 +56,13 @@ export default [
   {
     id: interestId++,
     titleI18n: {
-      de: 'Gleichberechtigung',
-      en: 'Equality',
+      de: 'Haus und Garten',
+      en: 'House and garden',
     },
     type: ReferenceTypes.personal,
-    icon: 'people-arrows',
-  },
-  {
-    id: interestId++,
-    titleI18n: {
-      de: 'Programmieren',
-      en: 'Programming',
-    },
-    type: ReferenceTypes.personal,
-    icon: 'code',
+    icon: 'home',
   },
 
-  // personal
   {
     id: interestId++,
     titleI18n: {
@@ -115,7 +105,7 @@ export default [
       de: 'Agile Methodology',
       en: 'Agile Methodology',
     },
-    type: ReferenceTypes.educational,
+    type: ReferenceTypes.professional,
     icon: 'project-diagram',
   },
   {
@@ -126,14 +116,5 @@ export default [
     },
     type: ReferenceTypes.professional,
     icon: 'space-shuttle',
-  },
-  {
-    id: interestId++,
-    titleI18n: {
-      de: 'Emotionale Intelligenz',
-      en: 'Emotional intelligence',
-    },
-    type: ReferenceTypes.educational,
-    icon: 'user-friends',
   },
 ] as Array<Interest>;
