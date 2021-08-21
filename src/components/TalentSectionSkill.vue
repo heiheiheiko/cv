@@ -7,9 +7,6 @@
       <BaseSectionHeaderSubtitle>
         {{ t('title') }}
       </BaseSectionHeaderSubtitle>
-      <BaseSectionHeaderDescription>
-        {{ t('subtitle') }}
-      </BaseSectionHeaderDescription>
 
       <div class="mt-12">
         <div class="flex items-center justify-center">
@@ -138,11 +135,9 @@ export default defineComponent({
 {
   "de": {
       "title": "Was ich so kann",
-      "subtitle": "Bla blub",
   },
   "en": {
-      "title": "Lorem ipsum",
-      "subtitle": "Lorem ipsum",
+      "title": "What I can",
   }
 }
 </i18n>

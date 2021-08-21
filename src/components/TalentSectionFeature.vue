@@ -7,9 +7,6 @@
       <BaseSectionHeaderSubtitle>
         {{ t('title') }}
       </BaseSectionHeaderSubtitle>
-      <BaseSectionHeaderDescription>
-        {{ t('subtitle') }}
-      </BaseSectionHeaderDescription>
 
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,11 +57,9 @@ export default defineComponent({
 {
   "de": {
       "title": "Was mich so ausmacht",
-      "subtitle": "Die Summe meiner Erfahrungen machen mich zu der Person, die ich heute bin",
   },
   "en": {
       "title": "What makes me special",
-      "subtitle": "The sum total of my experiences makes me to the person who I am today",
   }
 }
 </i18n>
