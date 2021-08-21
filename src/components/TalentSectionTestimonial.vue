@@ -60,9 +60,6 @@
               <p class="text-lg font-medium text-white">
                 {{ testimonial.quotedPerson }}
               </p>
-              <p class="text-base font-medium text-cyan-100">
-                {{ translateI18nField(testimonial.quotedPersonPositionI18n) }}
-              </p>
             </footer>
           </blockquote>
         </div>

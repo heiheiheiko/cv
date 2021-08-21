@@ -42,10 +42,6 @@ const testimonialGamer: Testimonial = {
     en: 'I have a wide range of interests, I am almost ready for any nonsense and I like to spend my time with family and friends',
   },
   quotedPerson: 'Heiko Beineke',
-  quotedPersonPositionI18n: {
-    de: 'Gamer',
-    en: 'Gamer',
-  },
   url: 'gamer_430x700.jpg',
   icon: 'dice',
 };
@@ -58,10 +54,6 @@ const testimonialExplorer: Testimonial = {
     en: 'I am open minded, I like to try out new things, I appreciate challenges, I also like to act outside of my comfort zone and I reinvent myself from time to time in that way',
   },
   quotedPerson: 'Heiko Beineke',
-  quotedPersonPositionI18n: {
-    de: 'Entdecker',
-    en: 'Explorer',
-  },
   url: 'explorer_430x700.jpg',
   icon: 'hiking',
 };
@@ -74,10 +66,6 @@ const testimonialAccomplisher: Testimonial = {
     en: 'I solve tricky problems, I drive long-awaited progress, I develop products that inspire, I create digital added value and I help people to be just better',
   },
   quotedPerson: 'Heiko Beineke',
-  quotedPersonPositionI18n: {
-    de: 'Verwirklicher',
-    en: 'Accomplisher',
-  },
   url: 'accomplisher_430x700.jpg',
   icon: 'user-astronaut',
 };

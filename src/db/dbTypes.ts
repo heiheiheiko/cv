@@ -17,7 +17,6 @@ interface Testimonial{
   staticId: string,
   quoteI18n: I18nField,
   quotedPerson: string,
-  quotedPersonPositionI18n: I18nField,
   url: string,
   icon: string
 }
