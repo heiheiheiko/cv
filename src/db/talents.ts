@@ -38,8 +38,8 @@ const testimonialGamer: Testimonial = {
   id: testimonialId++,
   staticId: 'gamer',
   quoteI18n: {
-    de: 'Ich habe vielseitige Interessen, bin annähernd für jeden Unfug zu haben und verbringe meine Zeit am liebsten mit Menschen die ich mag',
-    en: 'I have a wide range of interests, I am almost ready for any nonsense and I like to spend my time with people I like',
+    de: 'Ich habe vielseitige Interessen, bin annähernd für jeden Unfug zu haben und verbringe meine Zeit am liebsten mit Familie und Freunden',
+    en: 'I have a wide range of interests, I am almost ready for any nonsense and I like to spend my time with family and friends',
   },
   quotedPerson: 'Heiko Beineke',
   quotedPersonPositionI18n: {
