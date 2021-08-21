@@ -29,6 +29,8 @@ export default class StageDecorator implements Filterable, Colorable {
 
   employment: EmploymentEnum | undefined;
 
+  jobDescriptionI18n: I18nField | undefined;
+
   startedAt: Date;
 
   endedAt: Date | null;
@@ -63,6 +65,7 @@ export default class StageDecorator implements Filterable, Colorable {
     this.organization = stage.organization;
     this.position = stage.position;
     this.employment = stage.employment;
+    this.jobDescriptionI18n = stage.jobDescriptionI18n;
     this.courseI18n = stage.courseI18n;
     this.graduationI18n = stage.graduationI18n;
     this.titleI18n = stage.titleI18n;

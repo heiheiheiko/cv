@@ -113,7 +113,8 @@ interface Stage{
   organization?: Organization, // professional, educational
   position?: PositionEnum, // professional
   employment?: EmploymentEnum, // professional
-  graduationI18n?: I18nField // educational
+  jobDescriptionI18n?: I18nField, // professional
+  graduationI18n?: I18nField, // educational
   courseI18n?: I18nField, // educational
   titleI18n?: I18nField, // personal
 }

@@ -297,7 +297,7 @@ export default [
       de: 'Verschiedene Aushilfsjobs',
       en: 'Various backup jobs',
     },
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles);Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)',
       en: 'Martin Oelrich GmbH & Co. KG (Car washer);Emsdettener Fahrradkurier (Mail carrier);Movie and More - Video library (Seller);Organic farm (Utility man);Hermes Logistik Gruppe Deutschland (Parcel delivery);crashtest-service.com GmbH (Data preparation)',
     },
@@ -383,7 +383,7 @@ export default [
   // Fachhochschule Münster (Studentenprofessional)
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Website',
       en: 'Maintenance and further development of the website',
     },
@@ -448,7 +448,7 @@ export default [
   // zeb
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
       en: 'Maintenance and further development of a prototype',
     },
@@ -533,7 +533,7 @@ export default [
   // gloud GmbH
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
       en: 'Maintenance and further development of a prototype',
     },
@@ -604,7 +604,7 @@ export default [
   // Fachhochschule Münster (Praktikum)
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer Anwendung für die Hochschulverwaltung',
       en: 'Design and implementation of an application for the university administration',
     },
@@ -769,7 +769,7 @@ export default [
   // Compeon
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung des Online-Finanzportals COMPEON;Bachelorarbeit: Konzeption, Implementierung und Evaluation einer webbasierten Anwendung zur Erfassung der Kundenzufriedenheit und zur Publikation von Kundenempfehlungen im Rahmen des Online-Finanzportals COMPEON',
       en: 'Maintenance and further development of the online financial portal COMPEON;Bachelor Thesis: Conception, implementation and evaluation of a web-based application for recording customer satisfaction and for publishing customer recommendations in the context of the online financial portal COMPEON',
     },
@@ -1131,7 +1131,7 @@ export default [
   // Fuchs (Junior)
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
       en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
     },
@@ -1332,7 +1332,7 @@ export default [
   // Deltacity
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer individuellen CMS-Lösung',
       en: 'Design and implementation of an individual CMS solution',
     },
@@ -1489,7 +1489,7 @@ export default [
   // Fuchs 2
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
       en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
     },
@@ -1726,7 +1726,7 @@ export default [
   // IDB
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Influencer Marketing Platform;Hauptverantwortlicher für das Frontend;Einführung von Vue',
       en: 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue',
     },
@@ -1996,7 +1996,7 @@ export default [
   // CROWDCODE
   {
     id: stageId++,
-    descriptionI18n: {
+    jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer PWA zur Planung eines Studiums;Hauptverantwortlicher für das Frontend;Einführung von Vue',
       en: 'Maintenance and further development of a PWA for study planning;Main responsible for the frontend;Introduction of Vue',
     },
@@ -2233,9 +2233,9 @@ export default [
   // adcommander
   {
     id: stageId++,
-    descriptionI18n: {
-      de: 'Wartung und Weiterentwicklung der Digital Signage Platform; Wartung und Weiterentwicklung der 24/7 Retail REST-Schnittstelle; Einführung von Vue; Mitgestaltung agiler Entwicklungsprozesse;',
-      en: 'Maintenance and further development of the digital signage platform; Maintenance and further development of the 24/7 retail REST interface; Introduction of Vue; Participation in designing agile development processes;',
+    jobDescriptionI18n: {
+      de: 'Wartung und Weiterentwicklung der Digital Signage Platform; Wartung und Weiterentwicklung der 24/7 Retail REST-Schnittstelle; Einführung von Vue; Mitgestaltung agiler Entwicklungsprozesse; Mitgestaltung einer offenen Kommunikationskultur',
+      en: 'Maintenance and further development of the digital signage platform; Maintenance and further development of the 24/7 retail REST interface; Introduction of Vue; Participation in designing agile development processes; Participation in shaping an open communication culture',
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,

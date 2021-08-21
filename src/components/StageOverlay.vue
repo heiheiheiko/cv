@@ -46,6 +46,22 @@
             </BaseDescriptionDetail>
           </div>
 
+          <div v-if="stage.jobDescriptionI18n">
+            <BaseDescriptionTerm>
+              {{ $t('resources.stage.attributes.jobDescription') }}
+            </BaseDescriptionTerm>
+            <BaseDescriptionDetail>
+              <ul class="list-disc ml-4">
+                <li
+                  v-for="(term, i) in translateI18nField(stage.jobDescriptionI18n).split(';')"
+                  :key="i"
+                >
+                  {{ term }}
+                </li>
+              </ul>
+            </BaseDescriptionDetail>
+          </div>
+
           <div v-if="skills.length">
             <BaseDescriptionTerm>
               {{ $t('resources.stageSkill.name', 2) }}

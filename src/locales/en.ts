@@ -15,6 +15,7 @@ export default {
       name: 'Stage of live | Stages of live',
       attributes: {
         description: 'Description',
+        jobDescription: 'Job description',
         isTop: 'Most interesting',
       },
       enums: {

@@ -15,6 +15,7 @@ export default {
       name: 'Lebensabschnitt | Lebensabschnitte',
       attributes: {
         description: 'Beschreibung',
+        jobDescription: 'Tätigkeitsbeschreibung',
         isTop: 'Am interessantesten ',
       },
       enums: {
