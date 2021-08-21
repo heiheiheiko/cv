@@ -63,9 +63,15 @@
             </BaseDescriptionDetail>
           </div>
 
-          <div class="w-full border-t border-gray-300" />
+          <div
+            v-if="organization.name"
+            class="w-full border-t border-gray-300"
+          />
 
-          <h2 class="text-lg font-medium text-gray-900">
+          <h2
+            v-if="organization.name"
+            class="text-lg font-medium text-gray-900"
+          >
             {{ organization.name }}
           </h2>
 
@@ -130,7 +136,7 @@ export default {
     },
   },
   emits: ['close'],
-  setup(props) {
+  setup(props: any) {
     /* eslint-disable import/no-dynamic-require */
     /* eslint-disable global-require */
 

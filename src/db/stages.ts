@@ -116,7 +116,7 @@ export default [
     startedAt: new Date('2003-08-01'),
     endedAt: new Date('2005-06-01'),
     icon: 'book',
-    isTop: false,
+    isTop: true,
     isVisible: true,
     organization: {
       id: organizationId++,
@@ -195,7 +195,7 @@ export default [
     startedAt: new Date('2005-08-01'),
     endedAt: new Date('2008-07-01'),
     icon: 'book',
-    isTop: false,
+    isTop: true,
     isVisible: true,
     organization: {
       id: organizationId++,
@@ -320,7 +320,7 @@ export default [
     startedAt: new Date('2008-10-01'),
     endedAt: new Date('2010-07-01'),
     icon: 'graduation-cap',
-    isTop: false,
+    isTop: true,
     isVisible: true,
     organization: {
       id: organizationId++,
