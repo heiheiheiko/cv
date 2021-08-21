@@ -50,8 +50,8 @@ const testimonialExplorer: Testimonial = {
   id: testimonialId++,
   staticId: 'explorer',
   quoteI18n: {
-    de: 'Ich bin open-minded, probiere gerne neue Dinge aus, schätze die Herausforderung, agiere auch mal gerne außerhalb meiner Komfortzone und erfinde mich so immer mal wieder neu',
-    en: 'I am open minded, I like to try out new things, I appreciate challenges, I also like to act outside of my comfort zone and I reinvent myself from time to time in that way',
+    de: 'Ich bin open-minded, probiere gerne neue Dinge aus, schätze die Herausforderung und agiere auch mal gerne außerhalb meiner Komfortzone',
+    en: 'I am open minded, I like to try out new things, I appreciate challenges and I also like to act outside of my comfort zone',
   },
   quotedPerson: 'Heiko Beineke',
   url: 'explorer_430x700.jpg',
@@ -62,7 +62,7 @@ const testimonialAccomplisher: Testimonial = {
   id: testimonialId++,
   staticId: 'accomplisher',
   quoteI18n: {
-    de: 'Ich löse knifflige Probleme, treibe ersehnten Fortschritt voran, entwickle Produkte die begeistern, schaffe digitale Mehrwerte und helfe damit Menschen einfach großartiger zu sein',
+    de: 'Ich löse knifflige Probleme, treibe ersehnten Fortschritt voran, entwickle Produkte die begeistern, schaffe digitale Mehrwerte und helfe damit Menschen großartiger zu sein',
     en: 'I solve tricky problems, I drive long-awaited progress, I develop products that inspire, I create digital added value and I help people to be just better',
   },
   quotedPerson: 'Heiko Beineke',
