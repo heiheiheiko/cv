@@ -1,7 +1,7 @@
 <template>
   <a
     :href="href"
-    :aria-current="isActive ? 'page' : undefined"
+    class="text-base text-cyan-600"
   >
     <slot />
   </a>
@@ -15,10 +15,6 @@ export default defineComponent({
     href: {
       type: String,
       required: true,
-    },
-    isActive: {
-      type: Boolean,
-      default: false,
     },
   },
 });

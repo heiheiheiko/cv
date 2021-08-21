@@ -104,7 +104,12 @@
               {{ $t('resources.organization.attributes.website') }}
             </BaseDescriptionTerm>
             <BaseDescriptionDetail>
-              {{ organization.website }}
+              <BaseLink
+                target="_blank"
+                :href="organization.website"
+              >
+                {{ organization.website }}
+              </BaseLink>
             </BaseDescriptionDetail>
           </div>
 

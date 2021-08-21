@@ -30,7 +30,7 @@ const orgaFuchs = {
   street: 'Industriestraße 25',
   zip: '49201',
   city: 'Dissen a.T.W.',
-  website: 'http://www.fuchs.de//',
+  website: 'http://www.fuchs.de',
   organizationSize: OrganizationSizeEnum.between1001To5000,
   branch: BranchEnum.food,
 } as Organization;
@@ -42,7 +42,7 @@ const orgaTvb = {
   street: 'Winkelstraße 22',
   zip: '48565',
   city: 'Steinfurt',
-  website: 'http://www.tv-borghorst.de/',
+  website: 'http://www.tv-borghorst.de',
 } as Organization;
 
 export default [
@@ -85,7 +85,7 @@ export default [
       street: 'Amtmann-Daniel-Straße 30',
       zip: '48356',
       city: 'Nordwalde',
-      website: 'https://kvgn.de/',
+      website: 'https://kvgn.de',
     } as Organization,
     stageSkills: [
       {
@@ -125,7 +125,7 @@ export default [
       street: 'Bahnhofstraße 28',
       zip: '48565',
       city: 'Steinfurt',
-      website: 'https://hermann-emanuel-berufskolleg.de/',
+      website: 'https://hermann-emanuel-berufskolleg.de',
     } as Organization,
     stageSkills: [
       {
@@ -204,7 +204,7 @@ export default [
       street: 'Liedekerker Str. 84',
       zip: '48565',
       city: 'Steinfurt',
-      website: 'https://www.tssteinfurt.de/',
+      website: 'https://www.tssteinfurt.de',
     } as Organization,
     stageSkills: [
       {
@@ -467,7 +467,7 @@ export default [
       street: 'Hammer Str. 165',
       zip: '48153',
       city: 'Münster',
-      website: 'http://www.zeb.de/',
+      website: 'http://www.zeb.de',
       organizationSize: OrganizationSizeEnum.between501And1000,
       branch: BranchEnum.finance,
     } as Organization,
@@ -788,7 +788,7 @@ export default [
       street: 'Am Wehrhahn 100',
       zip: '40211',
       city: 'Düsseldorf',
-      website: 'https://www.compeon.de/',
+      website: 'https://www.compeon.de',
       organizationSize: OrganizationSizeEnum.between501And1000,
       branch: BranchEnum.finance,
     } as Organization,
@@ -2015,7 +2015,7 @@ export default [
       street: 'Am Mittelhafen 16',
       zip: '48155',
       city: 'Münster',
-      website: 'https://www.crowdcode.io/',
+      website: 'https://www.crowdcode.io',
       organizationSize: OrganizationSizeEnum.between1And10,
       branch: BranchEnum.agency,
     } as Organization,
@@ -2252,7 +2252,7 @@ export default [
       street: 'Lippstädter Str. 54',
       zip: '48155',
       city: 'Münster',
-      website: 'https://www.adcommander.de/',
+      website: 'https://www.adcommander.de',
       organizationSize: OrganizationSizeEnum.between11And50,
       branch: BranchEnum.marketing,
     } as Organization,
