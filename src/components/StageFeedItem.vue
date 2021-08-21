@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex items-start space-x-3"
+    class="relative flex items-start space-x-3 cursor-pointer"
     @click="$emit('select', stage)"
   >
     <div class="relative">
