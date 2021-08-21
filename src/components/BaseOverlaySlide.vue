@@ -20,7 +20,9 @@
           leave-from="opacity-100"
           leave-to="opacity-0"
         >
-          <DialogOverlay class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <DialogOverlay
+            class="absolute z-5 inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          />
         </TransitionChild>
 
         <div class="fixed inset-y-0 right-0 pl-10 max-w-full flex">
