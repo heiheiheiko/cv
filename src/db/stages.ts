@@ -1144,7 +1144,6 @@ export default [
     isTop: true,
     isVisible: true,
     organization: orgaFuchs,
-    imageName: 'fuchs.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1502,7 +1501,6 @@ export default [
     isTop: true,
     isVisible: true,
     organization: orgaFuchs,
-    imageName: 'fuchs.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -1745,7 +1743,6 @@ export default [
       organizationSize: OrganizationSizeEnum.between11And50,
       branch: BranchEnum.marketing,
     } as Organization,
-    imageName: 'influencerdb.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2019,7 +2016,6 @@ export default [
       organizationSize: OrganizationSizeEnum.between1And10,
       branch: BranchEnum.agency,
     } as Organization,
-    imageName: 'crowdcode.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
@@ -2256,7 +2252,6 @@ export default [
       organizationSize: OrganizationSizeEnum.between11And50,
       branch: BranchEnum.marketing,
     } as Organization,
-    imageName: 'adcommander.jpg',
     stageSkills: [
       {
         id: stageSkillId++,
