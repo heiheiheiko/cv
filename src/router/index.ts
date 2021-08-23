@@ -10,6 +10,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'TalentShow',
     component: () => import(/* webpackChunkName: "core" */ '../views/TalentShow.vue'),
   },
+  {
+    path: '/data-protection',
+    name: 'DataProtectionPage',
+    component: () => import(/* webpackChunkName: "core" */ '../views/DataProtectionPage.vue'),
+  },
 ];
 
 const router = createRouter({

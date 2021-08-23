@@ -22,9 +22,12 @@
         </a>
       </div>
       <div class="mt-8 md:mt-0 md:order-1">
-        <p class="text-center text-base text-gray-400">
-          &copy; {{ new Date().getFullYear() }} {{ talent.name }}
-        </p>
+        <router-link
+          :to="{name: 'DataProtectionPage'}"
+          class="text-base text-gray-500 hover:text-gray-600"
+        >
+          {{ t('dataProtection') }}
+        </router-link>
       </div>
     </div>
   </footer>
@@ -34,6 +37,7 @@
 import { defineComponent } from 'vue';
 import useLink from '@/composables/useLink';
 import { translateI18nField } from '@/utils/i18nUtils';
+import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   props: {
@@ -43,13 +47,29 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { t } = useI18n({
+      inheritLocale: true,
+      useScope: 'local',
+    });
+
     const { findLinks } = useLink();
 
     const links = findLinks(props.talent.links);
 
     return {
-      links, translateI18nField,
+      links, translateI18nField, t,
     };
   },
 });
 </script>
+
+<i18n>
+{
+  "de": {
+      "dataProtection": "Datenschutz",
+  },
+  "en": {
+      "dataProtection": "Data protection",
+  }
+}
+</i18n>

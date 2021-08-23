@@ -103,7 +103,7 @@ export default [
     id: interestId++,
     titleI18n: {
       de: 'Agile Methodology',
-      en: 'Agile Methodology',
+      en: 'Agile methodology',
     },
     type: ReferenceTypes.professional,
     icon: 'project-diagram',
