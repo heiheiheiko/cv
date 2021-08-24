@@ -102,6 +102,7 @@ interface Stage{
   type: ReferenceTypes,
   isTop: boolean,
   isVisible: boolean,
+  isEvent: boolean,
   startedAt: Date,
   endedAt: Date | null,
   icon: string

@@ -21,6 +21,8 @@ export default class StageDecorator implements Filterable, Colorable {
 
   isVisible: boolean;
 
+  isEvent: boolean;
+
   type:ReferenceTypes;
 
   descriptionI18n: I18nField | undefined;
@@ -54,6 +56,7 @@ export default class StageDecorator implements Filterable, Colorable {
     this.type = stage.type;
     this.isTop = stage.isTop;
     this.isVisible = stage.isVisible;
+    this.isEvent = stage.isEvent;
     this.startedAt = stage.startedAt;
     this.endedAt = stage.endedAt;
     this.icon = stage.icon;
@@ -98,6 +101,8 @@ export default class StageDecorator implements Filterable, Colorable {
   }
 
   subtitle(): string {
+    if (this.isEvent) { return d(this.startedAt, 'short'); }
+
     const endedAtOrToday = this.endedAt ? d(this.endedAt, 'short') : t('datetime.today');
     return `${d(this.startedAt, 'short')} - ${endedAtOrToday}`;
   }
