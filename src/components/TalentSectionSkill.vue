@@ -9,7 +9,7 @@
       </BaseSectionHeaderSubtitle>
 
       <div class="mt-12">
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center hidden md:flex">
           <BaseSwitch
             v-for="filter in filterSwitches"
             :key="filter.id"

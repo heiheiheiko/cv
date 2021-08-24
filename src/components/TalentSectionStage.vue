@@ -10,8 +10,8 @@
         {{ t('title') }}
       </BaseSectionHeaderSubtitle>
 
-      <div class="mt-12 text-left">
-        <div class="flex items-center justify-center">
+      <div class="mt-12 text-left ">
+        <div class="flex items-center justify-center hidden md:flex">
           <BaseSwitch
             v-for="filter in filterSwitches"
             :key="filter.id"
