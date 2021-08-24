@@ -15,7 +15,6 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
-import './registerServiceWorker';
 import router from './router';
 import './assets/styles/main.scss';
 import i18n from './i18n';
