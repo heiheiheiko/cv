@@ -62,11 +62,10 @@
         <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div class="px-5 pt-4 flex items-center justify-between">
             <div>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-teal-500-cyan-600.svg"
-                alt=""
-              >
+              <FontAwesomeIcon
+                icon="user-astronaut"
+                size="2x"
+              />
             </div>
             <div class="-mr-2">
               <PopoverButton
