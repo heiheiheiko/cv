@@ -2473,22 +2473,4 @@ export default [
       },
     ] as Array<StageSkill>,
   },
-
-  // Haus
-  {
-    id: stageId++,
-    titleI18n: {
-      de: 'Haus gekauft',
-      en: 'Bought house',
-    },
-    type: ReferenceTypes.personal,
-    isEvent: true,
-    startedAt: new Date('2021-03-30'),
-    endedAt: null,
-    icon: 'home',
-    isTop: true,
-    isVisible: true,
-    imageName: 'house.jpg',
-  },
-
 ] as Array<Stage>;
