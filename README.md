@@ -1,35 +1,45 @@
-# cv
+# My CV
+![example workflow](https://github.com/heiheiheiko/cv/actions/workflows/actions/badge.svg)
 
-## Project setup
-```
-yarn install
-```
+Check out my CV: https://heiheiheiko.github.io/cv
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Technologies and services
+* [Vue 3](https://v3.vuejs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [normalizr](normalizr)
+* [Jest](https://jestjs.io/)
+* [Cypress](https://www.cypress.io/)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+* [Tailwind UI](https://tailwindui.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Lucid Illustrations](https://lucid.pixsellz.io/)
 
-### Run your unit tests
+## Scripts
+#### Project setup
 ```
-yarn test:unit
+$ yarn install
 ```
-
-### Run your end-to-end tests
+#### Compiles and hot-reloads for development
 ```
-yarn test:e2e
+$ yarn serve
 ```
-
-### Lints and fixes files
+#### Compiles and minifies for production
 ```
-yarn lint
+$ yarn build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# cv
+#### Deploy it on GitHub Pages
+```
+$ yarn deploy
+```
+#### Run your unit tests
+```
+$ yarn test:unit
+```
+#### Run your end-to-end tests
+```
+$ yarn test:e2e
+```
+#### Lints and fixes files
+```
+$ yarn lint
+```
