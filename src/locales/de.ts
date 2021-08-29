@@ -12,7 +12,7 @@ export default {
       name: 'Feature | Features',
     },
     stage: {
-      name: 'Lebensabschnitt | Lebensabschnitte',
+      name: 'Stage | Stages',
       attributes: {
         description: 'Beschreibung',
         jobDescription: 'Tätigkeitsbeschreibung',
