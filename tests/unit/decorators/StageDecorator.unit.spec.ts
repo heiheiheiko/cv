@@ -55,13 +55,13 @@ describe('StageDecorator', () => {
     describe('Should provide decorator method', () => {
       describe('title()', () => {
         it('And should return a correct string', () => {
-          expect(subject.title()).toBe('Ausbildung zum Padawan – Padawan');
+          expect(subject.title()).toBe('Training to become a Padwan – Padawan');
         });
       });
 
       describe('subtitle()', () => {
         it('And should return a correct string', () => {
-          expect(subject.subtitle()).toBe('Feb. 1978 - Mai 1983');
+          expect(subject.subtitle()).toBe('Feb 1978 - May 1983');
         });
       });
     });
@@ -111,13 +111,13 @@ describe('StageDecorator', () => {
     describe('Should provide decorator method', () => {
       describe('title()', () => {
         it('And should return a correct string', () => {
-          expect(subject.title()).toBe('Lichtschwert konstruiert');
+          expect(subject.title()).toBe('Constructed lightsaber');
         });
       });
 
       describe('subtitle()', () => {
         it('And should return a correct string', () => {
-          expect(subject.subtitle()).toBe('Aug. 1999');
+          expect(subject.subtitle()).toBe('Aug 1999');
         });
       });
     });
@@ -165,13 +165,13 @@ describe('StageDecorator', () => {
     describe('Should provide decorator method', () => {
       describe('title()', () => {
         it('And should return a correct string', () => {
-          expect(subject.title()).toBe('Web Developer – Angestellter');
+          expect(subject.title()).toBe('Web Developer – Employee');
         });
       });
 
       describe('subtitle()', () => {
         it('And should return a correct string', () => {
-          expect(subject.subtitle()).toBe('Dez. 2010 - Heute');
+          expect(subject.subtitle()).toBe('Dec 2010 - Today');
         });
       });
     });
