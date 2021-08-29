@@ -5,6 +5,7 @@ export default {
   type: ReferenceTypes.personal,
   isTop: true,
   isVisible: true,
+  isEvent: true,
   startedAt: new Date('1999-08-19'),
   endedAt: null,
   icon: 'lightsaber',

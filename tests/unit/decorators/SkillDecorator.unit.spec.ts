@@ -9,7 +9,8 @@ describe('SkillDecorator', () => {
 
     describe('Should provide skill attribute', () => {
       test.each([
-        ['id', 'lightsaber-fight'],
+        ['id', 1],
+        ['staticId', 'lightsaber-fight'],
         ['titleI18n', {
           de: 'Lichtschwertkampf',
           en: 'Lightsaber fight',

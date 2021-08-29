@@ -19,6 +19,7 @@ describe('StageDecorator', () => {
         ['type', ReferenceTypes.educational],
         ['isTop', true],
         ['isVisible', true],
+        ['isEvent', false],
         ['startedAt', new Date('1978-02-09')],
         ['endedAt', new Date('1983-05-25')],
         ['icon', 'book'],
@@ -78,6 +79,7 @@ describe('StageDecorator', () => {
         ['type', ReferenceTypes.personal],
         ['isTop', true],
         ['isVisible', true],
+        ['isEvent', true],
         ['startedAt', new Date('1999-08-19')],
         ['endedAt', null],
         ['icon', 'lightsaber'],
@@ -115,7 +117,7 @@ describe('StageDecorator', () => {
 
       describe('subtitle()', () => {
         it('And should return a correct string', () => {
-          expect(subject.subtitle()).toBe('Aug. 1999 - Heute');
+          expect(subject.subtitle()).toBe('Aug. 1999');
         });
       });
     });
@@ -134,8 +136,9 @@ describe('StageDecorator', () => {
         ['type', ReferenceTypes.professional],
         ['isTop', true],
         ['isVisible', true],
+        ['isEvent', false],
         ['startedAt', new Date('2010-12-01')],
-        ['endedAt', new Date('2011-02-01')],
+        ['endedAt', null],
         ['icon', 'empire'],
         ['descriptionI18n', {
           de: 'Verteidigung des Galaktischen Imperiums',
@@ -163,6 +166,12 @@ describe('StageDecorator', () => {
       describe('title()', () => {
         it('And should return a correct string', () => {
           expect(subject.title()).toBe('Web Developer – Angestellter');
+        });
+      });
+
+      describe('subtitle()', () => {
+        it('And should return a correct string', () => {
+          expect(subject.subtitle()).toBe('Dez. 2010 - Heute');
         });
       });
     });

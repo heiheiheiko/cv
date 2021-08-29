@@ -9,8 +9,9 @@ export default {
   type: ReferenceTypes.professional,
   isTop: true,
   isVisible: true,
+  isEvent: false,
   startedAt: new Date('2010-12-01'),
-  endedAt: new Date('2011-02-01'),
+  endedAt: null,
   icon: 'empire',
   descriptionI18n: {
     de: 'Verteidigung des Galaktischen Imperiums',

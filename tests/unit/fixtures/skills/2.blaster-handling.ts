@@ -1,7 +1,8 @@
 import { Skill, SkillTypes } from '@/db/dbTypes';
 
 export default {
-  id: 'blaster-handling',
+  id: 2,
+  staticId: 'blaster-handling',
   type: SkillTypes.technology,
   isTop: true,
   titleI18n: {

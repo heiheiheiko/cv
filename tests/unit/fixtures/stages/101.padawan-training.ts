@@ -9,6 +9,7 @@ export default {
   type: ReferenceTypes.educational,
   isTop: true,
   isVisible: true,
+  isEvent: false,
   startedAt: new Date('1978-02-09'),
   endedAt: new Date('1983-05-25'),
   icon: 'book',
