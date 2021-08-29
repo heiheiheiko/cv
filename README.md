@@ -1,5 +1,5 @@
 # My CV
-![example workflow](https://github.com/heiheiheiko/cv/actions/workflows/actions/badge.svg)
+![example workflow](https://github.com/heiheiheiko/cv/actions/workflows/actions.yml/badge.svg)
 
 Check out my CV: https://heiheiheiko.github.io/cv
 
