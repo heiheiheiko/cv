@@ -6,11 +6,11 @@
       <main>
         <TalentSectionHero :talent="talent" />
         <TalentSectionFeature :features="talentFeatures" />
-        <TalentSectionTestimonial :testimonial="gamerTestimonial" />
+        <TalentSectionTestimonial :testimonial="accomplisherTestimonial" />
         <TalentSectionStage :stages="talentStages" />
         <TalentSectionTestimonial :testimonial="explorerTestimonial" />
         <TalentSectionSkill :talent="talent" />
-        <TalentSectionTestimonial :testimonial="accomplisherTestimonial" />
+        <TalentSectionTestimonial :testimonial="gamerTestimonial" />
         <TalentSectionInterst :talent="talent" />
       </main>
       <TalentFooter :talent="talent" />
