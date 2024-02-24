@@ -156,7 +156,7 @@ export default {
     const skills = computed(() => findSkillsThroughStageSkills(props.stage.stageSkills))
 
     function getStageImageUrl(imageName: string) {
-      return `/images/${imageName}`
+      return `/cv/images/${imageName}`
     }
 
     return {
