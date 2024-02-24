@@ -1,12 +1,13 @@
-const colors = require('tailwindcss/colors');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   // purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       maxWidth: {
-        '8xl': '90rem',
+        '8xl': '90rem'
       },
       colors: {
         teal: colors.teal,
@@ -25,13 +26,13 @@ module.exports = {
         bondiBlue: '#0891b2',
         // orange gradient
         macaroniAndCheese: '#ffc371',
-        bittersweet: '#ff7e5f',
-      },
-    },
+        bittersweet: '#ff7e5f'
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
-};
+    require('@tailwindcss/typography')
+  ]
+}

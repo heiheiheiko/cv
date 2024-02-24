@@ -1,8 +1,5 @@
 <template>
-  <Popover
-    as="header"
-    class="relative"
-  >
+  <Popover as="header" class="relative">
     <div class="bg-gray-900 pt-6">
       <nav
         class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
@@ -13,22 +10,14 @@
             <div class="text-white hover:text-gray-300">
               <span class="sr-only">logo</span>
 
-              <FontAwesomeIcon
-                icon="user-astronaut"
-                size="2x"
-              />
+              <FontAwesomeIcon icon="user-astronaut" size="2x" />
             </div>
             <div class="-mr-2 flex items-center md:hidden">
               <PopoverButton
-                class="bg-gray-900 rounded-md p-2 inline-flex items-center
-                         justify-center text-gray-400 hover:bg-gray-800 focus:outline-none
-                         focus:ring-2 focus-ring-inset focus:ring-white"
+                class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white"
               >
                 <span class="sr-only">Open main menu</span>
-                <MenuIcon
-                  class="h-6 w-6"
-                  aria-hidden="true"
-                />
+                <Bars3Icon class="h-6 w-6" aria-hidden="true" />
               </PopoverButton>
             </div>
           </div>
@@ -38,7 +27,8 @@
               :key="item.name"
               :href="item.href"
               class="text-base font-medium text-white hover:text-gray-300"
-            >{{ item.name }}</a>
+              >{{ item.name }}</a
+            >
           </div>
         </div>
         <div class="hidden md:flex md:items-center md:space-x-6">
@@ -62,22 +52,14 @@
         <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div class="px-5 pt-4 flex items-center justify-between">
             <div>
-              <FontAwesomeIcon
-                icon="user-astronaut"
-                size="2x"
-              />
+              <FontAwesomeIcon icon="user-astronaut" size="2x" />
             </div>
             <div class="-mr-2">
               <PopoverButton
-                class="bg-white rounded-md p-2 inline-flex items-center
-                         justify-center text-gray-400 hover:bg-gray-100 focus:outline-none
-                         focus:ring-2 focus:ring-inset focus:ring-cyan-600"
+                class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-600"
               >
                 <span class="sr-only">Close menu</span>
-                <XIcon
-                  class="h-6 w-6"
-                  aria-hidden="true"
-                />
+                <XMarkIcon class="h-6 w-6" aria-hidden="true" />
               </PopoverButton>
             </div>
           </div>
@@ -87,9 +69,9 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :href="item.href"
-                class="block px-3 py-2 rounded-md text-base font-medium
-                     text-gray-900 hover:bg-gray-50"
-              >{{ item.name }}</a>
+                class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                >{{ item.name }}</a
+              >
             </div>
             <div class="mt-6 px-5">
               <TheLocaleSelect />
@@ -102,37 +84,32 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import {
-  Popover, PopoverButton, PopoverPanel,
-} from '@headlessui/vue';
-import {
-  MenuIcon,
-  XIcon,
-} from '@heroicons/vue/outline';
-import { useI18n } from 'vue-i18n';
-import TheLocaleSelect from '@/components/TheLocaleSelect.vue';
+import { defineComponent } from 'vue'
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/20/solid'
+import { useI18n } from 'vue-i18n'
+import TheLocaleSelect from '@/components/TheLocaleSelect.vue'
 
 export default defineComponent({
   components: {
     Popover,
     PopoverButton,
     PopoverPanel,
-    MenuIcon,
-    XIcon,
-    TheLocaleSelect,
+    Bars3Icon,
+    XMarkIcon,
+    TheLocaleSelect
   },
   setup() {
-    const { t } = useI18n();
+    const { t } = useI18n()
 
     const navigation = [
       { name: t('resources.feature.name', 2), href: '#features-section', isActive: true },
       { name: t('resources.stage.name', 2), href: '#stages-section', isActive: false },
       { name: t('resources.skill.name', 2), href: '#skills-section', isActive: false },
-      { name: t('resources.interest.name', 2), href: '#interests-section', isActive: false },
-    ];
+      { name: t('resources.interest.name', 2), href: '#interests-section', isActive: false }
+    ]
 
-    return { navigation };
-  },
-});
+    return { navigation }
+  }
+})
 </script>

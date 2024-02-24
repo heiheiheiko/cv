@@ -21,37 +21,39 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { translateI18nField } from '@/utils/i18nUtils';
-import { useI18n } from 'vue-i18n';
-import useInterest from '@/composables/useInterest';
-import InterestCard from '@/components/InterestCard.vue';
+import { defineComponent } from 'vue'
+import { translateI18nField } from '@/utils/i18nUtils'
+import { useI18n } from 'vue-i18n'
+import useInterest from '@/composables/useInterest'
+import InterestCard from '@/components/InterestCard.vue'
 
 export default defineComponent({
   components: {
-    InterestCard,
+    InterestCard
   },
   props: {
     talent: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   setup(props) {
     const { t } = useI18n({
       inheritLocale: true,
-      useScope: 'local',
-    });
+      useScope: 'local'
+    })
 
-    const { findInterests } = useInterest();
+    const { findInterests } = useInterest()
 
-    const interests = findInterests(props.talent.interests);
+    const interests = findInterests(props.talent.interests)
 
     return {
-      translateI18nField, t, interests,
-    };
-  },
-});
+      translateI18nField,
+      t,
+      interests
+    }
+  }
+})
 </script>
 
 <i18n>

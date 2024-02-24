@@ -1,31 +1,31 @@
-import { ReferenceTypes } from '@/db/dbTypes';
+import { ReferenceTypes } from '@/db/dbTypes'
 
 export default class ReferenceTypeDecorator {
   static color(type: ReferenceTypes): string {
     switch (type) {
       case ReferenceTypes.personal:
-        return 'mountainMeadow';
+        return 'mountainMeadow'
       case ReferenceTypes.professional:
-        return 'outrageousOrange';
+        return 'outrageousOrange'
       case ReferenceTypes.educational:
-        return 'royalBlue';
+        return 'royalBlue'
 
       default:
-        throw new Error(`${type} is not a valid ReferenceType`);
+        throw new Error(`${type} is not a valid ReferenceType`)
     }
   }
 
   static colorGradient(type: ReferenceTypes): string {
     switch (type) {
       case ReferenceTypes.personal:
-        return 'bondiBlue';
+        return 'bondiBlue'
       case ReferenceTypes.professional:
-        return 'lipstick';
+        return 'lipstick'
       case ReferenceTypes.educational:
-        return 'affair';
+        return 'affair'
 
       default:
-        throw new Error(`${type} is not a valid ReferenceType`);
+        throw new Error(`${type} is not a valid ReferenceType`)
     }
   }
 }

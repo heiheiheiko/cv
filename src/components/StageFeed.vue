@@ -2,10 +2,7 @@
   <div>
     <div class="flow-root">
       <ul class="-mb-8">
-        <li
-          v-for="stage in stages"
-          :key="stage.id"
-        >
+        <li v-for="stage in stages" :key="stage.id">
           <TransitionRoot
             appear
             :show="stage.isVisible"
@@ -45,47 +42,48 @@
         </li>
       </ul>
     </div>
-    <StageOverlay
-      :stage="overlayStage"
-      :is-open="isOverlayOpen"
-      @close="isOverlayOpen=false"
-    />
+    <StageOverlay :stage="overlayStage" :is-open="isOverlayOpen" @close="isOverlayOpen = false" />
   </div>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
-import { ReferenceTypes } from '@/db/dbTypes';
-import StageFeedItem from '@/components/StageFeedItem.vue';
-import StageOverlay from '@/components/StageOverlay.vue';
-import { TransitionRoot } from '@headlessui/vue';
-import _ from 'lodash';
+import { defineComponent, ref } from 'vue'
+import { ReferenceTypes } from '@/db/dbTypes'
+import StageFeedItem from '@/components/StageFeedItem.vue'
+import StageOverlay from '@/components/StageOverlay.vue'
+import { TransitionRoot } from '@headlessui/vue'
+import _ from 'lodash'
 
 export default defineComponent({
   components: {
     StageFeedItem,
     StageOverlay,
-    TransitionRoot,
+    TransitionRoot
   },
   props: {
     stages: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   setup(props) {
-    const isOverlayOpen = ref(false);
-    const overlayStage = ref({});
+    const isOverlayOpen = ref(false)
+    const overlayStage = ref({})
     // eslint-disable-next-line max-len
-    const isLastVisibleStage = (stage) => stage === _.last(props.stages.filter((_stage) => _stage.isVisible));
+    const isLastVisibleStage = (stage) =>
+      stage === _.last(props.stages.filter((_stage) => _stage.isVisible))
 
     const setOverlayStage = (stage) => {
-      isOverlayOpen.value = true;
-      overlayStage.value = stage;
-    };
+      isOverlayOpen.value = true
+      overlayStage.value = stage
+    }
     return {
-      ReferenceTypes, overlayStage, setOverlayStage, isOverlayOpen, isLastVisibleStage,
-    };
-  },
-});
+      ReferenceTypes,
+      overlayStage,
+      setOverlayStage,
+      isOverlayOpen,
+      isLastVisibleStage
+    }
+  }
+})
 </script>

@@ -23,10 +23,7 @@
         </div>
 
         <div class="mt-10 text-left">
-          <template
-            v-for="skill in skillsWithUseInMonths"
-            :key="skill.id"
-          >
+          <template v-for="skill in skillsWithUseInMonths" :key="skill.id">
             <TransitionRoot
               appear
               :show="skill.isVisible"
@@ -38,10 +35,7 @@
               leave-from="opacity-100"
               leave-to="opacity-0"
             >
-              <SkillBadge
-                :skill="skill"
-                class="mr-2 mb-2"
-              />
+              <SkillBadge :skill="skill" class="mr-2 mb-2" />
             </TransitionRoot>
           </template>
         </div>
@@ -51,36 +45,36 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from 'vue';
-import { translateI18nField } from '@/utils/i18nUtils';
-import { useI18n } from 'vue-i18n';
-import { SkillTypes } from '@/db/dbTypes';
-import { FilterSwitch } from '@/types';
-import SkillDecorator from '@/decorators/SkillDecorator';
-import SkillBadge from '@/components/SkillBadge.vue';
-import useFilterable from '@/composables/useFilterable';
+import { defineComponent, reactive, computed } from 'vue'
+import { translateI18nField } from '@/utils/i18nUtils'
+import { useI18n } from 'vue-i18n'
+import { SkillTypes } from '@/db/dbTypes'
+import { FilterSwitch } from '@/types'
+import SkillDecorator from '@/decorators/SkillDecorator'
+import SkillBadge from '@/components/SkillBadge.vue'
+import useFilterable from '@/composables/useFilterable'
 
-import { buildSkillsWithUseInMonths } from '@/services/SkillService';
-import { TransitionRoot } from '@headlessui/vue';
+import { buildSkillsWithUseInMonths } from '@/services/SkillService'
+import { TransitionRoot } from '@headlessui/vue'
 
 export default defineComponent({
   components: {
     TransitionRoot,
-    SkillBadge,
+    SkillBadge
   },
   props: {
     talent: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
   setup(props) {
     const { t } = useI18n({
       inheritLocale: true,
-      useScope: 'local',
-    });
+      useScope: 'local'
+    })
 
-    const { buildFilters } = useFilterable();
+    const { buildFilters } = useFilterable()
 
     const filterSwitches = reactive([
       {
@@ -89,7 +83,7 @@ export default defineComponent({
         value: SkillTypes.keyword,
         label: t(`resources.skill.enums.${SkillTypes.keyword}`, 2),
         isActive: true,
-        color: SkillDecorator.color(SkillTypes.keyword),
+        color: SkillDecorator.color(SkillTypes.keyword)
       },
       {
         id: 'type_technology',
@@ -97,7 +91,7 @@ export default defineComponent({
         value: SkillTypes.technology,
         label: t(`resources.skill.enums.${SkillTypes.technology}`, 2),
         isActive: true,
-        color: SkillDecorator.color(SkillTypes.technology),
+        color: SkillDecorator.color(SkillTypes.technology)
       },
       {
         id: 'type_software',
@@ -105,7 +99,7 @@ export default defineComponent({
         value: SkillTypes.software,
         label: t(`resources.skill.enums.${SkillTypes.software}`, 2),
         isActive: true,
-        color: SkillDecorator.color(SkillTypes.software),
+        color: SkillDecorator.color(SkillTypes.software)
       },
       {
         id: 'top',
@@ -113,22 +107,26 @@ export default defineComponent({
         value: true,
         label: t('resources.skill.attributes.isTop', 2),
         isActive: true,
-        color: 'macaroniAndCheese',
-      },
-    ] as Array<FilterSwitch>);
+        color: 'macaroniAndCheese'
+      }
+    ] as Array<FilterSwitch>)
 
-    const filters = computed(() => buildFilters(filterSwitches));
+    const filters = computed(() => buildFilters(filterSwitches))
 
-    const skillsWithUseInMonths = computed(() => buildSkillsWithUseInMonths(
-      props.talent.stages,
-      filters.value.value(),
-    ));
+    const skillsWithUseInMonths = computed(() =>
+      buildSkillsWithUseInMonths(props.talent.stages, filters.value.value())
+    )
 
     return {
-      translateI18nField, t, SkillTypes, filterSwitches, skillsWithUseInMonths, filters,
-    };
-  },
-});
+      translateI18nField,
+      t,
+      SkillTypes,
+      filterSwitches,
+      skillsWithUseInMonths,
+      filters
+    }
+  }
+})
 </script>
 
 <i18n>

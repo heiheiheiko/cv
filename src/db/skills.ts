@@ -1,13 +1,11 @@
 /* eslint-disable no-plusplus */
 
-import {
-  Skill, SkillTypes,
-} from '@/db/dbTypes';
+import type { Skill } from '@/db/dbTypes'
+import { SkillTypes } from '@/db/dbTypes'
 
-let skillId = 1;
+let skillId = 1
 
 export default [
-
   {
     id: skillId++,
     staticId: 'project',
@@ -15,8 +13,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Projektmanagement',
-      en: 'Project Management',
-    },
+      en: 'Project Management'
+    }
   },
 
   {
@@ -26,8 +24,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Prozessoptimierung',
-      en: 'Process Optimization',
-    },
+      en: 'Process Optimization'
+    }
   },
 
   {
@@ -37,8 +35,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Frontend Development',
-      en: 'Frontend Development',
-    },
+      en: 'Frontend Development'
+    }
   },
 
   {
@@ -48,8 +46,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Backend Development',
-      en: 'Backend Development',
-    },
+      en: 'Backend Development'
+    }
   },
 
   {
@@ -59,8 +57,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Testing',
-      en: 'Testing',
-    },
+      en: 'Testing'
+    }
   },
 
   {
@@ -70,8 +68,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Softwarequalität',
-      en: 'Software Quality',
-    },
+      en: 'Software Quality'
+    }
   },
 
   {
@@ -81,8 +79,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Usability',
-      en: 'Usability',
-    },
+      en: 'Usability'
+    }
   },
 
   {
@@ -92,8 +90,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Mobile Optimierung',
-      en: 'Mobile Optimization',
-    },
+      en: 'Mobile Optimization'
+    }
   },
 
   {
@@ -103,8 +101,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'REST',
-      en: 'REST',
-    },
+      en: 'REST'
+    }
   },
 
   {
@@ -114,8 +112,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'OpenAPI',
-      en: 'OpenAPI',
-    },
+      en: 'OpenAPI'
+    }
   },
 
   {
@@ -125,8 +123,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Microservices',
-      en: 'Microservices',
-    },
+      en: 'Microservices'
+    }
   },
 
   {
@@ -136,8 +134,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'JAMstack',
-      en: 'JAMstack',
-    },
+      en: 'JAMstack'
+    }
   },
 
   {
@@ -147,8 +145,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Agil',
-      en: 'Agile',
-    },
+      en: 'Agile'
+    }
   },
 
   {
@@ -158,8 +156,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Kanban',
-      en: 'Kanban',
-    },
+      en: 'Kanban'
+    }
   },
 
   {
@@ -169,8 +167,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Scrum',
-      en: 'Scrum',
-    },
+      en: 'Scrum'
+    }
   },
 
   {
@@ -180,8 +178,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Code Reviews',
-      en: 'Code Reviews',
-    },
+      en: 'Code Reviews'
+    }
   },
 
   {
@@ -191,8 +189,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Lean Startup',
-      en: 'Lean Startup',
-    },
+      en: 'Lean Startup'
+    }
   },
 
   {
@@ -202,8 +200,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Remote Work',
-      en: 'Remote Work',
-    },
+      en: 'Remote Work'
+    }
   },
 
   {
@@ -213,8 +211,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Bürohund',
-      en: 'Office dog',
-    },
+      en: 'Office dog'
+    }
   },
 
   {
@@ -224,8 +222,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Deutsch (Muttersprache)',
-      en: 'German (Native language)',
-    },
+      en: 'German (Native language)'
+    }
   },
 
   {
@@ -235,8 +233,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Englisch (B2)',
-      en: 'English (B2)',
-    },
+      en: 'English (B2)'
+    }
   },
 
   {
@@ -246,8 +244,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Assembler',
-      en: 'Assembler',
-    },
+      en: 'Assembler'
+    }
   },
 
   {
@@ -257,8 +255,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Visual Basic',
-      en: 'Visual Basic',
-    },
+      en: 'Visual Basic'
+    }
   },
 
   {
@@ -268,8 +266,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'C',
-      en: 'C',
-    },
+      en: 'C'
+    }
   },
 
   {
@@ -279,8 +277,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'C#',
-      en: 'C#',
-    },
+      en: 'C#'
+    }
   },
 
   {
@@ -290,8 +288,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Java',
-      en: 'Java',
-    },
+      en: 'Java'
+    }
   },
 
   {
@@ -301,8 +299,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Spring Boot',
-      en: 'Spring Boot',
-    },
+      en: 'Spring Boot'
+    }
   },
 
   {
@@ -312,8 +310,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'JUnit',
-      en: 'JUnit',
-    },
+      en: 'JUnit'
+    }
   },
 
   {
@@ -323,8 +321,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'PHP',
-      en: 'PHP',
-    },
+      en: 'PHP'
+    }
   },
 
   {
@@ -334,8 +332,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Zend Framework',
-      en: 'Zend Framework',
-    },
+      en: 'Zend Framework'
+    }
   },
 
   {
@@ -345,8 +343,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Laravel',
-      en: 'Laravel',
-    },
+      en: 'Laravel'
+    }
   },
 
   {
@@ -356,8 +354,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'PHPUnit',
-      en: 'PHPUnit',
-    },
+      en: 'PHPUnit'
+    }
   },
 
   {
@@ -367,8 +365,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Ruby',
-      en: 'Ruby',
-    },
+      en: 'Ruby'
+    }
   },
 
   {
@@ -378,8 +376,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Ruby on Rails',
-      en: 'Ruby on Rails',
-    },
+      en: 'Ruby on Rails'
+    }
   },
 
   {
@@ -389,8 +387,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'RSpec',
-      en: 'RSpec',
-    },
+      en: 'RSpec'
+    }
   },
 
   {
@@ -400,8 +398,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Capybara',
-      en: 'Capybara',
-    },
+      en: 'Capybara'
+    }
   },
 
   {
@@ -411,8 +409,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Python',
-      en: 'Python',
-    },
+      en: 'Python'
+    }
   },
 
   {
@@ -422,8 +420,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Django',
-      en: 'Django',
-    },
+      en: 'Django'
+    }
   },
 
   {
@@ -433,8 +431,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'pytest',
-      en: 'pytest',
-    },
+      en: 'pytest'
+    }
   },
 
   {
@@ -444,8 +442,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'unittest (Python)',
-      en: 'unittest (Python)',
-    },
+      en: 'unittest (Python)'
+    }
   },
 
   {
@@ -455,8 +453,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'JavaScript',
-      en: 'JavaScript',
-    },
+      en: 'JavaScript'
+    }
   },
 
   {
@@ -466,8 +464,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'TypeScript',
-      en: 'TypeScript',
-    },
+      en: 'TypeScript'
+    }
   },
 
   {
@@ -477,8 +475,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'jQuery',
-      en: 'jQuery',
-    },
+      en: 'jQuery'
+    }
   },
 
   {
@@ -488,8 +486,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'AngularJS',
-      en: 'AngularJS',
-    },
+      en: 'AngularJS'
+    }
   },
 
   {
@@ -499,8 +497,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Vue 2',
-      en: 'Vue 2',
-    },
+      en: 'Vue 2'
+    }
   },
 
   {
@@ -510,8 +508,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Vue 3',
-      en: 'Vue 3',
-    },
+      en: 'Vue 3'
+    }
   },
 
   {
@@ -521,8 +519,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Jest',
-      en: 'Jest',
-    },
+      en: 'Jest'
+    }
   },
 
   {
@@ -532,8 +530,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Cypress',
-      en: 'Cypress',
-    },
+      en: 'Cypress'
+    }
   },
 
   {
@@ -543,8 +541,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Redux | Vuex',
-      en: 'Redux | Vuex',
-    },
+      en: 'Redux | Vuex'
+    }
   },
 
   {
@@ -554,8 +552,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Storybook',
-      en: 'Storybook',
-    },
+      en: 'Storybook'
+    }
   },
 
   {
@@ -565,8 +563,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Gridsome',
-      en: 'Gridsome',
-    },
+      en: 'Gridsome'
+    }
   },
 
   {
@@ -576,8 +574,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Highcharts',
-      en: 'Highcharts',
-    },
+      en: 'Highcharts'
+    }
   },
 
   {
@@ -587,8 +585,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'HTML5',
-      en: 'HTML5',
-    },
+      en: 'HTML5'
+    }
   },
 
   {
@@ -598,8 +596,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'CSS3',
-      en: 'CSS3',
-    },
+      en: 'CSS3'
+    }
   },
 
   {
@@ -609,8 +607,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Sass',
-      en: 'Sass',
-    },
+      en: 'Sass'
+    }
   },
 
   {
@@ -620,8 +618,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Bootstrap',
-      en: 'Bootstrap',
-    },
+      en: 'Bootstrap'
+    }
   },
 
   {
@@ -631,8 +629,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Bulma',
-      en: 'Bulma',
-    },
+      en: 'Bulma'
+    }
   },
 
   {
@@ -642,8 +640,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Tailwind CSS',
-      en: 'Tailwind CSS',
-    },
+      en: 'Tailwind CSS'
+    }
   },
 
   {
@@ -653,8 +651,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Vuetify',
-      en: 'Vuetify',
-    },
+      en: 'Vuetify'
+    }
   },
 
   {
@@ -664,8 +662,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'SQL',
-      en: 'SQL',
-    },
+      en: 'SQL'
+    }
   },
 
   {
@@ -675,8 +673,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Oracle',
-      en: 'Oracle',
-    },
+      en: 'Oracle'
+    }
   },
 
   {
@@ -686,8 +684,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'MySQL',
-      en: 'MySQL',
-    },
+      en: 'MySQL'
+    }
   },
 
   {
@@ -697,8 +695,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'PostgreSQL',
-      en: 'PostgreSQL',
-    },
+      en: 'PostgreSQL'
+    }
   },
 
   {
@@ -708,8 +706,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'AMQP',
-      en: 'AMQP',
-    },
+      en: 'AMQP'
+    }
   },
 
   {
@@ -719,8 +717,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'BPMN 2.0',
-      en: 'BPMN 2.0',
-    },
+      en: 'BPMN 2.0'
+    }
   },
 
   {
@@ -730,8 +728,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'UML',
-      en: 'UML',
-    },
+      en: 'UML'
+    }
   },
 
   {
@@ -741,8 +739,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Windows',
-      en: 'Windows',
-    },
+      en: 'Windows'
+    }
   },
 
   {
@@ -752,8 +750,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Ubuntu',
-      en: 'Ubuntu',
-    },
+      en: 'Ubuntu'
+    }
   },
 
   {
@@ -763,8 +761,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Mac OS',
-      en: 'Mac OS',
-    },
+      en: 'Mac OS'
+    }
   },
 
   {
@@ -774,8 +772,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'git',
-      en: 'git',
-    },
+      en: 'git'
+    }
   },
 
   {
@@ -785,8 +783,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'GitHub',
-      en: 'GitHub',
-    },
+      en: 'GitHub'
+    }
   },
 
   {
@@ -796,8 +794,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Bitbucket',
-      en: 'Bitbucket',
-    },
+      en: 'Bitbucket'
+    }
   },
 
   {
@@ -807,8 +805,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'GitLab',
-      en: 'GitLab',
-    },
+      en: 'GitLab'
+    }
   },
 
   {
@@ -818,8 +816,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Git Tower',
-      en: 'Git Tower',
-    },
+      en: 'Git Tower'
+    }
   },
 
   {
@@ -829,8 +827,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'SourceTree',
-      en: 'SourceTree',
-    },
+      en: 'SourceTree'
+    }
   },
 
   {
@@ -840,8 +838,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'GitKraken',
-      en: 'GitKraken',
-    },
+      en: 'GitKraken'
+    }
   },
 
   {
@@ -851,8 +849,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Visual Studio',
-      en: 'Visual Studio',
-    },
+      en: 'Visual Studio'
+    }
   },
 
   {
@@ -862,8 +860,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Eclipse',
-      en: 'Eclipse',
-    },
+      en: 'Eclipse'
+    }
   },
 
   {
@@ -873,8 +871,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'PyCharm',
-      en: 'PyCharm',
-    },
+      en: 'PyCharm'
+    }
   },
 
   {
@@ -884,8 +882,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'IntelliJ',
-      en: 'IntelliJ',
-    },
+      en: 'IntelliJ'
+    }
   },
 
   {
@@ -895,8 +893,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Sublime Text',
-      en: 'Sublime Text',
-    },
+      en: 'Sublime Text'
+    }
   },
 
   {
@@ -906,8 +904,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Atom',
-      en: 'Atom',
-    },
+      en: 'Atom'
+    }
   },
 
   {
@@ -917,8 +915,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Visual Studio Code',
-      en: 'Visual Studio Code',
-    },
+      en: 'Visual Studio Code'
+    }
   },
 
   {
@@ -928,8 +926,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Postman',
-      en: 'Postman',
-    },
+      en: 'Postman'
+    }
   },
 
   {
@@ -939,8 +937,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Jira',
-      en: 'Jira',
-    },
+      en: 'Jira'
+    }
   },
 
   {
@@ -950,8 +948,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Basecamp',
-      en: 'Basecamp',
-    },
+      en: 'Basecamp'
+    }
   },
 
   {
@@ -961,8 +959,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Redmine',
-      en: 'Redmine',
-    },
+      en: 'Redmine'
+    }
   },
 
   {
@@ -972,8 +970,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Trello',
-      en: 'Trello',
-    },
+      en: 'Trello'
+    }
   },
 
   {
@@ -983,8 +981,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Confluence',
-      en: 'Confluence',
-    },
+      en: 'Confluence'
+    }
   },
 
   {
@@ -994,8 +992,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Slack',
-      en: 'Slack',
-    },
+      en: 'Slack'
+    }
   },
 
   {
@@ -1005,8 +1003,8 @@ export default [
     isTop: true,
     titleI18n: {
       de: 'Microsoft Teams',
-      en: 'Microsoft Teams',
-    },
+      en: 'Microsoft Teams'
+    }
   },
 
   {
@@ -1016,8 +1014,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Travis CI',
-      en: 'Travis CI',
-    },
+      en: 'Travis CI'
+    }
   },
 
   {
@@ -1027,8 +1025,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Jenkins',
-      en: 'Jenkins',
-    },
+      en: 'Jenkins'
+    }
   },
 
   {
@@ -1038,8 +1036,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Airbrake',
-      en: 'Airbrake',
-    },
+      en: 'Airbrake'
+    }
   },
 
   {
@@ -1049,8 +1047,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Errbit',
-      en: 'Errbit',
-    },
+      en: 'Errbit'
+    }
   },
 
   {
@@ -1060,8 +1058,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Heroku',
-      en: 'Heroku',
-    },
+      en: 'Heroku'
+    }
   },
 
   {
@@ -1071,8 +1069,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'RabbitMQ',
-      en: 'RabbitMQ',
-    },
+      en: 'RabbitMQ'
+    }
   },
 
   {
@@ -1082,8 +1080,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'Camtasia Studio',
-      en: 'Camtasia Studio',
-    },
+      en: 'Camtasia Studio'
+    }
   },
 
   {
@@ -1093,8 +1091,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'GIMP',
-      en: 'GIMP',
-    },
+      en: 'GIMP'
+    }
   },
 
   {
@@ -1104,8 +1102,8 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'MS Office',
-      en: 'MS Office',
-    },
+      en: 'MS Office'
+    }
   },
 
   {
@@ -1115,8 +1113,7 @@ export default [
     isTop: false,
     titleI18n: {
       de: 'G Suite',
-      en: 'G Suite',
-    },
-  },
-
-] as Array<Skill>;
+      en: 'G Suite'
+    }
+  }
+] as Array<Skill>

@@ -1,27 +1,28 @@
 <template>
-  <SwitchGroup
-    as="div"
-    class="flex items-center"
-  >
+  <SwitchGroup as="div" class="flex items-center">
     <Switch
       :model-value="isActive"
-      :class="[isActive ? `bg-${color}` : 'bg-gray-200', `relative inline-flex
+      :class="[
+        isActive ? `bg-${color}` : 'bg-gray-200',
+        `relative inline-flex
       flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer
       transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2
-      focus:ring-offset-2 focus:ring-${color}`]"
+      focus:ring-offset-2 focus:ring-${color}`
+      ]"
       @update:modelValue="$emit('update')"
     >
+      <!-- TODO: Don't concat tailwind classes! bg-royalBlue bg-outrageousOrange bg-mountainMeadow bg-macaroniAndCheese -->
       <span
         aria-hidden="true"
-        :class="[isActive ? 'translate-x-5' : 'translate-x-0', `pointer-events-none
+        :class="[
+          isActive ? 'translate-x-5' : 'translate-x-0',
+          `pointer-events-none
         inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition
-        ease-in-out duration-200`]"
+        ease-in-out duration-200`
+        ]"
       />
     </Switch>
-    <SwitchLabel
-      as="span"
-      class="ml-3"
-    >
+    <SwitchLabel as="span" class="ml-3">
       <span class="text-sm font-medium text-gray-900">
         <slot />
       </span>
@@ -30,26 +31,26 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
-import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue';
+import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
 
 export default defineComponent({
   components: {
     Switch,
     SwitchGroup,
-    SwitchLabel,
+    SwitchLabel
   },
   props: {
     isActive: {
       type: Boolean,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      default: 'gray',
-    },
+      default: 'gray'
+    }
   },
-  emits: ['update'],
-});
+  emits: ['update']
+})
 </script>

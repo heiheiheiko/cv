@@ -1,31 +1,33 @@
-import { computed } from 'vue';
-import { schema } from 'normalizr';
-import useState from '@/composables/useState';
-import { Skill } from '@/db/dbTypes';
-import SkillDecorator from '@/decorators/SkillDecorator';
-import { orderBy } from 'lodash';
+import { computed } from 'vue'
+import { schema } from 'normalizr'
+import useState from '@/composables/useState'
+import SkillDecorator from '@/decorators/SkillDecorator'
+import { orderBy } from 'lodash'
 
-const { allResources, findResource } = useState();
+const { allResources, findResource } = useState()
 
 // constants
-const resourceName = 'skills';
+const resourceName = 'skills'
 
 // schema
-const skillSchema = new schema.Entity(resourceName, {});
+const skillSchema = new schema.Entity(resourceName, {})
 
 // computed
-const skills = computed(() => allResources(resourceName));
+const skills = computed(() => allResources(resourceName))
 
 export default function useSkill() {
   // methods
-  const findSkill = (id: number) => new SkillDecorator(findResource(resourceName, id));
+  const findSkill = (id: number) => new SkillDecorator(findResource(resourceName, id))
 
   const findSkills = (ids: Array<number>) => {
-    const localSkills = ids.map((id) => findSkill(id));
-    return orderBy(localSkills, ['type', 'id']);
-  };
+    const localSkills = ids.map((id) => findSkill(id))
+    return orderBy(localSkills, ['type', 'id'])
+  }
 
   return {
-    skills, findSkill, findSkills, skillSchema,
-  };
+    skills,
+    findSkill,
+    findSkills,
+    skillSchema
+  }
 }

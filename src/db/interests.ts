@@ -1,10 +1,10 @@
 /* eslint-disable no-plusplus */
 
-import {
-  Interest, ReferenceTypes,
-} from '@/db/dbTypes';
+import type { Interest } from '@/db/dbTypes'
 
-let interestId = 1;
+import { ReferenceTypes } from '@/db/dbTypes'
+
+let interestId = 1
 
 export default [
   // personal
@@ -12,109 +12,109 @@ export default [
     id: interestId++,
     titleI18n: {
       de: 'Brettspiele',
-      en: 'Board games',
+      en: 'Board games'
     },
     type: ReferenceTypes.personal,
-    icon: 'chess',
+    icon: 'chess'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Computerspiele',
-      en: 'Computer games',
+      en: 'Computer games'
     },
     type: ReferenceTypes.personal,
-    icon: 'gamepad',
+    icon: 'gamepad'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Outdoor Aktivitäten',
-      en: 'Outdoor activities',
+      en: 'Outdoor activities'
     },
     type: ReferenceTypes.personal,
-    icon: 'hiking',
+    icon: 'hiking'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Kung Fu',
-      en: 'Kung Fu',
+      en: 'Kung Fu'
     },
     type: ReferenceTypes.personal,
-    icon: 'hand-rock',
+    icon: 'hand-rock'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Nachhaltigkeit',
-      en: 'Sustainability',
+      en: 'Sustainability'
     },
     type: ReferenceTypes.personal,
-    icon: 'tree',
+    icon: 'tree'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Haus und Garten',
-      en: 'House and garden',
+      en: 'House and garden'
     },
     type: ReferenceTypes.personal,
-    icon: 'home',
+    icon: 'home'
   },
 
   {
     id: interestId++,
     titleI18n: {
       de: 'Frontend Technologien',
-      en: 'Frontend technologies',
+      en: 'Frontend technologies'
     },
     type: ReferenceTypes.professional,
-    icon: 'address-card',
+    icon: 'address-card'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Usability',
-      en: 'Usability',
+      en: 'Usability'
     },
     type: ReferenceTypes.professional,
-    icon: 'map-marked-alt',
+    icon: 'map-marked-alt'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Gamification',
-      en: 'Gamification',
+      en: 'Gamification'
     },
     type: ReferenceTypes.professional,
-    icon: 'ghost',
+    icon: 'ghost'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Softwarequalität',
-      en: 'Software quality',
+      en: 'Software quality'
     },
     type: ReferenceTypes.professional,
-    icon: 'gem',
+    icon: 'gem'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Agile Methodology',
-      en: 'Agile methodology',
+      en: 'Agile methodology'
     },
     type: ReferenceTypes.professional,
-    icon: 'project-diagram',
+    icon: 'project-diagram'
   },
   {
     id: interestId++,
     titleI18n: {
       de: 'Produktentwicklung',
-      en: 'Product development',
+      en: 'Product development'
     },
     type: ReferenceTypes.professional,
-    icon: 'space-shuttle',
-  },
-] as Array<Interest>;
+    icon: 'space-shuttle'
+  }
+] as Array<Interest>

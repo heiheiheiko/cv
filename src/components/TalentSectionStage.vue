@@ -1,8 +1,6 @@
 <template>
   <BaseSection id="stages-section">
-    <div
-      class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-8xl"
-    >
+    <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-8xl">
       <BaseSectionHeaderTitle>
         {{ t('resources.stage.name', 2) }}
       </BaseSectionHeaderTitle>
@@ -10,7 +8,7 @@
         {{ t('title') }}
       </BaseSectionHeaderSubtitle>
 
-      <div class="mt-12 text-left ">
+      <div class="mt-12 text-left">
         <div class="flex items-center justify-center hidden md:flex">
           <BaseSwitch
             v-for="filter in filterSwitches"
@@ -35,33 +33,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from 'vue';
+import { defineComponent, reactive, computed } from 'vue'
 
-import { translateI18nField } from '@/utils/i18nUtils';
-import { useI18n } from 'vue-i18n';
-import ReferenceTypesDecorator from '@/decorators/ReferenceTypesDecorator';
-import { ReferenceTypes } from '@/db/dbTypes';
-import { FilterSwitch } from '@/types';
-import useFilterable from '@/composables/useFilterable';
-import StageFeed from '@/components/StageFeed.vue';
+import { translateI18nField } from '@/utils/i18nUtils'
+import { useI18n } from 'vue-i18n'
+import ReferenceTypesDecorator from '@/decorators/ReferenceTypesDecorator'
+import { ReferenceTypes } from '@/db/dbTypes'
+import { FilterSwitch } from '@/types'
+import useFilterable from '@/composables/useFilterable'
+import StageFeed from '@/components/StageFeed.vue'
 
 export default defineComponent({
   components: {
-    StageFeed,
+    StageFeed
   },
   props: {
     stages: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   setup(props) {
     const { t } = useI18n({
       inheritLocale: true,
-      useScope: 'local',
-    });
+      useScope: 'local'
+    })
 
-    const { buildFilters, filterFilterables } = useFilterable();
+    const { buildFilters, filterFilterables } = useFilterable()
 
     const filterSwitches = reactive([
       {
@@ -70,7 +68,7 @@ export default defineComponent({
         value: ReferenceTypes.educational,
         label: t(`resources.stage.enums.type.${ReferenceTypes.educational}`, 2),
         isActive: true,
-        color: ReferenceTypesDecorator.color(ReferenceTypes.educational),
+        color: ReferenceTypesDecorator.color(ReferenceTypes.educational)
       },
       {
         id: 'type_professional',
@@ -78,7 +76,7 @@ export default defineComponent({
         value: ReferenceTypes.professional,
         label: t(`resources.stage.enums.type.${ReferenceTypes.professional}`, 2),
         isActive: true,
-        color: ReferenceTypesDecorator.color(ReferenceTypes.professional),
+        color: ReferenceTypesDecorator.color(ReferenceTypes.professional)
       },
       {
         id: 'type_personal',
@@ -86,7 +84,7 @@ export default defineComponent({
         value: ReferenceTypes.personal,
         label: t(`resources.stage.enums.type.${ReferenceTypes.personal}`, 2),
         isActive: true,
-        color: ReferenceTypesDecorator.color(ReferenceTypes.personal),
+        color: ReferenceTypesDecorator.color(ReferenceTypes.personal)
       },
       {
         id: 'top',
@@ -94,29 +92,32 @@ export default defineComponent({
         value: true,
         label: t('resources.stage.attributes.isTop', 2),
         isActive: true,
-        color: 'macaroniAndCheese',
-      },
-    ] as Array<FilterSwitch>);
+        color: 'macaroniAndCheese'
+      }
+    ] as Array<FilterSwitch>)
 
-    const filters = computed(() => buildFilters(filterSwitches));
+    const filters = computed(() => buildFilters(filterSwitches))
 
-    const professionalStages: any = props.stages
-      .filter((stage: any) => stage.type === ReferenceTypes.professional);
-    const filteredProfessionalStages = computed(() => filterFilterables(
-      professionalStages, filters.value as any, ['startedAt', 'desc'],
-    ));
+    const professionalStages: any = props.stages.filter(
+      (stage: any) => stage.type === ReferenceTypes.professional
+    )
+    const filteredProfessionalStages = computed(() =>
+      filterFilterables(professionalStages, filters.value as any, ['startedAt', 'desc'])
+    )
 
-    const educationalStages: any = props.stages
-      .filter((stage: any) => stage.type === ReferenceTypes.educational);
-    const filteredEducationalStages = computed(() => filterFilterables(
-      educationalStages, filters.value as any, ['startedAt', 'desc'],
-    ));
+    const educationalStages: any = props.stages.filter(
+      (stage: any) => stage.type === ReferenceTypes.educational
+    )
+    const filteredEducationalStages = computed(() =>
+      filterFilterables(educationalStages, filters.value as any, ['startedAt', 'desc'])
+    )
 
-    const personalStages: any = props.stages
-      .filter((stage: any) => stage.type === ReferenceTypes.personal);
-    const filteredPersonalStages = computed(() => filterFilterables(
-      personalStages, filters.value as any, ['startedAt', 'desc'],
-    ));
+    const personalStages: any = props.stages.filter(
+      (stage: any) => stage.type === ReferenceTypes.personal
+    )
+    const filteredPersonalStages = computed(() =>
+      filterFilterables(personalStages, filters.value as any, ['startedAt', 'desc'])
+    )
 
     return {
       translateI18nField,
@@ -124,19 +125,19 @@ export default defineComponent({
       filteredProfessionalStages,
       filteredEducationalStages,
       filteredPersonalStages,
-      filterSwitches,
-    };
-  },
-});
+      filterSwitches
+    }
+  }
+})
 </script>
 
 <i18n>
 {
   "de": {
-      "title": "Was ich so gemacht habe"
+      "title": "Was ich so gemacht habe",
   },
   "en": {
-      "title": "What I have done"
+      "title": "What I have done",
   }
 }
 </i18n>

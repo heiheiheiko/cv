@@ -1,28 +1,28 @@
-import { Interest, ReferenceTypes, I18nField } from '@/db/dbTypes';
-import { Colorable } from '@/types';
-import ReferenceTypeDecorator from './ReferenceTypesDecorator';
+import type { Interest, ReferenceTypes, I18nField } from '@/db/dbTypes'
+import type { Colorable } from '@/types'
+import ReferenceTypeDecorator from './ReferenceTypesDecorator'
 
 export default class InterestDecorator implements Colorable {
-  id: number;
+  id: number
 
-  titleI18n: I18nField;
+  titleI18n: I18nField
 
-  type: ReferenceTypes;
+  type: ReferenceTypes
 
-  icon: string;
+  icon: string
 
   constructor(interest: Interest) {
-    this.id = interest.id;
-    this.titleI18n = interest.titleI18n;
-    this.type = interest.type;
-    this.icon = interest.icon;
+    this.id = interest.id
+    this.titleI18n = interest.titleI18n
+    this.type = interest.type
+    this.icon = interest.icon
   }
 
   color(): string {
-    return ReferenceTypeDecorator.color(this.type);
+    return ReferenceTypeDecorator.color(this.type)
   }
 
   colorGradient(): string {
-    return ReferenceTypeDecorator.colorGradient(this.type);
+    return ReferenceTypeDecorator.colorGradient(this.type)
   }
 }

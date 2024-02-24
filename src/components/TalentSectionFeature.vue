@@ -10,10 +10,7 @@
 
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <BaseCardFeature
-            v-for="feature in features"
-            :key="feature.id"
-          >
+          <BaseCardFeature v-for="feature in features" :key="feature.id">
             <BaseCardFeatureIcon :icon="feature.icon" />
             <BaseCardFeatureTitle>
               {{ translateI18nField(feature.titleI18n) }}
@@ -29,28 +26,29 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import { translateI18nField } from '@/utils/i18nUtils';
-import { useI18n } from 'vue-i18n';
+import { defineComponent } from 'vue'
+import { translateI18nField } from '@/utils/i18nUtils'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   props: {
     features: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   setup() {
     const { t } = useI18n({
       inheritLocale: true,
-      useScope: 'local',
-    });
+      useScope: 'local'
+    })
 
     return {
-      translateI18nField, t,
-    };
-  },
-});
+      translateI18nField,
+      t
+    }
+  }
+})
 </script>
 
 <i18n>

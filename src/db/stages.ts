@@ -1,14 +1,18 @@
 /* eslint-disable no-plusplus */
+import type { Stage, StageSkill, Organization } from '@/db/dbTypes'
 import {
-  Stage, ReferenceTypes, StageSkill, PositionEnum, EmploymentEnum,
-  Organization, OrganizationSizeEnum, BranchEnum,
-} from '@/db/dbTypes';
-import skills from '@/db/skills';
-import { findByStaticIdOrFail } from '@/utils/arrayUtils';
+  ReferenceTypes,
+  PositionEnum,
+  EmploymentEnum,
+  OrganizationSizeEnum,
+  BranchEnum
+} from '@/db/dbTypes'
+import skills from '@/db/skills'
+import { findByStaticIdOrFail } from '@/utils/arrayUtils'
 
-let stageId = 1;
-let stageSkillId = 1;
-let organizationId = 1;
+let stageId = 1
+let stageSkillId = 1
+let organizationId = 1
 
 // organizations
 const orgaFhMsWi = {
@@ -20,8 +24,8 @@ const orgaFhMsWi = {
   city: 'Münster',
   website: 'https://www.fh-muenster.de/wirtschaftsinformatik/index.php',
   organizationSize: OrganizationSizeEnum.between501And1000,
-  branch: BranchEnum.education,
-} as Organization;
+  branch: BranchEnum.education
+} as Organization
 
 const orgaFuchs = {
   id: organizationId++,
@@ -32,8 +36,8 @@ const orgaFuchs = {
   city: 'Dissen a.T.W.',
   website: 'http://www.fuchs.de',
   organizationSize: OrganizationSizeEnum.between1001To5000,
-  branch: BranchEnum.food,
-} as Organization;
+  branch: BranchEnum.food
+} as Organization
 
 const orgaTvb = {
   id: organizationId++,
@@ -42,8 +46,8 @@ const orgaTvb = {
   street: 'Winkelstraße 22',
   zip: '48565',
   city: 'Steinfurt',
-  website: 'http://www.tv-borghorst.de',
-} as Organization;
+  website: 'http://www.tv-borghorst.de'
+} as Organization
 
 export default [
   // Geburtstag
@@ -51,7 +55,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Geburtstag',
-      en: 'Birthday',
+      en: 'Birthday'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -59,7 +63,7 @@ export default [
     endedAt: null,
     icon: 'birthday-cake',
     isTop: true,
-    isVisible: true,
+    isVisible: true
   },
 
   // KVG Gesamtschule Nordwalde
@@ -67,12 +71,12 @@ export default [
     id: stageId++,
     courseI18n: {
       de: 'Realschule',
-      en: 'Secondary school',
+      en: 'Secondary school'
     },
     type: ReferenceTypes.educational,
     graduationI18n: {
       de: 'Fachoberschulreife',
-      en: 'Vocational extension certificate',
+      en: 'Vocational extension certificate'
     },
     isEvent: false,
     startedAt: new Date('1997-08-01'),
@@ -87,20 +91,20 @@ export default [
       street: 'Amtmann-Daniel-Straße 30',
       zip: '48356',
       city: 'Nordwalde',
-      website: 'https://kvgn.de',
+      website: 'https://kvgn.de'
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'windows'),
+        skill: findByStaticIdOrFail(skills, 'windows')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'office'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'office')
+      }
+    ] as Array<StageSkill>
   },
 
   // Hermann-Emanuel-Berufskolleg
@@ -108,12 +112,12 @@ export default [
     id: stageId++,
     courseI18n: {
       de: 'Höhere Handelsschule',
-      en: 'Commercial college',
+      en: 'Commercial college'
     },
     type: ReferenceTypes.educational,
     graduationI18n: {
       de: 'Fachhochschulreife (Wirtschaft)',
-      en: 'Advanced college certificate (Commercial)',
+      en: 'Advanced college certificate (Commercial)'
     },
     isEvent: false,
     startedAt: new Date('2003-08-01'),
@@ -128,25 +132,25 @@ export default [
       street: 'Bahnhofstraße 28',
       zip: '48565',
       city: 'Steinfurt',
-      website: 'https://hermann-emanuel-berufskolleg.de',
+      website: 'https://hermann-emanuel-berufskolleg.de'
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'windows'),
+        skill: findByStaticIdOrFail(skills, 'windows')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'office'),
+        skill: findByStaticIdOrFail(skills, 'office')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vba'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'vba')
+      }
+    ] as Array<StageSkill>
   },
 
   // met my girl
@@ -154,7 +158,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Meine Frau getroffen',
-      en: 'Met my wife',
+      en: 'Met my wife'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -162,7 +166,7 @@ export default [
     endedAt: null,
     icon: 'heart',
     isTop: true,
-    isVisible: true,
+    isVisible: true
   },
 
   // Führerschein
@@ -170,7 +174,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Führerschein Klasse B',
-      en: 'Driving licence',
+      en: 'Driving licence'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -178,7 +182,7 @@ export default [
     endedAt: null,
     icon: 'car',
     isTop: false,
-    isVisible: true,
+    isVisible: true
   },
 
   // Technische Schulen des Kreises Steinfurt
@@ -186,16 +190,16 @@ export default [
     id: stageId++,
     courseI18n: {
       de: 'Informationstechnischer Assistent',
-      en: 'IT assistant',
+      en: 'IT assistant'
     },
     descriptionI18n: {
       de: 'Abschluss als Jahrgangsbester',
-      en: 'Graduation as best of year',
+      en: 'Graduation as best of year'
     },
     type: ReferenceTypes.educational,
     graduationI18n: {
       de: 'Fachhochschulreife (Informatik)',
-      en: 'Advanced college certificate (IT)',
+      en: 'Advanced college certificate (IT)'
     },
     isEvent: false,
     startedAt: new Date('2005-08-01'),
@@ -210,90 +214,90 @@ export default [
       street: 'Liedekerker Str. 84',
       zip: '48565',
       city: 'Steinfurt',
-      website: 'https://www.tssteinfurt.de',
+      website: 'https://www.tssteinfurt.de'
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'windows'),
+        skill: findByStaticIdOrFail(skills, 'windows')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'office'),
+        skill: findByStaticIdOrFail(skills, 'office')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'c'),
+        skill: findByStaticIdOrFail(skills, 'c')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'php'),
+        skill: findByStaticIdOrFail(skills, 'php')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'assembler'),
+        skill: findByStaticIdOrFail(skills, 'assembler')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'c#'),
+        skill: findByStaticIdOrFail(skills, 'c#')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'java'),
+        skill: findByStaticIdOrFail(skills, 'java')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vba'),
+        skill: findByStaticIdOrFail(skills, 'vba')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'eclipse'),
+        skill: findByStaticIdOrFail(skills, 'eclipse')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'camtasia'),
+        skill: findByStaticIdOrFail(skills, 'camtasia')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'uml'),
+        skill: findByStaticIdOrFail(skills, 'uml')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sql'),
+        skill: findByStaticIdOrFail(skills, 'sql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mysql'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'mysql')
+      }
+    ] as Array<StageSkill>
   },
 
   // Verschiedene Aushilfsjobs
@@ -301,11 +305,11 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Verschiedene Aushilfsjobs',
-      en: 'Various backup jobs',
+      en: 'Various backup jobs'
     },
     jobDescriptionI18n: {
       de: 'Martin Oelrich GmbH & Co. KG (Wagenwäscher);Emsdettener Fahrradkurier (Briefzusteller);Movie and More - Videothek (Verkäufer);Biobauernhof (Mädchen für alles);Hermes Logistik Gruppe Deutschland (Paketzusteller);crashtest-service.com GmbH (Datenaufbereitung)',
-      en: 'Martin Oelrich GmbH & Co. KG (Car washer);Emsdettener Fahrradkurier (Mail carrier);Movie and More - Video library (Seller);Organic farm (Utility man);Hermes Logistik Gruppe Deutschland (Parcel delivery);crashtest-service.com GmbH (Data preparation)',
+      en: 'Martin Oelrich GmbH & Co. KG (Car washer);Emsdettener Fahrradkurier (Mail carrier);Movie and More - Video library (Seller);Organic farm (Utility man);Hermes Logistik Gruppe Deutschland (Parcel delivery);crashtest-service.com GmbH (Data preparation)'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -313,7 +317,7 @@ export default [
     endedAt: new Date('2009-09-01'),
     icon: 'money-bill-alt',
     isTop: false,
-    isVisible: true,
+    isVisible: true
   },
 
   // Fachhochschule Münster (Steinfurt)
@@ -321,7 +325,7 @@ export default [
     id: stageId++,
     courseI18n: {
       de: 'Angewandte Informatik',
-      en: 'Applied computer science',
+      en: 'Applied computer science'
     },
     type: ReferenceTypes.educational,
     isEvent: false,
@@ -337,55 +341,55 @@ export default [
       street: 'Bismarckstraße 11',
       zip: '48565',
       city: 'Steinfurt',
-      website: 'https://www.fh-muenster.de/fb2/index.php',
+      website: 'https://www.fh-muenster.de/fb2/index.php'
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'windows'),
+        skill: findByStaticIdOrFail(skills, 'windows')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'office'),
+        skill: findByStaticIdOrFail(skills, 'office')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'c'),
+        skill: findByStaticIdOrFail(skills, 'c')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'java'),
+        skill: findByStaticIdOrFail(skills, 'java')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'eclipse'),
+        skill: findByStaticIdOrFail(skills, 'eclipse')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'uml'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'uml')
+      }
+    ] as Array<StageSkill>
   },
 
   // Fachhochschule Münster (Studentenprofessional)
@@ -393,7 +397,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Website',
-      en: 'Maintenance and further development of the website',
+      en: 'Maintenance and further development of the website'
     },
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
@@ -413,45 +417,45 @@ export default [
       city: 'Münster',
       website: 'https://www.fh-muenster.de/fb9/index.php',
       organizationSize: OrganizationSizeEnum.between501And1000,
-      branch: BranchEnum.education,
+      branch: BranchEnum.education
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'php'),
+        skill: findByStaticIdOrFail(skills, 'php')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'sublime')
+      }
+    ] as Array<StageSkill>
   },
 
   // zeb
@@ -459,7 +463,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
-      en: 'Maintenance and further development of a prototype',
+      en: 'Maintenance and further development of a prototype'
     },
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
@@ -479,50 +483,50 @@ export default [
       city: 'Münster',
       website: 'http://www.zeb.de',
       organizationSize: OrganizationSizeEnum.between501And1000,
-      branch: BranchEnum.finance,
+      branch: BranchEnum.finance
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jira'),
+        skill: findByStaticIdOrFail(skills, 'jira')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'gimp')
+      }
+    ] as Array<StageSkill>
   },
 
   // gloud GmbH
@@ -530,7 +534,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung eines Prototypen',
-      en: 'Maintenance and further development of a prototype',
+      en: 'Maintenance and further development of a prototype'
     },
     employment: EmploymentEnum.studentAssistant,
     position: PositionEnum.webDeveloper,
@@ -546,55 +550,55 @@ export default [
       staticId: 'gloud',
       name: 'gloud GmbH',
       organizationSize: OrganizationSizeEnum.between1And10,
-      branch: BranchEnum.cloud,
+      branch: BranchEnum.cloud
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'php'),
+        skill: findByStaticIdOrFail(skills, 'php')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'zend'),
+        skill: findByStaticIdOrFail(skills, 'zend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'highcharts'),
+        skill: findByStaticIdOrFail(skills, 'highcharts')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'sublime')
+      }
+    ] as Array<StageSkill>
   },
 
   // Fachhochschule Münster (Praktikum)
@@ -602,7 +606,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer Anwendung für die Hochschulverwaltung',
-      en: 'Design and implementation of an application for the university administration',
+      en: 'Design and implementation of an application for the university administration'
     },
     employment: EmploymentEnum.intern,
     position: PositionEnum.webDeveloper,
@@ -618,134 +622,134 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'process'),
+        skill: findByStaticIdOrFail(skills, 'process')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rspec'),
+        skill: findByStaticIdOrFail(skills, 'rspec')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'capybara'),
+        skill: findByStaticIdOrFail(skills, 'capybara')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'windows'),
+        skill: findByStaticIdOrFail(skills, 'windows')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'office'),
+        skill: findByStaticIdOrFail(skills, 'office')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'google'),
+        skill: findByStaticIdOrFail(skills, 'google')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
+        skill: findByStaticIdOrFail(skills, 'gimp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'testing')
+      }
+    ] as Array<StageSkill>
   },
 
   // Hochzeit
@@ -753,7 +757,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Meine Frau geheiratet',
-      en: 'Married my wife',
+      en: 'Married my wife'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -761,7 +765,7 @@ export default [
     endedAt: null,
     icon: 'heart',
     isTop: true,
-    isVisible: true,
+    isVisible: true
   },
 
   // Compeon
@@ -769,7 +773,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung des Online-Finanzportals COMPEON;Bachelorarbeit: Konzeption, Implementierung und Evaluation einer webbasierten Anwendung zur Erfassung der Kundenzufriedenheit und zur Publikation von Kundenempfehlungen im Rahmen des Online-Finanzportals COMPEON',
-      en: 'Maintenance and further development of the online financial portal COMPEON;Bachelor Thesis: Conception, implementation and evaluation of a web-based application for recording customer satisfaction and for publishing customer recommendations in the context of the online financial portal COMPEON',
+      en: 'Maintenance and further development of the online financial portal COMPEON;Bachelor Thesis: Conception, implementation and evaluation of a web-based application for recording customer satisfaction and for publishing customer recommendations in the context of the online financial portal COMPEON'
     },
     employment: EmploymentEnum.bachelor,
     position: PositionEnum.webDeveloper,
@@ -789,165 +793,165 @@ export default [
       city: 'Düsseldorf',
       website: 'https://www.compeon.de',
       organizationSize: OrganizationSizeEnum.between501And1000,
-      branch: BranchEnum.finance,
+      branch: BranchEnum.finance
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rspec'),
+        skill: findByStaticIdOrFail(skills, 'rspec')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'capybara'),
+        skill: findByStaticIdOrFail(skills, 'capybara')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tower'),
+        skill: findByStaticIdOrFail(skills, 'tower')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'angular'),
+        skill: findByStaticIdOrFail(skills, 'angular')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
+        skill: findByStaticIdOrFail(skills, 'gimp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kanban'),
+        skill: findByStaticIdOrFail(skills, 'kanban')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'travis'),
+        skill: findByStaticIdOrFail(skills, 'travis')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'google'),
+        skill: findByStaticIdOrFail(skills, 'google')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'airbrake'),
+        skill: findByStaticIdOrFail(skills, 'airbrake')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'basecamp'),
+        skill: findByStaticIdOrFail(skills, 'basecamp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'heroku'),
+        skill: findByStaticIdOrFail(skills, 'heroku')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'postgres'),
+        skill: findByStaticIdOrFail(skills, 'postgres')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'lean'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'lean')
+      }
+    ] as Array<StageSkill>
   },
 
   // Fachhochschule Münster (Münster)
@@ -955,11 +959,11 @@ export default [
     id: stageId++,
     courseI18n: {
       de: 'Wirtschaftsinformatik',
-      en: 'Business computer science',
+      en: 'Business computer science'
     },
     graduationI18n: {
       de: 'Bachelor of science',
-      en: 'Bachelor of science',
+      en: 'Bachelor of science'
     },
     type: ReferenceTypes.educational,
     isEvent: false,
@@ -973,159 +977,159 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'process'),
+        skill: findByStaticIdOrFail(skills, 'process')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'java'),
+        skill: findByStaticIdOrFail(skills, 'java')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'php'),
+        skill: findByStaticIdOrFail(skills, 'php')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rspec'),
+        skill: findByStaticIdOrFail(skills, 'rspec')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'capybara'),
+        skill: findByStaticIdOrFail(skills, 'capybara')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'eclipse'),
+        skill: findByStaticIdOrFail(skills, 'eclipse')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'uml'),
+        skill: findByStaticIdOrFail(skills, 'uml')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bpmn'),
+        skill: findByStaticIdOrFail(skills, 'bpmn')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'google'),
+        skill: findByStaticIdOrFail(skills, 'google')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mysql'),
+        skill: findByStaticIdOrFail(skills, 'mysql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sql'),
+        skill: findByStaticIdOrFail(skills, 'sql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'postgres'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'postgres')
+      }
+    ] as Array<StageSkill>
   },
 
   // Fuchs (Junior)
@@ -1133,7 +1137,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
-      en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
+      en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.juniorSoftwareDeveloper,
@@ -1149,184 +1153,184 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'process'),
+        skill: findByStaticIdOrFail(skills, 'process')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rspec'),
+        skill: findByStaticIdOrFail(skills, 'rspec')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rest'),
+        skill: findByStaticIdOrFail(skills, 'rest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'capybara'),
+        skill: findByStaticIdOrFail(skills, 'capybara')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bootstrap'),
+        skill: findByStaticIdOrFail(skills, 'bootstrap')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'redmine'),
+        skill: findByStaticIdOrFail(skills, 'redmine')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sql'),
+        skill: findByStaticIdOrFail(skills, 'sql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mac'),
+        skill: findByStaticIdOrFail(skills, 'mac')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
+        skill: findByStaticIdOrFail(skills, 'gimp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kanban'),
+        skill: findByStaticIdOrFail(skills, 'kanban')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'google'),
+        skill: findByStaticIdOrFail(skills, 'google')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'amqp'),
+        skill: findByStaticIdOrFail(skills, 'amqp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rabbit'),
+        skill: findByStaticIdOrFail(skills, 'rabbit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'errbit'),
+        skill: findByStaticIdOrFail(skills, 'errbit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'oracle'),
+        skill: findByStaticIdOrFail(skills, 'oracle')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tower'),
+        skill: findByStaticIdOrFail(skills, 'tower')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'microservices'),
+        skill: findByStaticIdOrFail(skills, 'microservices')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'slack'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'slack')
+      }
+    ] as Array<StageSkill>
   },
 
   // Deltacity
@@ -1334,7 +1338,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer individuellen CMS-Lösung',
-      en: 'Design and implementation of an individual CMS solution',
+      en: 'Design and implementation of an individual CMS solution'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
@@ -1354,85 +1358,85 @@ export default [
       city: 'Emsdetten',
       website: 'http://www.deltacity.net',
       organizationSize: OrganizationSizeEnum.between11And50,
-      branch: BranchEnum.agency,
+      branch: BranchEnum.agency
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'redmine'),
+        skill: findByStaticIdOrFail(skills, 'redmine')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sublime'),
+        skill: findByStaticIdOrFail(skills, 'sublime')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mac'),
+        skill: findByStaticIdOrFail(skills, 'mac')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sourcetree'),
+        skill: findByStaticIdOrFail(skills, 'sourcetree')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mysql'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'mysql')
+      }
+    ] as Array<StageSkill>
   },
 
   // Kung Fu I
@@ -1440,7 +1444,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Kung Fu Training',
-      en: 'Kung Fu training',
+      en: 'Kung Fu training'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -1450,7 +1454,7 @@ export default [
     isTop: false,
     isVisible: true,
     organization: orgaTvb,
-    imageName: 'kungfu.jpg',
+    imageName: 'kungfu.jpg'
   },
 
   // Hermannsweg
@@ -1458,11 +1462,11 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Hermannsweg gewandert',
-      en: 'Hermannsweg hiked',
+      en: 'Hermannsweg hiked'
     },
     descriptionI18n: {
       de: '8 Tage, 150 km, 2 Bundesländer, 5 Kreise, 1 kaputtes Knie, 1 kaputten Knöchel, 2 kleine Abschürfungen, 1 riesige Blase und einen Haufen Glücksmomente',
-      en: '8 days, 150 km, 2 federal states, 1 damaged knee, 1 damaged ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments',
+      en: '8 days, 150 km, 2 federal states, 1 damaged knee, 1 damaged ankle, 2 small abrasions, 1 huge bladder and a bunch of happy moments'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -1471,7 +1475,7 @@ export default [
     icon: 'hiking',
     isTop: false,
     isVisible: true,
-    imageName: 'hermannsweg.jpg',
+    imageName: 'hermannsweg.jpg'
   },
 
   // Fuchs 2
@@ -1479,7 +1483,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung neuer ERP-Anwendungen;Wartung und Weiterentwicklung bestehender ERP-Anwendungen;Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
-      en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems',
+      en: 'Design and implementation of new ERP applications;Maintenance and further development of existing ERP applications;Development of REST interfaces for the integration of distributed systems'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.softwareDeveloper,
@@ -1495,184 +1499,184 @@ export default [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'process'),
+        skill: findByStaticIdOrFail(skills, 'process')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ruby'),
+        skill: findByStaticIdOrFail(skills, 'ruby')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rails'),
+        skill: findByStaticIdOrFail(skills, 'rails')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rspec'),
+        skill: findByStaticIdOrFail(skills, 'rspec')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rest'),
+        skill: findByStaticIdOrFail(skills, 'rest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'capybara'),
+        skill: findByStaticIdOrFail(skills, 'capybara')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bootstrap'),
+        skill: findByStaticIdOrFail(skills, 'bootstrap')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'redmine'),
+        skill: findByStaticIdOrFail(skills, 'redmine')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sql'),
+        skill: findByStaticIdOrFail(skills, 'sql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'atom'),
+        skill: findByStaticIdOrFail(skills, 'atom')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mac'),
+        skill: findByStaticIdOrFail(skills, 'mac')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
+        skill: findByStaticIdOrFail(skills, 'gimp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kanban'),
+        skill: findByStaticIdOrFail(skills, 'kanban')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'google'),
+        skill: findByStaticIdOrFail(skills, 'google')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'amqp'),
+        skill: findByStaticIdOrFail(skills, 'amqp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rabbit'),
+        skill: findByStaticIdOrFail(skills, 'rabbit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'errbit'),
+        skill: findByStaticIdOrFail(skills, 'errbit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'oracle'),
+        skill: findByStaticIdOrFail(skills, 'oracle')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tower'),
+        skill: findByStaticIdOrFail(skills, 'tower')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'microservices'),
+        skill: findByStaticIdOrFail(skills, 'microservices')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'slack'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'slack')
+      }
+    ] as Array<StageSkill>
   },
 
   // Geoffrey
@@ -1680,7 +1684,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Herr­chen von Geoffrey',
-      en: 'Dog daddy of Geoffrey',
+      en: 'Dog daddy of Geoffrey'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -1689,7 +1693,7 @@ export default [
     icon: 'dog',
     isTop: false,
     isVisible: true,
-    imageName: 'geoffrey.jpg',
+    imageName: 'geoffrey.jpg'
   },
 
   // Eggeweg
@@ -1697,11 +1701,11 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Eggeweg gewandert',
-      en: 'Eggeweg hiked',
+      en: 'Eggeweg hiked'
     },
     descriptionI18n: {
       de: '5 Tage, 100 km, keine Blessuren und einige unerwartete Bekanntschaften',
-      en: '5 days, 100 km, no injuries and some unexpected acquaintances',
+      en: '5 days, 100 km, no injuries and some unexpected acquaintances'
     },
     type: ReferenceTypes.personal,
     isEvent: true,
@@ -1710,7 +1714,7 @@ export default [
     icon: 'hiking',
     isTop: false,
     isVisible: true,
-    imageName: 'eggeweg.jpg',
+    imageName: 'eggeweg.jpg'
   },
 
   // IDB
@@ -1718,7 +1722,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Influencer Marketing Platform;Hauptverantwortlicher für das Frontend;Einführung von Vue',
-      en: 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue',
+      en: 'Maintenance and further development of the Influencer Marketing Platform;Main responsible for the frontend;Introduction of Vue'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
@@ -1734,220 +1738,220 @@ export default [
       staticId: 'idb',
       name: 'InfluencerDB Tech GmbH & Co. KG',
       organizationSize: OrganizationSizeEnum.between11And50,
-      branch: BranchEnum.marketing,
+      branch: BranchEnum.marketing
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mobile'),
+        skill: findByStaticIdOrFail(skills, 'mobile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kanban'),
+        skill: findByStaticIdOrFail(skills, 'kanban')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'scrum'),
+        skill: findByStaticIdOrFail(skills, 'scrum')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'lean'),
+        skill: findByStaticIdOrFail(skills, 'lean')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'remote'),
+        skill: findByStaticIdOrFail(skills, 'remote')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'officedog'),
+        skill: findByStaticIdOrFail(skills, 'officedog')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'python'),
+        skill: findByStaticIdOrFail(skills, 'python')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'django'),
+        skill: findByStaticIdOrFail(skills, 'django')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'pytest'),
+        skill: findByStaticIdOrFail(skills, 'pytest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'pythonunittest'),
+        skill: findByStaticIdOrFail(skills, 'pythonunittest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bootstrap'),
+        skill: findByStaticIdOrFail(skills, 'bootstrap')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bulma'),
+        skill: findByStaticIdOrFail(skills, 'bulma')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tailwind'),
+        skill: findByStaticIdOrFail(skills, 'tailwind')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jquery'),
+        skill: findByStaticIdOrFail(skills, 'jquery')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'highcharts'),
+        skill: findByStaticIdOrFail(skills, 'highcharts')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vue'),
+        skill: findByStaticIdOrFail(skills, 'vue')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jest'),
+        skill: findByStaticIdOrFail(skills, 'jest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'redux'),
+        skill: findByStaticIdOrFail(skills, 'redux')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'storybook'),
+        skill: findByStaticIdOrFail(skills, 'storybook')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bitbucket'),
+        skill: findByStaticIdOrFail(skills, 'bitbucket')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gitlab'),
+        skill: findByStaticIdOrFail(skills, 'gitlab')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kraken'),
+        skill: findByStaticIdOrFail(skills, 'kraken')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'pycharm'),
+        skill: findByStaticIdOrFail(skills, 'pycharm')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vscode'),
+        skill: findByStaticIdOrFail(skills, 'vscode')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'trello'),
+        skill: findByStaticIdOrFail(skills, 'trello')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jira'),
+        skill: findByStaticIdOrFail(skills, 'jira')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gimp'),
+        skill: findByStaticIdOrFail(skills, 'gimp')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'slack'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'slack')
+      }
+    ] as Array<StageSkill>
   },
 
   // Rumo
@@ -1955,7 +1959,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Herr­chen von Rumo',
-      en: 'Dog daddy of Rumo',
+      en: 'Dog daddy of Rumo'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -1964,7 +1968,7 @@ export default [
     icon: 'dog',
     isTop: true,
     isVisible: true,
-    imageName: 'rumo.jpg',
+    imageName: 'rumo.jpg'
   },
 
   // Kung Fu I
@@ -1972,7 +1976,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Kung Fu Training',
-      en: 'Kung Fu training',
+      en: 'Kung Fu training'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -1982,7 +1986,7 @@ export default [
     isTop: false,
     isVisible: true,
     organization: orgaTvb,
-    imageName: 'kungfu.jpg',
+    imageName: 'kungfu.jpg'
   },
 
   // CROWDCODE
@@ -1990,7 +1994,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Entwurf und Umsetzung einer PWA zur Planung eines Studiums;Hauptverantwortlicher für das Frontend;Einführung von Vue',
-      en: 'Maintenance and further development of a PWA for study planning;Main responsible for the frontend;Introduction of Vue',
+      en: 'Maintenance and further development of a PWA for study planning;Main responsible for the frontend;Introduction of Vue'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
@@ -2010,200 +2014,200 @@ export default [
       city: 'Münster',
       website: 'https://www.crowdcode.io',
       organizationSize: OrganizationSizeEnum.between1And10,
-      branch: BranchEnum.agency,
+      branch: BranchEnum.agency
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mobile'),
+        skill: findByStaticIdOrFail(skills, 'mobile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'scrum'),
+        skill: findByStaticIdOrFail(skills, 'scrum')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'remote'),
+        skill: findByStaticIdOrFail(skills, 'remote')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'officedog'),
+        skill: findByStaticIdOrFail(skills, 'officedog')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'java'),
+        skill: findByStaticIdOrFail(skills, 'java')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'junit'),
+        skill: findByStaticIdOrFail(skills, 'junit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'spring'),
+        skill: findByStaticIdOrFail(skills, 'spring')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rest'),
+        skill: findByStaticIdOrFail(skills, 'rest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'openapi'),
+        skill: findByStaticIdOrFail(skills, 'openapi')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'css'),
+        skill: findByStaticIdOrFail(skills, 'css')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sass'),
+        skill: findByStaticIdOrFail(skills, 'sass')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vuetify'),
+        skill: findByStaticIdOrFail(skills, 'vuetify')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jam'),
+        skill: findByStaticIdOrFail(skills, 'jam')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tailwind'),
+        skill: findByStaticIdOrFail(skills, 'tailwind')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vue'),
+        skill: findByStaticIdOrFail(skills, 'vue')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'redux'),
+        skill: findByStaticIdOrFail(skills, 'redux')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jest'),
+        skill: findByStaticIdOrFail(skills, 'jest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'cypress'),
+        skill: findByStaticIdOrFail(skills, 'cypress')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'gridsome'),
+        skill: findByStaticIdOrFail(skills, 'gridsome')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'teams'),
+        skill: findByStaticIdOrFail(skills, 'teams')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mac'),
+        skill: findByStaticIdOrFail(skills, 'mac')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'bitbucket'),
+        skill: findByStaticIdOrFail(skills, 'bitbucket')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kraken'),
+        skill: findByStaticIdOrFail(skills, 'kraken')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'intellij'),
+        skill: findByStaticIdOrFail(skills, 'intellij')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vscode'),
+        skill: findByStaticIdOrFail(skills, 'vscode')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'confluence'),
+        skill: findByStaticIdOrFail(skills, 'confluence')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jira'),
-      },
-    ] as Array<StageSkill>,
+        skill: findByStaticIdOrFail(skills, 'jira')
+      }
+    ] as Array<StageSkill>
   },
 
   // Rala
@@ -2211,7 +2215,7 @@ export default [
     id: stageId++,
     titleI18n: {
       de: 'Herr­chen von Rala',
-      en: 'Dog daddy of Rala',
+      en: 'Dog daddy of Rala'
     },
     type: ReferenceTypes.personal,
     isEvent: false,
@@ -2220,7 +2224,7 @@ export default [
     icon: 'dog',
     isTop: true,
     isVisible: true,
-    imageName: 'rala.jpg',
+    imageName: 'rala.jpg'
   },
 
   // adcommander
@@ -2228,7 +2232,7 @@ export default [
     id: stageId++,
     jobDescriptionI18n: {
       de: 'Wartung und Weiterentwicklung der Digital Signage Platform; Wartung und Weiterentwicklung der 24/7 Retail REST-Schnittstelle; Einführung von Vue; Mitgestaltung agiler Entwicklungsprozesse; Mitgestaltung einer offenen Kommunikationskultur',
-      en: 'Maintenance and further development of the digital signage platform; Maintenance and further development of the 24/7 retail REST interface; Introduction of Vue; Participation in designing agile development processes; Participation in shaping an open communication culture',
+      en: 'Maintenance and further development of the digital signage platform; Maintenance and further development of the 24/7 retail REST interface; Introduction of Vue; Participation in designing agile development processes; Participation in shaping an open communication culture'
     },
     employment: EmploymentEnum.employee,
     position: PositionEnum.webDeveloper,
@@ -2248,229 +2252,229 @@ export default [
       city: 'Münster',
       website: 'https://www.adcommander.de',
       organizationSize: OrganizationSizeEnum.between11And50,
-      branch: BranchEnum.marketing,
+      branch: BranchEnum.marketing
     } as Organization,
     stageSkills: [
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'project'),
+        skill: findByStaticIdOrFail(skills, 'project')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'process'),
+        skill: findByStaticIdOrFail(skills, 'process')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'frontend'),
+        skill: findByStaticIdOrFail(skills, 'frontend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'backend'),
+        skill: findByStaticIdOrFail(skills, 'backend')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'softwarequality'),
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'usability'),
+        skill: findByStaticIdOrFail(skills, 'usability')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mobile'),
+        skill: findByStaticIdOrFail(skills, 'mobile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'testing'),
+        skill: findByStaticIdOrFail(skills, 'testing')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'reviews'),
+        skill: findByStaticIdOrFail(skills, 'reviews')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'agile'),
+        skill: findByStaticIdOrFail(skills, 'agile')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kanban'),
+        skill: findByStaticIdOrFail(skills, 'kanban')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'remote'),
+        skill: findByStaticIdOrFail(skills, 'remote')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'officedog'),
+        skill: findByStaticIdOrFail(skills, 'officedog')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'php'),
+        skill: findByStaticIdOrFail(skills, 'php')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'laravel'),
+        skill: findByStaticIdOrFail(skills, 'laravel')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'phpunit'),
+        skill: findByStaticIdOrFail(skills, 'phpunit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'java'),
+        skill: findByStaticIdOrFail(skills, 'java')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'spring'),
+        skill: findByStaticIdOrFail(skills, 'spring')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'junit'),
+        skill: findByStaticIdOrFail(skills, 'junit')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'html'),
+        skill: findByStaticIdOrFail(skills, 'html')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vuetify'),
+        skill: findByStaticIdOrFail(skills, 'vuetify')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'tailwind'),
+        skill: findByStaticIdOrFail(skills, 'tailwind')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'js'),
+        skill: findByStaticIdOrFail(skills, 'js')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ts'),
+        skill: findByStaticIdOrFail(skills, 'ts')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vue'),
+        skill: findByStaticIdOrFail(skills, 'vue')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vue3'),
+        skill: findByStaticIdOrFail(skills, 'vue3')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jest'),
+        skill: findByStaticIdOrFail(skills, 'jest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'cypress'),
+        skill: findByStaticIdOrFail(skills, 'cypress')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'storybook'),
+        skill: findByStaticIdOrFail(skills, 'storybook')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'ubuntu'),
+        skill: findByStaticIdOrFail(skills, 'ubuntu')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'git'),
+        skill: findByStaticIdOrFail(skills, 'git')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'github'),
+        skill: findByStaticIdOrFail(skills, 'github')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'kraken'),
+        skill: findByStaticIdOrFail(skills, 'kraken')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'intellij'),
+        skill: findByStaticIdOrFail(skills, 'intellij')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'vscode'),
+        skill: findByStaticIdOrFail(skills, 'vscode')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'jira'),
+        skill: findByStaticIdOrFail(skills, 'jira')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'confluence'),
+        skill: findByStaticIdOrFail(skills, 'confluence')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'rest'),
+        skill: findByStaticIdOrFail(skills, 'rest')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'openapi'),
+        skill: findByStaticIdOrFail(skills, 'openapi')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'microservices'),
+        skill: findByStaticIdOrFail(skills, 'microservices')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'slack'),
+        skill: findByStaticIdOrFail(skills, 'slack')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'postman'),
+        skill: findByStaticIdOrFail(skills, 'postman')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'mysql'),
+        skill: findByStaticIdOrFail(skills, 'mysql')
       },
       {
         id: stageSkillId++,
         stageId: stageId - 1,
-        skill: findByStaticIdOrFail(skills, 'sql'),
-      },
-    ] as Array<StageSkill>,
-  },
-] as Array<Stage>;
+        skill: findByStaticIdOrFail(skills, 'sql')
+      }
+    ] as Array<StageSkill>
+  }
+] as Array<Stage>

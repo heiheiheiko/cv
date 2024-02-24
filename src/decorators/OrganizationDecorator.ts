@@ -1,37 +1,37 @@
-import { Organization, OrganizationSizeEnum, BranchEnum } from '@/db/dbTypes';
+import type { Organization, OrganizationSizeEnum, BranchEnum } from '@/db/dbTypes'
 
 export default class OrganizationDecorator {
-  id: number;
+  id: number
 
-  staticId: string;
+  staticId: string
 
-  name: string;
+  name: string
 
-  street: string | undefined;
+  street: string | undefined
 
-  zip: string | undefined;
+  zip: string | undefined
 
-  city: string | undefined;
+  city: string | undefined
 
-  website: string | undefined;
+  website: string | undefined
 
-  organizationSize: OrganizationSizeEnum | undefined;
+  organizationSize: OrganizationSizeEnum | undefined
 
-  branch: BranchEnum | undefined;
+  branch: BranchEnum | undefined
 
   constructor(organization: Organization) {
-    this.id = organization.id;
-    this.staticId = organization.staticId;
-    this.name = organization.name;
-    this.street = organization.street;
-    this.zip = organization.zip;
-    this.city = organization.city;
-    this.website = organization.website;
-    this.organizationSize = organization.organizationSize;
-    this.branch = organization.branch;
+    this.id = organization.id
+    this.staticId = organization.staticId
+    this.name = organization.name
+    this.street = organization.street
+    this.zip = organization.zip
+    this.city = organization.city
+    this.website = organization.website
+    this.organizationSize = organization.organizationSize
+    this.branch = organization.branch
   }
 
   location(): string {
-    return `${this.street}, ${this.zip}, ${this.city}`;
+    return `${this.street}, ${this.zip}, ${this.city}`
   }
 }

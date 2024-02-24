@@ -1,21 +1,15 @@
 <template>
   <!-- eslint-disable max-len -->
-  <BaseOverlaySlide
-    :is-open="isOpen"
-    @close="$emit('close')"
-  >
+  <BaseOverlaySlide :is-open="isOpen" @close="$emit('close')">
     <div>
       <div class="pb-1 sm:pb-6">
         <div>
-          <div
-            v-if="stage.imageName"
-            class="relative h-40 sm:h-56 -mt-6 mb-4 sm:mb-6 "
-          >
+          <div v-if="stage.imageName" class="relative h-40 sm:h-56 -mt-6 mb-4 sm:mb-6">
             <img
               class="absolute h-full w-full object-cover"
               :src="getStageImageUrl(stage.imageName)"
               alt=""
-            >
+            />
           </div>
           <div class="px-4 sm:flex sm:items-end sm:px-6">
             <div class="sm:flex-1">
@@ -78,15 +72,9 @@
             </BaseDescriptionDetail>
           </div>
 
-          <div
-            v-if="organization.name"
-            class="w-full border-t border-gray-300"
-          />
+          <div v-if="organization.name" class="w-full border-t border-gray-300" />
 
-          <h2
-            v-if="organization.name"
-            class="text-lg font-medium text-gray-900"
-          >
+          <h2 v-if="organization.name" class="text-lg font-medium text-gray-900">
             {{ organization.name }}
           </h2>
 
@@ -104,10 +92,7 @@
               {{ $t('resources.organization.attributes.website') }}
             </BaseDescriptionTerm>
             <BaseDescriptionDetail>
-              <BaseLink
-                target="_blank"
-                :href="organization.website"
-              >
+              <BaseLink target="_blank" :href="organization.website">
                 {{ organization.website }}
               </BaseLink>
             </BaseDescriptionDetail>
@@ -118,7 +103,9 @@
               {{ $t('resources.organization.attributes.organizationSize') }}
             </BaseDescriptionTerm>
             <BaseDescriptionDetail>
-              {{ $t(`resources.organization.enums.organizationSize.${organization.organizationSize}`) }}
+              {{
+                $t(`resources.organization.enums.organizationSize.${organization.organizationSize}`)
+              }}
             </BaseDescriptionDetail>
           </div>
 
@@ -137,39 +124,39 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
-import { translateI18nField } from '@/utils/i18nUtils';
+import { computed } from 'vue'
+import { translateI18nField } from '@/utils/i18nUtils'
 
-import { periodInWords } from '@/utils/dateUtils';
-import useOrganization from '@/composables/useOrganization';
-import useStageSkill from '@/composables/useStageSkill';
-import SkillBadge from '@/components/SkillBadge.vue';
+import { periodInWords } from '@/utils/dateUtils'
+import useOrganization from '@/composables/useOrganization'
+import useStageSkill from '@/composables/useStageSkill'
+import SkillBadge from '@/components/SkillBadge.vue'
 
 export default {
   components: { SkillBadge },
   props: {
     stage: {
       type: Object,
-      required: true,
+      required: true
     },
     isOpen: {
       type: Boolean,
-      required: true,
-    },
+      required: true
+    }
   },
   emits: ['close'],
   setup(props: any) {
     /* eslint-disable import/no-dynamic-require */
     /* eslint-disable global-require */
 
-    const { findOrganization } = useOrganization();
-    const { findSkillsThroughStageSkills } = useStageSkill();
+    const { findOrganization } = useOrganization()
+    const { findSkillsThroughStageSkills } = useStageSkill()
 
-    const organization = computed(() => findOrganization(props.stage.organization));
-    const skills = computed(() => findSkillsThroughStageSkills(props.stage.stageSkills));
+    const organization = computed(() => findOrganization(props.stage.organization))
+    const skills = computed(() => findSkillsThroughStageSkills(props.stage.stageSkills))
 
     function getStageImageUrl(imageName: string) {
-      return require(`../assets/images/stages/${imageName}`);
+      return `/images/${imageName}`
     }
 
     return {
@@ -177,8 +164,8 @@ export default {
       periodInWords,
       organization,
       skills,
-      getStageImageUrl,
-    };
-  },
-};
+      getStageImageUrl
+    }
+  }
+}
 </script>
