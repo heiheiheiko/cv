@@ -64,6 +64,7 @@ export default {
           AGENCY: 'IT-Systemhaus',
           EDUCATION: 'Bildung',
           CLOUD: 'Cloud',
+          HOSTING: 'Hosting',
         },
       },
     },

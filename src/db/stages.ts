@@ -2239,7 +2239,7 @@ export default [
     type: ReferenceTypes.professional,
     isEvent: false,
     startedAt: new Date('2020-07-01'),
-    endedAt: null,
+    endedAt:  new Date('2021-12-31'),
     icon: 'code',
     isTop: true,
     isVisible: true,
@@ -2464,6 +2464,219 @@ export default [
         id: stageSkillId++,
         stageId: stageId - 1,
         skill: findByStaticIdOrFail(skills, 'postman')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'mysql')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'sql')
+      }
+    ] as Array<StageSkill>
+  },
+
+  //  23M
+  {
+    id: stageId++,
+    jobDescriptionI18n: {
+      de: 'Wartung und Weiterentwicklung einer neuen ERP-Anwendung; Entwurf und Umsetzung eines neuen Kundenbereiches; Entwicklung von REST-Schnittstellen zur Integration verteilter Systeme',
+      en: "Maintenance and further development of a new ERP application; Design and implementation of a new customer area; Development of REST interfaces for the integration of distributed systems"
+    },
+    employment: EmploymentEnum.employee,
+    position: PositionEnum.webDeveloper,
+    type: ReferenceTypes.professional,
+    isEvent: false,
+    startedAt: new Date('2022-01-01'),
+    endedAt: null,
+    icon: 'code',
+    isTop: true,
+    isVisible: true,
+    organization: {
+      id: organizationId++,
+      staticId: '23M',
+      name: '23M GmbH',
+      street: 'Johann-Krane-Weg 18',
+      zip: '48149',
+      city: 'Münster',
+      website: 'https://23m.com',
+      organizationSize: OrganizationSizeEnum.between11And50,
+      branch: BranchEnum.hosting
+    } as Organization,
+    stageSkills: [
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'project')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'process')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'frontend')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'backend')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'softwarequality')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'usability')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'mobile')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'testing')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'reviews')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'agile')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'kanban')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'remote')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'officedog')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'php')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'laravel')
+      },
+
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'statamic')
+      },
+
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'phpunit')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'html')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'tailwind')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'js')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'ts')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'vue3')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'jest')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'cypress')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'mac')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'git')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'bitbucket')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'kraken')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'vscode')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'jira')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'confluence')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'rest')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'openapi')
+      },
+      {
+        id: stageSkillId++,
+        stageId: stageId - 1,
+        skill: findByStaticIdOrFail(skills, 'slack')
       },
       {
         id: stageSkillId++,

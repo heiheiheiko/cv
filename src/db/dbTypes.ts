@@ -82,7 +82,8 @@ export enum BranchEnum {
   finance = 'FINANCE',
   agency = 'AGENCY',
   education = 'EDUCATION',
-  cloud = 'CLOUD'
+  cloud = 'CLOUD',
+  hosting = 'HOSTING',
 }
 
 export interface Organization {

@@ -64,6 +64,7 @@ export default {
           AGENCY: 'IT system house',
           EDUCATION: 'Education',
           CLOUD: 'Cloud',
+          HOSTING: 'Hosting',
         },
       },
     },

@@ -349,6 +349,17 @@ export default [
 
   {
     id: skillId++,
+    staticId: 'statamic',
+    type: SkillTypes.technology,
+    isTop: true,
+    titleI18n: {
+      de: 'Statamic',
+      en: 'Statamic'
+    }
+  },
+
+  {
+    id: skillId++,
     staticId: 'phpunit',
     type: SkillTypes.technology,
     isTop: true,
