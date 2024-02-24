@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/20/solid'
 import { useI18n } from 'vue-i18n'
@@ -102,12 +102,14 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
 
-    const navigation = [
-      { name: t('resources.feature.name', 2), href: '#features-section', isActive: true },
-      { name: t('resources.stage.name', 2), href: '#stages-section', isActive: false },
-      { name: t('resources.skill.name', 2), href: '#skills-section', isActive: false },
-      { name: t('resources.interest.name', 2), href: '#interests-section', isActive: false }
-    ]
+    const navigation = computed(() => {
+      return  [
+        { name: t('resources.feature.name', 2), href: '#features-section', isActive: true },
+        { name: t('resources.stage.name', 2), href: '#stages-section', isActive: false },
+        { name: t('resources.skill.name', 2), href: '#skills-section', isActive: false },
+        { name: t('resources.interest.name', 2), href: '#interests-section', isActive: false }
+      ]
+    })
 
     return { navigation }
   }
